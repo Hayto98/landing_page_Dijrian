@@ -1,725 +1,855 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Djirian — Single Origin Freeze-Dried Durian</title>
-    <meta name="description" content="Djirian: Single origin freeze-dried durian from the Di Linh Plateau, Lâm Đồng, Vietnam. No added sugar, no additives. Of the land. Of time. Of those who wait." />
-    <link rel="icon" type="image/png" href="./assets/logo.png" />
 
-    <!-- CSS -->
-    <link type="text/css" rel="stylesheet" href="./css/showHideNav.css" />
-    <link type="text/css" rel="stylesheet" href="./css/responsive-tabs.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <link rel="stylesheet" type="text/css" href="./css/animated-counter-prograssbar.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link href="./css/animation.css" rel="stylesheet" />
-    <link href="./dist/output.css" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Djirian — Single Origin Freeze-Dried Durian</title>
+  <meta name="description"
+    content="Djirian: Single origin freeze-dried durian from the Di Linh Plateau, Lâm Đồng, Vietnam. No added sugar, no additives. Of the land. Of time. Of those who wait." />
+  <link rel="icon" type="image/png" href="./assets/logo.png" />
 
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+  <!-- CSS -->
+  <link type="text/css" rel="stylesheet" href="./css/showHideNav.css" />
+  <link type="text/css" rel="stylesheet" href="./css/responsive-tabs.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="./css/animated-counter-prograssbar.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="./css/animation.css" rel="stylesheet" />
+  <link href="./dist/output.css" rel="stylesheet" />
 
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet" />
 
-    <!-- Scripts -->
-    <script src="./js/jquery.hidescroll.js" defer></script>
-    <script src="./js/jquery.responsiveTabs.js" defer></script>
-    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./js/animated-counter-prograssbar.js" defer></script>
-    <script defer src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
-    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/i18n.js" defer></script>
-    <script defer type="module" src="./js/main.js"></script>
-  </head>
-  <body>
-    <!--=================
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+
+  <!-- Scripts -->
+  <script src="./js/jquery.hidescroll.js" defer></script>
+  <script src="./js/jquery.responsiveTabs.js" defer></script>
+  <script defer type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./js/animated-counter-prograssbar.js" defer></script>
+  <script defer src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/i18n.js" defer></script>
+  <script defer type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+  <!--=================
         Navigation
     ==================-->
-    <header class="relative z-50">
-      <div class="flex items-center justify-center navbar">
-        <div class="max-w-[1536px] w-full px-4 py-4 md:py-10 md:px-[72px] flex items-center justify-between">
-          <a href="./" class="flex items-center justify-center flex-none gap-2">
-            <img src="./assets/banner_2.png" alt="Djirian product design" class="w-14 h-14 rounded-full object-cover border-2 border-p-400" />
-            <div>
-              <p class="text-lg font-bold tracking-wider font-playfair text-p-900">DJIRIAN</p>
-              <p class="text-[10px] uppercase tracking-[0.2em] text-n-500">Single Origin Durian</p>
-            </div>
-          </a>
+  <header class="relative z-50">
+    <div class="flex items-center justify-center navbar">
+      <div class="max-w-[1536px] w-full px-4 py-4 md:py-10 md:px-[72px] flex items-center justify-between">
+        <!-- Logo -->
+        <a href="./" class="flex items-center justify-center flex-none gap-3 hover-tilt">
+          <img src="./assets/official_logo.png" alt="Djirian Logo" class="h-10 md:h-12 w-auto object-contain" />
+        </a>
 
-          <!-- Nav Links -->
-          <nav class="items-center justify-end hidden w-full gap-6 lg:flex lg:gap-8">
-            <a href="./products.html" class="navLink" data-en="Products" data-zh="產品">Products</a>
-            <a href="./#story" class="navLink" data-en="Our Story" data-zh="品牌故事">Our Story</a>
-            <a href="./#process" class="navLink" data-en="Process" data-zh="工藝">Process</a>
-            <a href="./#contact" class="navLink" data-en="Contact" data-zh="聯絡">Contact</a>
+        <!-- Nav Links -->
+        <nav class="items-center justify-end hidden w-full gap-6 lg:flex lg:gap-8">
+          <a href="./products.html" class="navLink" data-en="Products" data-zh="產品">Products</a>
+          <a href="./#story" class="navLink" data-en="Our Story" data-zh="品牌故事">Our Story</a>
+          <a href="./#process" class="navLink" data-en="Process" data-zh="工藝">Process</a>
+          <a href="./#contact" class="navLink" data-en="Contact" data-zh="聯絡">Contact</a>
 
-            <!-- Language Switcher -->
-            <div class="flex items-center gap-1 ml-4 border-l border-n-200 pl-4">
-              <button class="lang-btn active" data-lang="en">EN</button>
-              <span class="text-n-200">|</span>
-              <button class="lang-btn" data-lang="zh">中文</button>
-            </div>
-          </nav>
-
-          <!-- Hamburger Icon -->
-          <div class="flex items-center gap-3 lg:hidden">
-            <div class="flex items-center gap-1">
-              <button class="lang-btn active" data-lang="en">EN</button>
-              <span class="text-n-200">|</span>
-              <button class="lang-btn" data-lang="zh">中文</button>
-            </div>
-            <div class="cursor-pointer" id="toggle_btn">
-              <img src="./assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
-            </div>
+          <!-- Language Switcher -->
+          <div class="flex items-center gap-1 ml-4 border-l border-n-200 pl-4">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <span class="text-n-200">|</span>
+            <button class="lang-btn" data-lang="zh">中文</button>
           </div>
+        </nav>
 
-          <!-- Mobile Menu -->
-          <div class="dropdown-menu lg:hidden">
-            <a href="./products.html" class="navLink mobileNavLink" data-en="Products" data-zh="產品">Products</a>
-            <a href="#story" class="navLink mobileNavLink" data-en="Our Story" data-zh="品牌故事">Our Story</a>
-            <a href="#process" class="navLink mobileNavLink" data-en="Process" data-zh="工藝">Process</a>
-            <a href="#contact" class="navLink mobileNavLink" data-en="Contact" data-zh="聯絡">Contact</a>
+        <!-- Hamburger Icon -->
+        <div class="flex items-center gap-3 lg:hidden">
+          <div class="flex items-center gap-1">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <span class="text-n-200">|</span>
+            <button class="lang-btn" data-lang="zh">中文</button>
+          </div>
+          <div class="cursor-pointer" id="toggle_btn">
+            <img src="./assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
           </div>
         </div>
+
+        <!-- Mobile Menu -->
+        <div class="dropdown-menu lg:hidden">
+          <a href="./products.html" class="navLink mobileNavLink" data-en="Products" data-zh="產品">Products</a>
+          <a href="#story" class="navLink mobileNavLink" data-en="Our Story" data-zh="品牌故事">Our Story</a>
+          <a href="#process" class="navLink mobileNavLink" data-en="Process" data-zh="工藝">Process</a>
+          <a href="#contact" class="navLink mobileNavLink" data-en="Contact" data-zh="聯絡">Contact</a>
+        </div>
       </div>
-    </header>
+    </div>
+  </header>
 
     <!--=================
-        Hero
+      Hero Section
     ==================-->
-    <section id="hero" class="min-h-screen xl:h-screen max-h-[1100px] bg-gradient-to-br from-p-50 via-p-100/60 to-amber-50/40 overflow-hidden py-12 xl:py-0 relative">
-      <!-- Decorative Innocent Drinks style floating background blur shapes -->
-      <div class="absolute -top-20 -left-20 w-80 h-80 bg-p-200/40 rounded-full blur-3xl animate-float-slow pointer-events-none"></div>
-      <div class="absolute bottom-10 right-1/3 w-96 h-96 bg-amber-200/30 rounded-full blur-3xl animate-float pointer-events-none"></div>
+    <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-p-50 via-lime-50/60 to-white pt-16 sm:pt-20 pb-12 md:py-20 lg:py-24">
+      <!-- Decorative Organic floating background blur shapes -->
+      <div class="absolute -top-20 -left-20 w-80 h-80 bg-p-300/30 rounded-full blur-3xl animate-float-slow pointer-events-none"></div>
+      <div class="absolute bottom-10 right-1/3 w-96 h-96 bg-lime-200/40 rounded-full blur-3xl animate-float pointer-events-none"></div>
 
-      <div class="container relative flex flex-col xl:flex-row items-center justify-center w-full h-full xl:justify-start gap-8 xl:gap-0 z-10">
-        <!-- Main content -->
-        <div class="z-20 flex flex-col items-center justify-center gap-5 md:gap-8 xl:items-start max-w-xl mx-auto xl:mx-0 text-center xl:text-left bg-white/80 xl:bg-transparent backdrop-blur-lg xl:backdrop-blur-none p-6 md:p-10 xl:p-0 rounded-3xl border border-white/80 xl:border-none shadow-2xl xl:shadow-none">
+      <div class="max-w-[1536px] mx-auto px-4 sm:px-8 xl:px-16 min-h-[auto] xl:min-h-[640px] flex flex-col xl:flex-row items-center justify-between gap-8 xl:gap-0 relative z-10">
+        
+        <!-- Text & Headline Content (Clean transparent layout without white box) -->
+        <div class="w-full xl:max-w-2xl text-center xl:text-left z-20 pt-6 xl:pt-10">
           
-          <!-- Innocent Drinks style cute floating badge -->
-          <div data-aos="zoom-in" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-p-600 text-white text-xs md:text-sm font-semibold shadow-md animate-pulse-subtle">
-            <span class="w-2.5 h-2.5 rounded-full bg-amber-300 animate-ping"></span>
-            <span data-en="🌱 100% Pure Highland Durian &bull; Zero Additives" data-zh="🌱 100% 純粹高園榴槤 &bull; 零添加">🌱 100% Pure Highland Durian &bull; Zero Additives</span>
+          <!-- Badge Wrapper Container -->
+          <div data-aos="zoom-in" class="w-full flex justify-center xl:justify-start mb-5 sm:mb-6">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-p-100 border border-p-300 text-p-900 font-extrabold text-xs sm:text-sm tracking-wide shadow-md max-w-full text-center">
+              <span class="w-2.5 h-2.5 rounded-full bg-p-500 animate-ping flex-none"></span>
+              <span data-en="🌱 100% Pure Highland Durian • Zero Additives" data-zh="🌱 100% 純粹高原榴槤 • 零添加" class="leading-snug">🌱 100% Pure Highland Durian • Zero Additives</span>
+            </div>
           </div>
 
-          <div>
-            <h1 data-aos="zoom-in" data-aos-delay="100" class="text-4xl sm:text-5xl leading-tight tracking-wide text-center capitalize font-playfair text-p-950 md:text-6xl lg:text-7xl font-extrabold"
-              data-en="Good for <span class='text-gradient'>You</span>.<br/>Good for the <span class='text-gradient'>Land</span>."
-              data-zh="對<span class='text-gradient'>您</span>好。<br/>對<span class='text-gradient'>土地</span>更好。">
-              Good for <span class="text-gradient">You</span>.<br/>Good for the <span class="text-gradient">Land</span>.
-            </h1>
-          </div>
+          <!-- Main Headline -->
+          <h1 data-aos="zoom-in" data-aos-delay="100" class="text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold text-p-950 font-playfair leading-[1.15] mb-4 md:mb-6"
+              data-en="Good for <span class='text-p-600'>You</span>.<br/>Good for the <span class='text-p-700'>Land</span>."
+              data-zh="對<span class='text-p-600'>您</span>好。<br/>對<span class='text-p-700'>土地</span>更好。">
+            Good for <span class="text-p-600">You</span>.<br/>Good for the <span class="text-p-700">Land</span>.
+          </h1>
 
-          <p data-aos="zoom-in" data-aos-delay="200" class="max-w-xl px-2 text-center text-n-800 md:px-0 xl:text-start text-base md:text-lg leading-relaxed font-medium"
-            data-en="Single-origin freeze-dried durian from the Di Linh highlands. Naturally ripened on trees at 950m altitude. No added sugar, no preservatives, no nonsense."
-            data-zh="來自夷靈高原的單一產地冷凍乾燥榴槤。950公尺海拔自然樹熟。無添加糖、無防腐劑、不玩花樣。">
+          <!-- Description -->
+          <p data-aos="zoom-in" data-aos-delay="200" class="text-n-800 text-sm sm:text-base md:text-lg max-w-xl mx-auto xl:mx-0 leading-relaxed mb-6 md:mb-8 font-medium"
+             data-en="Single-origin freeze-dried durian from the Di Linh highlands. Naturally ripened on trees at 950m altitude. No added sugar, no preservatives, no nonsense."
+             data-zh="來自夷靈高原的單一產地冷凍乾燥榴槤。950公尺海拔自然樹熟。無添加糖、無防腐劑、不玩花樣。">
             Single-origin freeze-dried durian from the Di Linh highlands. Naturally ripened on trees at 950m altitude. No added sugar, no preservatives, no nonsense.
           </p>
 
-          <div data-aos="zoom-in" data-aos-delay="300" class="flex flex-wrap items-center justify-center xl:justify-start gap-4 mt-2">
-            <a class="btn shadow-xl rounded-full !px-8 !py-4 hover-tilt hover:shadow-2xl transition-all duration-300 font-bold text-base bg-p-600 hover:bg-p-700" href="#products"
-              data-en="Taste Pure Durian 💛"
-              data-zh="品嚐純粹榴槤 💛">
-              Taste Pure Durian 💛
+          <!-- Action Buttons -->
+          <div data-aos="zoom-in" data-aos-delay="300" class="flex flex-col sm:flex-row items-center justify-center xl:justify-start gap-3 sm:gap-4 w-full sm:w-auto">
+            <a href="./products.html" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-p-600 hover:bg-p-700 text-white font-bold text-sm sm:text-base shadow-xl transition-all duration-300 hover-tilt flex items-center justify-center gap-2 border border-p-700">
+              <span data-en="Taste Pure Durian 💛" data-zh="品嚐純粹榴槤 💛">Taste Pure Durian 💛</span>
             </a>
-            <a class="px-6 py-3.5 rounded-full border-2 border-p-600 text-p-700 font-bold hover:bg-p-100/50 hover-tilt transition-all duration-300 text-sm md:text-base" href="#story"
-              data-en="Our Story"
-              data-zh="品牌故事">
-              Our Story
+            <a href="#story" class="w-full sm:w-auto px-7 py-3.5 rounded-full border-2 border-p-700 bg-white/90 text-p-950 font-bold text-sm sm:text-base hover:bg-p-700 hover:text-white shadow-md transition-all duration-300 hover-tilt flex items-center justify-center">
+              <span data-en="Our Story" data-zh="品牌故事">Our Story</span>
             </a>
           </div>
         </div>
 
-        <!-- Image with playful floating effect -->
-        <div data-aos="fade-up" class="relative xl:absolute bottom-0 right-0 z-10 w-full xl:w-auto h-[380px] sm:h-[480px] md:h-[580px] xl:h-full flex justify-center xl:justify-end animate-float">
-          <img src="./assets/banner_1.png" alt="Djirian Durian 150g Jar Packaging Design" class="h-full object-contain rounded-3xl xl:rounded-l-3xl xl:rounded-r-none shadow-2xl drop-shadow-2xl" />
+        <!-- Hero Product Stage (Clean Self-Contained Stage) -->
+        <div data-aos="fade-up" class="relative xl:absolute bottom-0 right-0 z-20 w-full xl:w-[620px] 2xl:w-[700px] flex items-center justify-center mt-6 xl:mt-0">
+          
+          <!-- Glowing aura background -->
+          <div class="absolute w-[300px] h-[300px] sm:w-[440px] sm:h-[440px] md:w-[540px] md:h-[540px] rounded-full bg-gradient-to-tr from-amber-300/40 via-p-300/30 to-amber-100/50 blur-3xl animate-pulse-subtle pointer-events-none"></div>
+
+          <!-- Main Image Container Frame (Self-Contained Dimensions with Gentle Floating Animation) -->
+          <div class="hero-slideshow-container animate-float-gentle relative w-[300px] sm:w-[420px] md:w-[480px] xl:w-[560px] h-[380px] sm:h-[500px] md:h-[560px] xl:h-[580px] rounded-3xl overflow-hidden shadow-[0_20px_50px_-10px_rgba(0,0,0,0.25)] border-4 border-white bg-white/40 backdrop-blur-sm">
+            <img src="./assets/banner_1.png" alt="Djirian Design Vertical 1" class="hero-slide active w-full h-full object-cover rounded-2xl absolute inset-0 transition-all duration-1000 ease-in-out opacity-100 scale-100" />
+            <img src="./assets/banner_2.png" alt="Djirian Design Vertical 2" class="hero-slide w-full h-full object-cover rounded-2xl absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-95" />
+            <img src="./assets/banner_3.png" alt="Djirian Design Vertical 3" class="hero-slide w-full h-full object-cover rounded-2xl absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-95" />
+          </div>
+
+          <!-- Slide indicators -->
+          <div class="absolute bottom-4 z-40 flex gap-2">
+            <span class="slide-dot cursor-pointer w-7 h-2.5 rounded-full bg-p-600 shadow-md transition-all duration-300"></span>
+            <span class="slide-dot cursor-pointer w-2.5 h-2.5 rounded-full bg-p-300 shadow-md transition-all duration-300"></span>
+            <span class="slide-dot cursor-pointer w-2.5 h-2.5 rounded-full bg-p-300 shadow-md transition-all duration-300"></span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!--=================
+  <!--=================
         Stats
     ==================-->
-    <section id="stats" class="relative mt-0 bg-fixed bg-center bg-no-repeat bg-cover bg-[url(/assets/highlands.png)]">
-      <!-- overlay -->
-      <div class="absolute inset-0 bg-p-950/90"></div>
+  <section id="stats" class="relative mt-0 bg-fixed bg-center bg-no-repeat bg-cover bg-[url(../assets/banner_4.png)]">
+    <!-- overlay for high contrast readability -->
+    <div class="absolute inset-0 bg-gradient-to-r from-p-950/95 via-p-950/85 to-p-950/95 backdrop-blur-[2px]"></div>
 
-      <!-- content -->
-      <div class="container relative z-10 flex flex-col items-center justify-center px-4 py-20 lg:py-28 gap-14 lg:gap-32 md:flex-row">
-        <div class="stats-item">
-          <h1 class="counter">127</h1>
-          <h2 data-en="Hectares of Partner Orchards" data-zh="公頃合作果園">Hectares of Partner Orchards</h2>
-        </div>
-
-        <svg viewBox="-1 -1 3 137" width="3" height="137" class="hidden md:block" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="lineGradient1" x1="0" y1="0" x2="0" y2="135" gradientUnits="userSpaceOnUse">
-              <stop stop-color="white" stop-opacity="0" />
-              <stop offset="0.5" stop-color="white" />
-              <stop offset="1" stop-color="white" stop-opacity="0" />
-            </linearGradient>
-          </defs>
-          <line x1="0.5" y1="0" x2="0.5" y2="135" stroke="url(#lineGradient1)" stroke-opacity="0.3" fill="none" />
-        </svg>
-
-        <div class="stats-item">
-          <h1 class="counter">52</h1>
-          <h2 data-en="Farming Households" data-zh="合作農戶">Farming Households</h2>
-        </div>
-
-        <svg viewBox="-1 -1 3 137" width="3" height="137" class="hidden md:block" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="lineGradient2" x1="0" y1="0" x2="0" y2="135" gradientUnits="userSpaceOnUse">
-              <stop stop-color="white" stop-opacity="0" />
-              <stop offset="0.5" stop-color="white" />
-              <stop offset="1" stop-color="white" stop-opacity="0" />
-            </linearGradient>
-          </defs>
-          <line x1="0.5" y1="0" x2="0.5" y2="135" stroke="url(#lineGradient2)" stroke-opacity="0.3" fill="none" />
-        </svg>
-
-        <div class="stats-item">
-          <h1 class="counter">97</h1>
-          <h2 data-en="% Nutrition Retained" data-zh="% 鮮果營養保留">% Nutrition Retained</h2>
-        </div>
-
-        <svg viewBox="-1 -1 3 137" width="3" height="137" class="hidden md:block" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="lineGradient3" x1="0" y1="0" x2="0" y2="135" gradientUnits="userSpaceOnUse">
-              <stop stop-color="white" stop-opacity="0" />
-              <stop offset="0.5" stop-color="white" />
-              <stop offset="1" stop-color="white" stop-opacity="0" />
-            </linearGradient>
-          </defs>
-          <line x1="0.5" y1="0" x2="0.5" y2="135" stroke="url(#lineGradient3)" stroke-opacity="0.3" fill="none" />
-        </svg>
-
-        <div class="stats-item">
-          <h1 class="counter">18</h1>
-          <h2 data-en="Months Shelf Life" data-zh="個月保質期">Months Shelf Life</h2>
-        </div>
+    <!-- content (Full Spacious Display without cutoff) -->
+    <div class="container relative z-10 flex flex-col items-center justify-center px-4 py-16 lg:py-24 gap-12 lg:gap-28 md:flex-row">
+      <div class="stats-item">
+        <h1 class="counter">127</h1>
+        <h2 data-en="Hectares of Partner Orchards" data-zh="公頃合作果園">Hectares of Partner Orchards</h2>
       </div>
-    </section>
 
-    <!--=================
-        Innocent-style Marquee Ticker
-    ==================-->
-    <div class="bg-p-600 text-amber-200 py-3 overflow-hidden whitespace-nowrap font-bold text-sm md:text-base border-y border-p-500 shadow-inner">
-      <div class="inline-block animate-marquee uppercase tracking-widest">
-        <span class="mx-6">✨ 100% Single Origin Di Linh</span>
-        <span class="mx-6">⚡ 22-Hour Freeze Dried</span>
-        <span class="mx-6">💛 Zero Added Sugar</span>
-        <span class="mx-6">🌱 52 Partner Farmers</span>
-        <span class="mx-6">📦 Direct Import &amp; OEM</span>
-        <span class="mx-6">✨ 100% Single Origin Di Linh</span>
-        <span class="mx-6">⚡ 22-Hour Freeze Dried</span>
-        <span class="mx-6">💛 Zero Added Sugar</span>
-        <span class="mx-6">🌱 52 Partner Farmers</span>
-        <span class="mx-6">📦 Direct Import &amp; OEM</span>
+      <svg viewBox="-1 -1 3 137" width="3" height="137" class="hidden md:block" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lineGradient1" x1="0" y1="0" x2="0" y2="135" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white" stop-opacity="0" />
+            <stop offset="0.5" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <line x1="0.5" y1="0" x2="0.5" y2="135" stroke="url(#lineGradient1)" stroke-opacity="0.3" fill="none" />
+      </svg>
+
+      <div class="stats-item">
+        <h1 class="counter">52</h1>
+        <h2 data-en="Farming Households" data-zh="合作農戶">Farming Households</h2>
+      </div>
+
+      <svg viewBox="-1 -1 3 137" width="3" height="137" class="hidden md:block" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lineGradient2" x1="0" y1="0" x2="0" y2="135" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white" stop-opacity="0" />
+            <stop offset="0.5" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <line x1="0.5" y1="0" x2="0.5" y2="135" stroke="url(#lineGradient2)" stroke-opacity="0.3" fill="none" />
+      </svg>
+
+      <div class="stats-item">
+        <h1 class="counter">97</h1>
+        <h2 data-en="% Nutrition Retained" data-zh="% 鮮果營養保留">% Nutrition Retained</h2>
+      </div>
+
+      <svg viewBox="-1 -1 3 137" width="3" height="137" class="hidden md:block" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lineGradient3" x1="0" y1="0" x2="0" y2="135" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white" stop-opacity="0" />
+            <stop offset="0.5" stop-color="white" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <line x1="0.5" y1="0" x2="0.5" y2="135" stroke="url(#lineGradient3)" stroke-opacity="0.3" fill="none" />
+      </svg>
+
+      <div class="stats-item">
+        <h1 class="counter">18</h1>
+        <h2 data-en="Months Shelf Life" data-zh="個月保質期">Months Shelf Life</h2>
       </div>
     </div>
+  </section>
 
-    <!--=================
+  <!--=================
+        Innocent-style Marquee Ticker
+    ==================-->
+  <div
+    class="bg-p-600 text-amber-200 py-3 overflow-hidden whitespace-nowrap font-bold text-sm md:text-base border-y border-p-500 shadow-inner">
+    <div class="inline-block animate-marquee uppercase tracking-widest">
+      <span class="mx-6">✨ 100% Single Origin Di Linh</span>
+      <span class="mx-6">⚡ 22-Hour Freeze Dried</span>
+      <span class="mx-6">💛 Zero Added Sugar</span>
+      <span class="mx-6">🌱 52 Partner Farmers</span>
+      <span class="mx-6">📦 Direct Import &amp; OEM</span>
+      <span class="mx-6">✨ 100% Single Origin Di Linh</span>
+      <span class="mx-6">⚡ 22-Hour Freeze Dried</span>
+      <span class="mx-6">💛 Zero Added Sugar</span>
+      <span class="mx-6">🌱 52 Partner Farmers</span>
+      <span class="mx-6">📦 Direct Import &amp; OEM</span>
+    </div>
+  </div>
+
+  <!--=================
         Products
     ==================-->
-    <section id="products">
-      <div class="container">
-        <div class="flex flex-col gap-9">
-          <!-- heading -->
-          <div data-aos="fade-right" class="mt-10">
-            <h2 class="sub_heading" data-en="Discover" data-zh="探索">Discover</h2>
-            <h1 class="main_heading"
-              data-en="One Product, <span class='text-gradient'>Four Formats</span>"
-              data-zh="一個產品，<span class='text-gradient'>四種規格</span>">
-              One Product, <span class="text-gradient">Four Formats</span>
-            </h1>
+  <section id="products">
+    <div class="container">
+      <div class="flex flex-col gap-9">
+        <!-- heading -->
+        <div data-aos="fade-right" class="mt-10">
+          <h2 class="sub_heading" data-en="Discover" data-zh="探索">Discover</h2>
+          <h1 class="main_heading" data-en="One Product, <span class='text-gradient'>Four Formats</span>"
+            data-zh="一個產品，<span class='text-gradient'>四種規格</span>">
+            One Product, <span class="text-gradient">Four Formats</span>
+          </h1>
+        </div>
+        <!-- tabs -->
+        <div id="products-tabs">
+          <ul
+            class="flex bg-p-50 px-4 md:px-10 xl:px-[200px] py-4 md:py-6 gap-4 md:gap-8 justify-center mb-9 text-center">
+            <li><a href="#discovery" class="tab-link" data-en="<span>100g</span> Discovery"
+                data-zh="<span>100g</span> 探索裝"><span>100g</span> Discovery</a></li>
+            <li>|</li>
+            <li><a href="#everyday" class="tab-link" data-en="<span>150g</span> Everyday"
+                data-zh="<span>150g</span> 日常精選"><span>150g</span> Everyday</a></li>
+            <li>|</li>
+            <li><a href="#gift" class="tab-link" data-en="<span>200g</span> Gift"
+                data-zh="<span>200g</span> 禮贈裝"><span>200g</span> Gift</a></li>
+            <li>|</li>
+            <li><a href="#oem" class="tab-link" data-en="OEM / Private Label" data-zh="OEM 代工">OEM / Private Label</a>
+            </li>
+          </ul>
+
+          <div id="discovery">
+            <div class="tabContainer">
+              <img src="./assets/banner_2.png" alt="Discovery 100g" class="productImg shadow-xl rounded-2xl" />
+              <div>
+                <h3 data-en="Discovery 100g" data-zh="探索裝 100g">Discovery 100g</h3>
+                <h4 data-en="Your first step into Di Linh durian" data-zh="踏入夷靈榴槤的第一步">Your first step into Di Linh
+                  durian</h4>
+                <p data-en="A compact personal trial size, especially suited to modern retail, premium convenience stores, airport shops, and refined sample distribution at international trade events. 100% Di Linh durian flesh, Ri6 70% and Monthong 30%."
+                  data-zh="個人小份試用，適合現代零售、精品便利店、機場銷售點，也是國際展會上細緻的樣品之選。100% 夷靈榴槤果肉，Ri6 70% 與 Monthong 30%。">
+                  A compact personal trial size, especially suited to modern retail, premium convenience stores, airport
+                  shops, and refined sample distribution at international trade events. 100% Di Linh durian flesh, Ri6
+                  70% and Monthong 30%.
+                </p>
+                <p class="mt-2 text-lg font-bold text-p-600">$5.90 – $7.50</p>
+                <button>
+                  <a href="./products.html" class="btn"
+                    data-en="View All Products <img src='./assets/right-arrow.svg' alt='right-arrow'/>"
+                    data-zh="查看所有產品 <img src='./assets/right-arrow.svg' alt='right-arrow'/>">
+                    View All Products <img src="./assets/right-arrow.svg" alt="right-arrow" />
+                  </a>
+                </button>
+              </div>
+            </div>
           </div>
-          <!-- tabs -->
-          <div id="products-tabs">
-            <ul class="flex bg-p-50 px-4 md:px-10 xl:px-[200px] py-4 md:py-6 gap-4 md:gap-8 justify-center mb-9 text-center">
-              <li><a href="#discovery" class="tab-link" data-en="<span>100g</span> Discovery" data-zh="<span>100g</span> 探索裝"><span>100g</span> Discovery</a></li>
-              <li>|</li>
-              <li><a href="#everyday" class="tab-link" data-en="<span>150g</span> Everyday" data-zh="<span>150g</span> 日常精選"><span>150g</span> Everyday</a></li>
-              <li>|</li>
-              <li><a href="#gift" class="tab-link" data-en="<span>200g</span> Gift" data-zh="<span>200g</span> 禮贈裝"><span>200g</span> Gift</a></li>
-              <li>|</li>
-              <li><a href="#oem" class="tab-link" data-en="OEM / Private Label" data-zh="OEM 代工">OEM / Private Label</a></li>
-            </ul>
 
-            <div id="discovery">
-              <div class="tabContainer">
-                <img src="./assets/banner_2.png" alt="Discovery 100g" class="productImg shadow-xl rounded-2xl" />
-                <div>
-                  <h3 data-en="Discovery 100g" data-zh="探索裝 100g">Discovery 100g</h3>
-                  <h4 data-en="Your first step into Di Linh durian" data-zh="踏入夷靈榴槤的第一步">Your first step into Di Linh durian</h4>
-                  <p data-en="A compact personal trial size, especially suited to modern retail, premium convenience stores, airport shops, and refined sample distribution at international trade events. 100% Di Linh durian flesh, Ri6 70% and Monthong 30%."
-                     data-zh="個人小份試用，適合現代零售、精品便利店、機場銷售點，也是國際展會上細緻的樣品之選。100% 夷靈榴槤果肉，Ri6 70% 與 Monthong 30%。">
-                    A compact personal trial size, especially suited to modern retail, premium convenience stores, airport shops, and refined sample distribution at international trade events. 100% Di Linh durian flesh, Ri6 70% and Monthong 30%.
-                  </p>
-                  <p class="mt-2 text-lg font-bold text-p-600">$5.90 – $7.50</p>
-                  <button>
-                    <a href="./products.html" class="btn"
-                      data-en="View All Products <img src='./assets/right-arrow.svg' alt='right-arrow'/>"
-                      data-zh="查看所有產品 <img src='./assets/right-arrow.svg' alt='right-arrow'/>">
-                      View All Products <img src="./assets/right-arrow.svg" alt="right-arrow" />
-                    </a>
-                  </button>
-                </div>
+          <div id="everyday">
+            <div class="tabContainer">
+              <img src="./assets/banner_1.png" alt="Everyday Premium 150g" class="productImg shadow-xl rounded-2xl" />
+              <div>
+                <h3 data-en="Everyday Premium 150g" data-zh="日常精選 150g">Everyday Premium 150g</h3>
+                <h4 data-en="The strategic SKU for supermarkets and food stores" data-zh="超市與高端食品店的策略性SKU">The strategic
+                  SKU for supermarkets and food stores</h4>
+                <p data-en="This is our most common weight and our strategic SKU for supermarkets and high end food stores. Same pure Di Linh durian inside — no added sugar, no preservatives, no flavorings, and no additives."
+                  data-zh="最普及的規格，也是我們針對超市與高端食品店的策略性 SKU。內在同樣純粹的夷靈榴槤——無添加糖、無防腐劑、無香精、無任何添加劑。">
+                  This is our most common weight and our strategic SKU for supermarkets and high end food stores. Same
+                  pure Di Linh durian inside — no added sugar, no preservatives, no flavorings, and no additives.
+                </p>
+                <p class="mt-2 text-lg font-bold text-p-600">$8.90 – $11.50</p>
+                <button>
+                  <a href="./products.html" class="btn"
+                    data-en="View All Products <img src='./assets/right-arrow.svg' alt='right-arrow'/>"
+                    data-zh="查看所有產品 <img src='./assets/right-arrow.svg' alt='right-arrow'/>">
+                    View All Products <img src="./assets/right-arrow.svg" alt="right-arrow" />
+                  </a>
+                </button>
               </div>
             </div>
+          </div>
 
-            <div id="everyday">
-              <div class="tabContainer">
-                <img src="./assets/banner_1.png" alt="Everyday Premium 150g" class="productImg shadow-xl rounded-2xl" />
-                <div>
-                  <h3 data-en="Everyday Premium 150g" data-zh="日常精選 150g">Everyday Premium 150g</h3>
-                  <h4 data-en="The strategic SKU for supermarkets and food stores" data-zh="超市與高端食品店的策略性SKU">The strategic SKU for supermarkets and food stores</h4>
-                  <p data-en="This is our most common weight and our strategic SKU for supermarkets and high end food stores. Same pure Di Linh durian inside — no added sugar, no preservatives, no flavorings, and no additives."
-                     data-zh="最普及的規格，也是我們針對超市與高端食品店的策略性 SKU。內在同樣純粹的夷靈榴槤——無添加糖、無防腐劑、無香精、無任何添加劑。">
-                    This is our most common weight and our strategic SKU for supermarkets and high end food stores. Same pure Di Linh durian inside — no added sugar, no preservatives, no flavorings, and no additives.
-                  </p>
-                  <p class="mt-2 text-lg font-bold text-p-600">$8.90 – $11.50</p>
-                  <button>
-                    <a href="./products.html" class="btn"
-                      data-en="View All Products <img src='./assets/right-arrow.svg' alt='right-arrow'/>"
-                      data-zh="查看所有產品 <img src='./assets/right-arrow.svg' alt='right-arrow'/>">
-                      View All Products <img src="./assets/right-arrow.svg" alt="right-arrow" />
-                    </a>
-                  </button>
-                </div>
+          <div id="gift">
+            <div class="tabContainer">
+              <img src="./assets/banner_3.png" alt="Share & Gift 200g" class="productImg shadow-xl rounded-2xl" />
+              <div>
+                <h3 data-en="Share &amp; Gift 200g" data-zh="分享禮贈 200g">Share &amp; Gift 200g</h3>
+                <h4 data-en="An ideal weight for gifting occasions" data-zh="禮贈場合的理想份量">An ideal weight for gifting
+                  occasions</h4>
+                <p data-en="An ideal weight for households or as a small personal gift. The packaging carries a clear gifting intent and pairs naturally into elegant gift sets with tea, coffee, or chocolate. Partners may add an outer premium paper box as an option."
+                  data-zh="家庭分享或小型禮贈的理想份量，包裝帶明確的禮品意涵，可與茶、咖啡、巧克力組合成雅緻禮盒。夥伴可加選外層精裝紙盒。">
+                  An ideal weight for households or as a small personal gift. The packaging carries a clear gifting
+                  intent and pairs naturally into elegant gift sets with tea, coffee, or chocolate. Partners may add an
+                  outer premium paper box as an option.
+                </p>
+                <p class="mt-2 text-lg font-bold text-p-600">$16.90 – $21.90</p>
+                <button>
+                  <a href="./products.html" class="btn"
+                    data-en="View All Products <img src='./assets/right-arrow.svg' alt='right-arrow'/>"
+                    data-zh="查看所有產品 <img src='./assets/right-arrow.svg' alt='right-arrow'/>">
+                    View All Products <img src="./assets/right-arrow.svg" alt="right-arrow" />
+                  </a>
+                </button>
               </div>
             </div>
+          </div>
 
-            <div id="gift">
-              <div class="tabContainer">
-                <img src="./assets/banner_3.png" alt="Share & Gift 200g" class="productImg shadow-xl rounded-2xl" />
-                <div>
-                  <h3 data-en="Share &amp; Gift 200g" data-zh="分享禮贈 200g">Share &amp; Gift 200g</h3>
-                  <h4 data-en="An ideal weight for gifting occasions" data-zh="禮贈場合的理想份量">An ideal weight for gifting occasions</h4>
-                  <p data-en="An ideal weight for households or as a small personal gift. The packaging carries a clear gifting intent and pairs naturally into elegant gift sets with tea, coffee, or chocolate. Partners may add an outer premium paper box as an option."
-                     data-zh="家庭分享或小型禮贈的理想份量，包裝帶明確的禮品意涵，可與茶、咖啡、巧克力組合成雅緻禮盒。夥伴可加選外層精裝紙盒。">
-                    An ideal weight for households or as a small personal gift. The packaging carries a clear gifting intent and pairs naturally into elegant gift sets with tea, coffee, or chocolate. Partners may add an outer premium paper box as an option.
-                  </p>
-                  <p class="mt-2 text-lg font-bold text-p-600">$16.90 – $21.90</p>
-                  <button>
-                    <a href="./products.html" class="btn"
-                      data-en="View All Products <img src='./assets/right-arrow.svg' alt='right-arrow'/>"
-                      data-zh="查看所有產品 <img src='./assets/right-arrow.svg' alt='right-arrow'/>">
-                      View All Products <img src="./assets/right-arrow.svg" alt="right-arrow" />
-                    </a>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div id="oem">
-              <div class="tabContainer">
-                <img src="./assets/durian_closeup.png" alt="OEM Private Label" class="productImg" />
-                <div>
-                  <h3 data-en="OEM / Private Label" data-zh="OEM 與自有品牌代工">OEM / Private Label</h3>
-                  <h4 data-en="Custom packaging for retail chains & F&amp;B brands" data-zh="為零售連鎖與餐飲品牌量身定制">Custom packaging for retail chains &amp; F&amp;B brands</h4>
-                  <p data-en="A non-branded line, showing only information required by law. Weight and packaging are designed to each partner's specification, with a minimum order of 300 kilograms. We support packaging design, handle full export documentation, and comply with specific labeling requirements."
-                     data-zh="不掛 Djirian 品牌，僅顯示法定必要資訊。淨含量與包裝依夥伴需求設計，MOQ 起訂 300 公斤。需要時我們可協助包裝設計，處理全部出口文件，並確保符合各市場的標示要求。">
-                    A non-branded line, showing only information required by law. Weight and packaging are designed to each partner's specification, with a minimum order of 300 kilograms. We support packaging design, handle full export documentation, and comply with specific labeling requirements.
-                  </p>
-                  <p class="mt-2 text-lg font-bold text-p-600"
-                    data-en="Volume-based pricing — Contact us"
-                    data-zh="依量報價——歡迎洽詢">Volume-based pricing — Contact us</p>
-                  <button>
-                    <a href="#contact" class="btn"
-                      data-en="Contact Us <img src='./assets/right-arrow.svg' alt='right-arrow'/>"
-                      data-zh="聯絡我們 <img src='./assets/right-arrow.svg' alt='right-arrow'/>">
-                      Contact Us <img src="./assets/right-arrow.svg" alt="right-arrow" />
-                    </a>
-                  </button>
-                </div>
+          <div id="oem">
+            <div class="tabContainer">
+              <img src="./assets/durian_closeup.png" alt="OEM Private Label" class="productImg" />
+              <div>
+                <h3 data-en="OEM / Private Label" data-zh="OEM 與自有品牌代工">OEM / Private Label</h3>
+                <h4 data-en="Custom packaging for retail chains & F&amp;B brands" data-zh="為零售連鎖與餐飲品牌量身定制">Custom
+                  packaging for retail chains &amp; F&amp;B brands</h4>
+                <p data-en="A non-branded line, showing only information required by law. Weight and packaging are designed to each partner's specification, with a minimum order of 300 kilograms. We support packaging design, handle full export documentation, and comply with specific labeling requirements."
+                  data-zh="不掛 Djirian 品牌，僅顯示法定必要資訊。淨含量與包裝依夥伴需求設計，MOQ 起訂 300 公斤。需要時我們可協助包裝設計，處理全部出口文件，並確保符合各市場的標示要求。">
+                  A non-branded line, showing only information required by law. Weight and packaging are designed to
+                  each partner's specification, with a minimum order of 300 kilograms. We support packaging design,
+                  handle full export documentation, and comply with specific labeling requirements.
+                </p>
+                <p class="mt-2 text-lg font-bold text-p-600" data-en="Volume-based pricing — Contact us"
+                  data-zh="依量報價——歡迎洽詢">Volume-based pricing — Contact us</p>
+                <button>
+                  <a href="#contact" class="btn"
+                    data-en="Contact Us <img src='./assets/right-arrow.svg' alt='right-arrow'/>"
+                    data-zh="聯絡我們 <img src='./assets/right-arrow.svg' alt='right-arrow'/>">
+                    Contact Us <img src="./assets/right-arrow.svg" alt="right-arrow" />
+                  </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!--=================
+  <!--=================
         Slogan / Brand Statement
     ==================-->
-    <section id="slogan" class="mt-20 overflow-clip">
-      <div class="relative min-w-full h-[30vh] max-h-[276px] overflow-hidden flex justify-center items-center bg-[url(/assets/durian_closeup.png)] bg-cover bg-center">
-        <div class="absolute inset-0 bg-p-950/70"></div>
-        <p class="relative z-10 px-4 text-base tracking-wide text-center text-white md:text-2xl text-shadow-[2px_2px_8px_#000000] font-playfair italic"
-          data-en="&ldquo;Of the land. Of time. Of those who wait.&rdquo;"
-          data-zh="&ldquo;來自這片土地。來自漫長的時間。來自懂得等待的人。&rdquo;">
-          &ldquo;Of the land. Of time. Of those who wait.&rdquo;
-        </p>
-      </div>
-    </section>
+  <section id="slogan" class="mt-20 overflow-clip">
+    <div
+      class="relative min-w-full h-[30vh] max-h-[276px] overflow-hidden flex justify-center items-center bg-[url(/assets/durian_closeup.png)] bg-cover bg-center">
+      <div class="absolute inset-0 bg-p-950/70"></div>
+      <p class="relative z-10 px-4 text-base tracking-wide text-center text-white md:text-2xl text-shadow-[2px_2px_8px_#000000] font-playfair italic"
+        data-en="&ldquo;Of the land. Of time. Of those who wait.&rdquo;"
+        data-zh="&ldquo;來自這片土地。來自漫長的時間。來自懂得等待的人。&rdquo;">
+        &ldquo;Of the land. Of time. Of those who wait.&rdquo;
+      </p>
+    </div>
+  </section>
 
-    <!--=================
+  <!--=================
         Features / Why Djirian
     ==================-->
-    <section id="features">
-      <div class="container relative m-20 text-center">
-        <!-- row 1 -->
-        <div class="flex flex-col items-center justify-center w-full gap-0 lg:gap-10 lg:flex-row">
-          <div data-aos="zoom-in" class="feature-card group bg-[url(../assets/feat_origin.png)]">
-            <div class="feature-filter"></div>
-            <h3 data-en="True Single Origin" data-zh="真正單一產地">True Single Origin</h3>
-            <p data-en="All raw material comes from the Di Linh Plateau, at altitudes between 920 and 1,050 meters, on ancient basalt soil three million years old. We do not blend with any other region."
-               data-zh="全部原料來自海拔920至1,050公尺的夷靈高原，種在三百萬年歷史的玄武岩之上。絕不與其他產區摻配。">
-              All raw material comes from the Di Linh Plateau, at altitudes between 920 and 1,050 meters, on ancient basalt soil three million years old. We do not blend with any other region.
-            </p>
-          </div>
-
-          <div data-aos="zoom-in" data-aos-delay="400" class="order-first bg-p-50 feature-card lg:order-none lg:bg-transparent">
-            <div>
-              <h2 class="sub_heading" data-en="Why Us?" data-zh="為何選我們？">Why Us?</h2>
-              <h1 class="leading-loose text-center main_heading"
-                data-en="Why Choose <span class='text-gradient'>Djirian</span>"
-                data-zh="為何選擇 <span class='text-gradient'>Djirian</span>">
-                Why Choose <span class="text-gradient">Djirian</span>
-              </h1>
-            </div>
-          </div>
-
-          <div data-aos="zoom-in" data-aos-delay="100" class="feature-card group bg-[url(../assets/feat_pure.png)]">
-            <div class="feature-filter"></div>
-            <h3 data-en="Pure to the Core" data-zh="純粹到底">Pure to the Core</h3>
-            <p data-en="Not a single grain of added sugar, not a drop of flavoring, no preservatives, no additives. And no economy version exists."
-               data-zh="無一粒額外的糖、無一滴香精、無防腐劑、無任何添加劑。也沒有任何「經濟版本」。">
-              Not a single grain of added sugar, not a drop of flavoring, no preservatives, no additives. And no economy version exists.
-            </p>
-          </div>
-        </div>
-
-        <!-- row 2 -->
-        <div class="flex flex-col items-center justify-center w-full lg:-mt-20 lg:gap-10 lg:flex-row">
-          <div data-aos="zoom-in" data-aos-delay="200" class="feature-card group bg-[url(../assets/feat_tech.png)]">
-            <div class="feature-filter"></div>
-            <h3 data-en="22-Hour Freeze Dry" data-zh="22小時冷凍乾燥">22-Hour Freeze Dry</h3>
-            <p data-en="A twenty-two hour freeze-drying cycle designed to protect every delicate cell, retaining 97% of the nutrition with final moisture below 4%."
-               data-zh="二十二小時的冷凍乾燥流程，為每一個細胞而設計，保留約97%的鮮果營養、成品含水率低於4%。">
-              A twenty-two hour freeze-drying cycle designed to protect every delicate cell, retaining 97% of the nutrition with final moisture below 4%.
-            </p>
-          </div>
-
-          <div data-aos="zoom-in" data-aos-delay="300" class="feature-card group bg-[url(../assets/feat_fair.png)]">
-            <div class="feature-filter"></div>
-            <h3 data-en="Fair & Transparent" data-zh="公正透明">Fair &amp; Transparent</h3>
-            <p data-en="52 partner farming households with 3-year offtake contracts and a protective floor price. Complete transparency about our current stage and capabilities."
-               data-zh="五十二戶合作農民透過三年包銷合約與保底價格機制長期同行。對現階段的能力完全透明。">
-              52 partner farming households with 3-year offtake contracts and a protective floor price. Complete transparency about our current stage and capabilities.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--=================
-        Production Process
-    ==================-->
-    <section id="process">
-      <div class="container my-20">
-        <!-- heading -->
-        <div class="flex flex-col items-start md:items-center lg:items-start">
-          <div data-aos="fade-right">
-            <h2 class="sub_heading" data-en="From Orchard to You" data-zh="從果園到您手中">From Orchard to You</h2>
-            <h2 class="main_heading"
-              data-en="Seven Steps of <span class='text-gradient'>Careful Craft</span>"
-              data-zh="七步<span class='text-gradient'>精心工藝</span>">
-              Seven Steps of <span class="text-gradient">Careful Craft</span>
-            </h2>
-          </div>
-
-          <p data-aos="fade-right" data-aos-delay="100" class="max-w-lg pr-16 mt-2 text-xs text-start md:text-center lg:text-start text-n-500"
-            data-en="The final quality of a bag of freeze-dried durian is decided almost entirely within the first 48 hours after the fruit leaves the tree. Every action must be precise to the minute."
-            data-zh="一袋冷凍乾燥榴槤最後的品質，幾乎在果實離樹後的頭四十八小時內就已被決定。每一個步驟都必須精確到分鐘。">
-            The final quality of a bag of freeze-dried durian is decided almost entirely within the first 48 hours after the fruit leaves the tree. Every action must be precise to the minute.
+  <section id="features">
+    <div class="container relative m-20 text-center">
+      <!-- row 1 -->
+      <div class="flex flex-col items-center justify-center w-full gap-0 lg:gap-10 lg:flex-row">
+        <div data-aos="zoom-in" class="feature-card group bg-[url(../assets/feat_origin.png)]">
+          <div class="feature-filter"></div>
+          <h3 data-en="True Single Origin" data-zh="真正單一產地">True Single Origin</h3>
+          <p data-en="All raw material comes from the Di Linh Plateau, at altitudes between 920 and 1,050 meters, on ancient basalt soil three million years old. We do not blend with any other region."
+            data-zh="全部原料來自海拔920至1,050公尺的夷靈高原，種在三百萬年歷史的玄武岩之上。絕不與其他產區摻配。">
+            All raw material comes from the Di Linh Plateau, at altitudes between 920 and 1,050 meters, on ancient
+            basalt soil three million years old. We do not blend with any other region.
           </p>
         </div>
 
-        <!-- production carousel -->
-        <div class="lg:px-4 md:x-2 mt-9 slider">
-          <!-- Step 1-3 -->
-          <div class="!flex flex-col lg:flex-row items-center justify-between">
-            <div class="flex-1 best-product--left">
-              <div class="best-product-info">
-                <h3 data-en="Harvest &amp; Sort" data-zh="採收與分級">Harvest &amp; Sort</h3>
-                <p data-en="Step 1: Hand-picked only when naturally ripened on the tree. Harvest teams work in pairs, led by farmers with 20+ years experience. Step 2: Sorted within 4 hours at collection points no more than 5km from the orchard. Step 3: Peeling and pre-processing within 12 hours of harvest at 18-20°C."
-                   data-zh="第一步：全程人工，只採已在樹上自然熟透的果實。採收兩人一組，由資深農民帶隊。第二步：四小時內於集貨點分級，距果園不超過五公里。第三步：採收後十二小時內在攝氏18-20度環境中開殼與初處理。">
-                  Step 1: Hand-picked only when naturally ripened on the tree. Harvest teams work in pairs, led by farmers with 20+ years experience. Step 2: Sorted within 4 hours at collection points no more than 5km from the orchard. Step 3: Peeling and pre-processing within 12 hours of harvest at 18-20°C.
-                </p>
-              </div>
-
-              <div class="benefit-bars" id="firstbar">
-                <div>
-                  <div class="flex-1 progressbar-item">
-                    <h4 class="progress-title" data-en="Aroma Retention" data-zh="香氣保留">Aroma Retention</h4>
-                    <div progress-bar data-percentage="97%">
-                      <div class="progress-number"><div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span></div></div>
-                      <div class="progress-bg"><div class="progress-fill"></div></div>
-                    </div>
-                  </div>
-                  <div class="flex-1 progressbar-item">
-                    <h4 class="progress-title" data-en="Cell Structure Integrity" data-zh="細胞結構完整性">Cell Structure Integrity</h4>
-                    <div progress-bar data-percentage="95%">
-                      <div class="progress-number"><div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span></div></div>
-                      <div class="progress-bg"><div class="progress-fill"></div></div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex-1 progressbar-item">
-                    <h4 class="progress-title" data-en="Nutrition Preserved" data-zh="營養保留">Nutrition Preserved</h4>
-                    <div progress-bar data-percentage="97%">
-                      <div class="progress-number"><div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span></div></div>
-                      <div class="progress-bg"><div class="progress-fill"></div></div>
-                    </div>
-                  </div>
-                  <div class="flex-1 progressbar-item">
-                    <h4 class="progress-title" data-en="Moisture Below" data-zh="含水率低於">Moisture Below</h4>
-                    <div progress-bar data-percentage="4%">
-                      <div class="progress-number"><div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span></div></div>
-                      <div class="progress-bg"><div class="progress-fill"></div></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <img src="./assets/banner_3.png" alt="Harvest & Crate Packaging" class="rounded-2xl shadow-xl object-cover max-h-[550px]" />
-            </div>
-          </div>
-
-          <!-- Step 4-5 -->
-          <div class="!flex flex-col lg:flex-row items-center justify-between">
-            <div class="flex-1 best-product--left">
-              <div class="best-product-info">
-                <h3 data-en="Freeze &amp; Dry" data-zh="急凍與乾燥">Freeze &amp; Dry</h3>
-                <p data-en="Step 4: Flash freezing within 30 minutes at -40°C. Ice crystals form so small they cannot rupture cell walls. Step 5: 22-hour freeze-drying in a vacuum chamber at pressure 2,000 times lower than atmosphere. Ice sublimates directly to vapor without becoming liquid. The cell structure stays intact, the aroma does not vanish."
-                   data-zh="第四步：三十分鐘內在零下40度急凍。冰晶極其細小，小到無力撐破細胞壁。第五步：二十二小時冷凍乾燥，真空艙壓力低於大氣兩千倍。冰直接昇華為水氣，不經過液體階段。細胞結構完整保留，香氣不隨水氣飄走。">
-                  Step 4: Flash freezing within 30 minutes at -40°C. Ice crystals form so small they cannot rupture cell walls. Step 5: 22-hour freeze-drying in a vacuum chamber at pressure 2,000 times lower than atmosphere. Ice sublimates directly to vapor without becoming liquid. The cell structure stays intact, the aroma does not vanish.
-                </p>
-              </div>
-
-              <div class="benefit-bars">
-                <div>
-                  <div class="flex-1 progressbar-item">
-                    <h4 class="progress-title" data-en="Flash Freeze Temp" data-zh="急凍溫度">Flash Freeze Temp</h4>
-                    <div progress-bar data-percentage="96%">
-                      <div class="progress-number"><div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span></div></div>
-                      <div class="progress-bg"><div class="progress-fill"></div></div>
-                    </div>
-                  </div>
-                  <div class="flex-1 progressbar-item">
-                    <h4 class="progress-title" data-en="Texture Quality" data-zh="質地品質">Texture Quality</h4>
-                    <div progress-bar data-percentage="98%">
-                      <div class="progress-number"><div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span></div></div>
-                      <div class="progress-bg"><div class="progress-fill"></div></div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex-1 progressbar-item">
-                    <h4 class="progress-title" data-en="Vacuum Precision" data-zh="真空精度">Vacuum Precision</h4>
-                    <div progress-bar data-percentage="99%">
-                      <div class="progress-number"><div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span></div></div>
-                      <div class="progress-bg"><div class="progress-fill"></div></div>
-                    </div>
-                  </div>
-                  <div class="flex-1 progressbar-item">
-                    <h4 class="progress-title" data-en="Sublimation Purity" data-zh="昇華純度">Sublimation Purity</h4>
-                    <div progress-bar data-percentage="97%">
-                      <div class="progress-number"><div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span></div></div>
-                      <div class="progress-bg"><div class="progress-fill"></div></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <img src="./assets/banner_4.png" alt="Freeze drying batch" class="rounded-2xl shadow-xl object-cover max-h-[550px]" />
-            </div>
-          </div>
-
-          <!-- Step 6-7 -->
-          <div class="!flex flex-col lg:flex-row items-center justify-between">
-            <div class="flex-1 best-product--left">
-              <div class="best-product-info">
-                <h3 data-en="Inspect &amp; Pack" data-zh="品檢與包裝">Inspect &amp; Pack</h3>
-                <p data-en="Step 6: Every piece inspected by eye and hand. Average rejection rate runs 8-12%, considerably higher than industry norms — a level we accept by choice. Step 7: Packed into multi-layer moisture barrier bags, purged with nitrogen, heat sealed. Every bag carries a lot code with exact production date."
-                   data-zh="第六步：用眼睛與雙手仔細挑選，剔除率平均八到十二個百分點，明顯高於行業標準，這是我們主動接受的代價。第七步：使用多層防潮包材，充氮排氧後熱封。每一袋都印有可追溯批次碼與確切生產日期。">
-                  Step 6: Every piece inspected by eye and hand. Average rejection rate runs 8-12%, considerably higher than industry norms — a level we accept by choice. Step 7: Packed into multi-layer moisture barrier bags, purged with nitrogen, heat sealed. Every bag carries a lot code with exact production date.
-                </p>
-              </div>
-
-              <div class="benefit-bars">
-                <div>
-                  <div class="flex-1 progressbar-item">
-                    <h4 class="progress-title" data-en="Manual QC Pass Rate" data-zh="人工品檢通過率">Manual QC Pass Rate</h4>
-                    <div progress-bar data-percentage="90%">
-                      <div class="progress-number"><div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span></div></div>
-                      <div class="progress-bg"><div class="progress-fill"></div></div>
-                    </div>
-                  </div>
-                  <div class="flex-1 progressbar-item">
-                    <h4 class="progress-title" data-en="Package Seal Integrity" data-zh="包裝密封性">Package Seal Integrity</h4>
-                    <div progress-bar data-percentage="100%">
-                      <div class="progress-number"><div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span></div></div>
-                      <div class="progress-bg"><div class="progress-fill"></div></div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex-1 progressbar-item">
-                    <h4 class="progress-title" data-en="Metal Detection" data-zh="金屬檢測">Metal Detection</h4>
-                    <div progress-bar data-percentage="100%">
-                      <div class="progress-number"><div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span></div></div>
-                      <div class="progress-bg"><div class="progress-fill"></div></div>
-                    </div>
-                  </div>
-                  <div class="flex-1 progressbar-item">
-                    <h4 class="progress-title" data-en="Traceability" data-zh="可追溯性">Traceability</h4>
-                    <div progress-bar data-percentage="100%">
-                      <div class="progress-number"><div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span></div></div>
-                      <div class="progress-bg"><div class="progress-fill"></div></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <img src="./assets/banner_1.png" alt="Finished Product Packaging" class="rounded-2xl shadow-xl object-cover max-h-[550px]" />
-            </div>
+        <div data-aos="zoom-in" data-aos-delay="400"
+          class="order-first bg-p-50 feature-card lg:order-none lg:bg-transparent">
+          <div>
+            <h2 class="sub_heading" data-en="Why Us?" data-zh="為何選我們？">Why Us?</h2>
+            <h1 class="leading-loose text-center main_heading"
+              data-en="Why Choose <span class='text-gradient'>Djirian</span>"
+              data-zh="為何選擇 <span class='text-gradient'>Djirian</span>">
+              Why Choose <span class="text-gradient">Djirian</span>
+            </h1>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!--=================
-      Brand Story
-    ==================-->
-    <section id="story" class="relative overflow-hidden">
-      <div class="flex justify-end min-h-[800px] xl:h-screen max-h-[1100px] p-0 w-full max-w-none bg-[url('../assets/highlands.png')] bg-no-repeat bg-center bg-cover relative">
-        <!-- Semi-transparent overlay to ensure image is clearly visible while keeping text readable -->
-        <div class="w-full h-full lg:w-2/3 bg-gradient-to-r from-p-950/90 via-p-950/75 to-p-950/60 p-6 md:p-12 lg:p-16 flex items-center">
-          <div class="container relative flex items-center justify-center h-full md:justify-end 2xl:justify-center">
-            <!-- watermark -->
-            <div data-aos="fade-right" class="absolute hidden -translate-y-1/2 translate-x-36 top-1/2 right-1/2 md:block 2xl:translate-x-0 pointer-events-none">
-              <h1 class="uppercase -rotate-90 text-[140px] lg:text-[168px] text-center leading-[148px] font-bold text-amber-200 opacity-15 font-playfair">
-                DJI <br /> RIAN
-              </h1>
-            </div>
-
-            <!-- main content -->
-            <div class="relative z-10 max-w-xl text-left" data-aos="fade-left">
-              <div class="mb-6 md:mb-9">
-                <span class="px-4 py-1.5 rounded-full bg-amber-400/20 text-amber-300 font-semibold text-xs md:text-sm uppercase tracking-wider mb-4 inline-block border border-amber-400/30" data-en="Our Sacred Story" data-zh="品牌故事">Our Sacred Story</span>
-                <h1 class="text-white main_heading text-3xl sm:text-4xl md:text-5xl font-playfair leading-tight font-extrabold mt-2"
-                  data-en="Three Million Years,<br/><span class='text-amber-300'>120 Days</span>, 22 Hours"
-                  data-zh="三百萬年、<br/><span class='text-amber-300'>一百二十天</span>、二十二小時">Three Million Years,<br/><span class="text-amber-300">120 Days</span>, 22 Hours</h1>
-              </div>
-
-              <div class="space-y-4 text-n-100 text-sm md:text-base leading-relaxed font-normal bg-p-950/40 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <p data-en="Three million years ago, the last volcanoes of Di Linh went quiet, leaving three meters of basalt soil. 120 days is the time a durian needs to ripen fully at 950 meters altitude."
-                   data-zh="大約三百萬年前，夷靈高原最後幾座火山熄滅，留下三公尺厚的玄武岩。一百二十天，是一顆榴槤在海拔九百五十公尺處完全熟透所需的時間。">
-                  Three million years ago, the last volcanoes of Di Linh went quiet, leaving three meters of basalt soil. 120 days is the time a durian needs to ripen fully at 950 meters altitude.
-                </p>
-                <p data-en="22 hours is how long each batch rests in our freeze-drying chamber. These three numbers gather everything we pursue. We do not allow ourselves to shorten any one of them."
-                   data-zh="二十二小時，是每一批榴槤在冷凍乾燥艙中靜臥的時間。這三個數字概括了我們追求的一切。任何一個，我們都絕不允許縮短。">
-                  22 hours is how long each batch rests in our freeze-drying chamber. These three numbers gather everything we pursue. We do not allow ourselves to shorten any one of them.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div data-aos="zoom-in" data-aos-delay="100" class="feature-card group bg-[url(../assets/feat_pure.png)]">
+          <div class="feature-filter"></div>
+          <h3 data-en="Pure to the Core" data-zh="純粹到底">Pure to the Core</h3>
+          <p data-en="Not a single grain of added sugar, not a drop of flavoring, no preservatives, no additives. And no economy version exists."
+            data-zh="無一粒額外的糖、無一滴香精、無防腐劑、無任何添加劑。也沒有任何「經濟版本」。">
+            Not a single grain of added sugar, not a drop of flavoring, no preservatives, no additives. And no economy
+            version exists.
+          </p>
         </div>
       </div>
-    </section>
 
-    <!--=================
-    Contact
-    ==================-->
-    <section id="contact">
-      <div class="container my-20">
-        <div class="flex flex-col w-full gap-10 lg:flex-row">
-          <!-- contact info -->
-          <div class="flex h-[515px] flex-col items-center justify-center flex-1 w-full px-10 py-20 border border-dotted border-p-600 gap-9">
-            <div data-aos="fade-down">
-              <h2 class="sub_heading" data-en="Get in Touch" data-zh="聯絡我們">Get in Touch</h2>
-              <h1 class="main_heading" data-en="Contact Djirian" data-zh="聯繫 Djirian">Contact Djirian</h1>
-            </div>
+      <!-- row 2 -->
+      <div class="flex flex-col items-center justify-center w-full lg:-mt-20 lg:gap-10 lg:flex-row">
+        <div data-aos="zoom-in" data-aos-delay="200" class="feature-card group bg-[url(../assets/feat_tech.png)]">
+          <div class="feature-filter"></div>
+          <h3 data-en="22-Hour Freeze Dry" data-zh="22小時冷凍乾燥">22-Hour Freeze Dry</h3>
+          <p data-en="A twenty-two hour freeze-drying cycle designed to protect every delicate cell, retaining 97% of the nutrition with final moisture below 4%."
+            data-zh="二十二小時的冷凍乾燥流程，為每一個細胞而設計，保留約97%的鮮果營養、成品含水率低於4%。">
+            A twenty-two hour freeze-drying cycle designed to protect every delicate cell, retaining 97% of the
+            nutrition with final moisture below 4%.
+          </p>
+        </div>
 
-            <div class="contact-info">
-              <div>
-                <img src="./assets/building.svg" alt="building" class="size-4" />
-                <h1 data-en="Address" data-zh="地址">Address</h1>
-              </div>
-              <p data-en="Di Linh, Lâm Đồng Province, Vietnam" data-zh="越南林同省夷靈">Di Linh, Lâm Đồng Province, Vietnam</p>
-            </div>
-
-            <div class="contact-info">
-              <div>
-                <img src="./assets/mail.svg" alt="email" class="size-4" />
-                <h1>Email</h1>
-              </div>
-              <p>contact@djirian.com</p>
-            </div>
-
-            <div class="contact-info">
-              <div>
-                <img src="./assets/phone.svg" alt="phone" class="size-4" />
-                <h1>WhatsApp / Zalo</h1>
-              </div>
-              <p>+84 xxx xxx xxx</p>
-            </div>
-          </div>
-
-          <!-- newsletter signup -->
-          <div class="relative text-center flex flex-col items-center w-full flex-1 h-[515px] px-10 py-20 gap-9 border border-p-600 overflow-clip">
-            <div data-aos="fade-down">
-              <h2 class="sub_heading" data-en="Partnership Inquiry" data-zh="合作洽詢">Partnership Inquiry</h2>
-              <h1 class="main_heading" data-en="Work With Us" data-zh="與我們合作">Work With Us</h1>
-            </div>
-
-            <p data-en="Interested in importing Djirian? We welcome partnerships in direct import, exclusive distribution, and OEM."
-               data-zh="有意進口 Djirian？我們歡迎直接進口、區域獨家經銷、OEM 代工等合作方式。">
-              Interested in importing Djirian? We welcome partnerships in direct import, exclusive distribution, and OEM.
-            </p>
-
-            <div class="relative w-[250px] md:w-[350px]">
-              <input type="email" placeholder="Your email address" class="w-full px-12 py-3 border border-p-600" data-en="Your email address" data-zh="您的電郵地址" />
-              <img src="./assets/mail2.svg" alt="mail icon" class="absolute -translate-y-1/2 top-1/2 left-4" />
-            </div>
-
-            <button class="flex-none !border-p-600 w-[250px] md:w-[350px]">
-              <div class="capitalize btn !bg-p-600 hover:!bg-p-700">
-                <span class="w-full text-center" data-en="Send Inquiry" data-zh="發送洽詢">Send Inquiry</span>
-              </div>
-            </button>
-
-            <!-- decorative designer image -->
-            <img src="./assets/banner_2.png" alt="decor" class="absolute -bottom-16 -right-16 w-[320px] md:w-[380px] opacity-25 -z-10 object-contain pointer-events-none" />
-          </div>
+        <div data-aos="zoom-in" data-aos-delay="300" class="feature-card group bg-[url(../assets/feat_fair.png)]">
+          <div class="feature-filter"></div>
+          <h3 data-en="Fair & Transparent" data-zh="公正透明">Fair &amp; Transparent</h3>
+          <p data-en="52 partner farming households with 3-year offtake contracts and a protective floor price. Complete transparency about our current stage and capabilities."
+            data-zh="五十二戶合作農民透過三年包銷合約與保底價格機制長期同行。對現階段的能力完全透明。">
+            52 partner farming households with 3-year offtake contracts and a protective floor price. Complete
+            transparency about our current stage and capabilities.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!--=================
-    Footer
+  <!--=================
+        Production Process
     ==================-->
-    <footer class="bg-p-950">
-      <div class="container text-white/50">
-        <p class="text-center mt-9" data-en="© Djirian 2026 — Single Origin Freeze-Dried Durian, Di Linh, Vietnam"
-           data-zh="© Djirian 2026 — 單一產地冷凍乾燥榴槤，越南夷靈">
-          © Djirian 2026 — Single Origin Freeze-Dried Durian, Di Linh, Vietnam
+  <section id="process">
+    <div class="container my-20">
+      <!-- heading -->
+      <div class="flex flex-col items-start md:items-center lg:items-start">
+        <div data-aos="fade-right">
+          <h2 class="sub_heading" data-en="From Orchard to You" data-zh="從果園到您手中">From Orchard to You</h2>
+          <h2 class="main_heading" data-en="Seven Steps of <span class='text-gradient'>Careful Craft</span>"
+            data-zh="七步<span class='text-gradient'>精心工藝</span>">
+            Seven Steps of <span class="text-gradient">Careful Craft</span>
+          </h2>
+        </div>
+
+        <p data-aos="fade-right" data-aos-delay="100"
+          class="max-w-lg pr-16 mt-2 text-xs text-start md:text-center lg:text-start text-n-500"
+          data-en="The final quality of a bag of freeze-dried durian is decided almost entirely within the first 48 hours after the fruit leaves the tree. Every action must be precise to the minute."
+          data-zh="一袋冷凍乾燥榴槤最後的品質，幾乎在果實離樹後的頭四十八小時內就已被決定。每一個步驟都必須精確到分鐘。">
+          The final quality of a bag of freeze-dried durian is decided almost entirely within the first 48 hours after
+          the fruit leaves the tree. Every action must be precise to the minute.
         </p>
       </div>
-    </footer>
-  </body>
+
+      <!-- production carousel -->
+      <div class="lg:px-4 md:x-2 mt-9 slider">
+        <!-- Step 1-3 -->
+        <div class="!flex flex-col lg:flex-row items-center justify-between">
+          <div class="flex-1 best-product--left">
+            <div class="best-product-info">
+              <h3 data-en="Harvest &amp; Sort" data-zh="採收與分級">Harvest &amp; Sort</h3>
+              <p data-en="Step 1: Hand-picked only when naturally ripened on the tree. Harvest teams work in pairs, led by farmers with 20+ years experience. Step 2: Sorted within 4 hours at collection points no more than 5km from the orchard. Step 3: Peeling and pre-processing within 12 hours of harvest at 18-20°C."
+                data-zh="第一步：全程人工，只採已在樹上自然熟透的果實。採收兩人一組，由資深農民帶隊。第二步：四小時內於集貨點分級，距果園不超過五公里。第三步：採收後十二小時內在攝氏18-20度環境中開殼與初處理。">
+                Step 1: Hand-picked only when naturally ripened on the tree. Harvest teams work in pairs, led by farmers
+                with 20+ years experience. Step 2: Sorted within 4 hours at collection points no more than 5km from the
+                orchard. Step 3: Peeling and pre-processing within 12 hours of harvest at 18-20°C.
+              </p>
+            </div>
+
+            <div class="benefit-bars" id="firstbar">
+              <div>
+                <div class="flex-1 progressbar-item">
+                  <h4 class="progress-title" data-en="Aroma Retention" data-zh="香氣保留">Aroma Retention</h4>
+                  <div progress-bar data-percentage="97%">
+                    <div class="progress-number">
+                      <div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="progress-bg">
+                      <div class="progress-fill"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 progressbar-item">
+                  <h4 class="progress-title" data-en="Cell Structure Integrity" data-zh="細胞結構完整性">Cell Structure
+                    Integrity</h4>
+                  <div progress-bar data-percentage="95%">
+                    <div class="progress-number">
+                      <div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="progress-bg">
+                      <div class="progress-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex-1 progressbar-item">
+                  <h4 class="progress-title" data-en="Nutrition Preserved" data-zh="營養保留">Nutrition Preserved</h4>
+                  <div progress-bar data-percentage="97%">
+                    <div class="progress-number">
+                      <div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="progress-bg">
+                      <div class="progress-fill"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 progressbar-item">
+                  <h4 class="progress-title" data-en="Moisture Below" data-zh="含水率低於">Moisture Below</h4>
+                  <div progress-bar data-percentage="4%">
+                    <div class="progress-number">
+                      <div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="progress-bg">
+                      <div class="progress-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-[480px] xl:w-[540px] flex-none">
+            <img src="./assets/banner_3.png" alt="Harvest & Crate Packaging"
+              class="w-full h-[450px] lg:h-[520px] rounded-3xl shadow-2xl object-cover border-4 border-white/90" />
+          </div>
+        </div>
+
+        <!-- Step 4-5 -->
+        <div class="!flex flex-col lg:flex-row items-center justify-between">
+          <div class="flex-1 best-product--left">
+            <div class="best-product-info">
+              <h3 data-en="Freeze &amp; Dry" data-zh="急凍與乾燥">Freeze &amp; Dry</h3>
+              <p data-en="Step 4: Flash freezing within 30 minutes at -40°C. Ice crystals form so small they cannot rupture cell walls. Step 5: 22-hour freeze-drying in a vacuum chamber at pressure 2,000 times lower than atmosphere. Ice sublimates directly to vapor without becoming liquid. The cell structure stays intact, the aroma does not vanish."
+                data-zh="第四步：三十分鐘內在零下40度急凍。冰晶極其細小，小到無力撐破細胞壁。第五步：二十二小時冷凍乾燥，真空艙壓力低於大氣兩千倍。冰直接昇華為水氣，不經過液體階段。細胞結構完整保留，香氣不隨水氣飄走。">
+                Step 4: Flash freezing within 30 minutes at -40°C. Ice crystals form so small they cannot rupture cell
+                walls. Step 5: 22-hour freeze-drying in a vacuum chamber at pressure 2,000 times lower than atmosphere.
+                Ice sublimates directly to vapor without becoming liquid. The cell structure stays intact, the aroma
+                does not vanish.
+              </p>
+            </div>
+
+            <div class="benefit-bars">
+              <div>
+                <div class="flex-1 progressbar-item">
+                  <h4 class="progress-title" data-en="Flash Freeze Temp" data-zh="急凍溫度">Flash Freeze Temp</h4>
+                  <div progress-bar data-percentage="96%">
+                    <div class="progress-number">
+                      <div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="progress-bg">
+                      <div class="progress-fill"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 progressbar-item">
+                  <h4 class="progress-title" data-en="Texture Quality" data-zh="質地品質">Texture Quality</h4>
+                  <div progress-bar data-percentage="98%">
+                    <div class="progress-number">
+                      <div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="progress-bg">
+                      <div class="progress-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex-1 progressbar-item">
+                  <h4 class="progress-title" data-en="Vacuum Precision" data-zh="真空精度">Vacuum Precision</h4>
+                  <div progress-bar data-percentage="99%">
+                    <div class="progress-number">
+                      <div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="progress-bg">
+                      <div class="progress-fill"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 progressbar-item">
+                  <h4 class="progress-title" data-en="Sublimation Purity" data-zh="昇華純度">Sublimation Purity</h4>
+                  <div progress-bar data-percentage="97%">
+                    <div class="progress-number">
+                      <div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="progress-bg">
+                      <div class="progress-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-[480px] xl:w-[540px] flex-none">
+            <img src="./assets/banner_2.png" alt="Freeze drying batch"
+              class="w-full h-[450px] lg:h-[520px] rounded-3xl shadow-2xl object-cover border-4 border-white/90" />
+          </div>
+        </div>
+
+        <!-- Step 6-7 -->
+        <div class="!flex flex-col lg:flex-row items-center justify-between">
+          <div class="flex-1 best-product--left">
+            <div class="best-product-info">
+              <h3 data-en="Inspect &amp; Pack" data-zh="品檢與包裝">Inspect &amp; Pack</h3>
+              <p data-en="Step 6: Every piece inspected by eye and hand. Average rejection rate runs 8-12%, considerably higher than industry norms — a level we accept by choice. Step 7: Packed into multi-layer moisture barrier bags, purged with nitrogen, heat sealed. Every bag carries a lot code with exact production date."
+                data-zh="第六步：用眼睛與雙手仔細挑選，剔除率平均八到十二個百分點，明顯高於行業標準，這是我們主動接受的代價。第七步：使用多層防潮包材，充氮排氧後熱封。每一袋都印有可追溯批次碼與確切生產日期。">
+                Step 6: Every piece inspected by eye and hand. Average rejection rate runs 8-12%, considerably higher
+                than industry norms — a level we accept by choice. Step 7: Packed into multi-layer moisture barrier
+                bags, purged with nitrogen, heat sealed. Every bag carries a lot code with exact production date.
+              </p>
+            </div>
+
+            <div class="benefit-bars">
+              <div>
+                <div class="flex-1 progressbar-item">
+                  <h4 class="progress-title" data-en="Manual QC Pass Rate" data-zh="人工品檢通過率">Manual QC Pass Rate</h4>
+                  <div progress-bar data-percentage="90%">
+                    <div class="progress-number">
+                      <div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="progress-bg">
+                      <div class="progress-fill"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 progressbar-item">
+                  <h4 class="progress-title" data-en="Package Seal Integrity" data-zh="包裝密封性">Package Seal Integrity
+                  </h4>
+                  <div progress-bar data-percentage="100%">
+                    <div class="progress-number">
+                      <div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="progress-bg">
+                      <div class="progress-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex-1 progressbar-item">
+                  <h4 class="progress-title" data-en="Metal Detection" data-zh="金屬檢測">Metal Detection</h4>
+                  <div progress-bar data-percentage="100%">
+                    <div class="progress-number">
+                      <div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="progress-bg">
+                      <div class="progress-fill"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 progressbar-item">
+                  <h4 class="progress-title" data-en="Traceability" data-zh="可追溯性">Traceability</h4>
+                  <div progress-bar data-percentage="100%">
+                    <div class="progress-number">
+                      <div class="progress-number-mark"><span class="percent"></span><span class="down-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="progress-bg">
+                      <div class="progress-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-[480px] xl:w-[540px] flex-none">
+            <img src="./assets/banner_1.png" alt="Inspection & Packaging"
+              class="w-full h-[450px] lg:h-[520px] rounded-3xl shadow-2xl object-cover border-4 border-white/90" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--=================
+      Brand Story
+    ==================-->
+  <section id="story" class="relative overflow-hidden">
+    <div
+      class="flex justify-end min-h-[800px] xl:h-screen max-h-[1100px] p-0 w-full max-w-none bg-[url('../assets/highlands.png')] bg-no-repeat bg-center bg-cover relative">
+      <!-- Semi-transparent overlay to ensure image is clearly visible while keeping text readable -->
+      <div
+        class="w-full h-full lg:w-2/3 bg-gradient-to-r from-p-950/90 via-p-950/75 to-p-950/60 p-6 md:p-12 lg:p-16 flex items-center">
+        <div class="container relative flex items-center justify-center h-full md:justify-end 2xl:justify-center">
+          <!-- watermark -->
+          <div data-aos="fade-right"
+            class="absolute hidden -translate-y-1/2 translate-x-36 top-1/2 right-1/2 md:block 2xl:translate-x-0 pointer-events-none">
+            <h1
+              class="uppercase -rotate-90 text-[140px] lg:text-[168px] text-center leading-[148px] font-bold text-amber-200 opacity-15 font-playfair">
+              DJI <br /> RIAN
+            </h1>
+          </div>
+
+          <!-- main content -->
+          <div class="relative z-10 max-w-xl text-left" data-aos="fade-left">
+            <div class="mb-6 md:mb-9">
+              <span
+                class="px-4 py-1.5 rounded-full bg-amber-400/20 text-amber-300 font-semibold text-xs md:text-sm uppercase tracking-wider mb-4 inline-block border border-amber-400/30"
+                data-en="Our Sacred Story" data-zh="品牌故事">Our Sacred Story</span>
+              <h1
+                class="text-white main_heading text-3xl sm:text-4xl md:text-5xl font-playfair leading-tight font-extrabold mt-2"
+                data-en="Three Million Years,<br/><span class='text-amber-300'>120 Days</span>, 22 Hours"
+                data-zh="三百萬年、<br/><span class='text-amber-300'>一百二十天</span>、二十二小時">Three Million Years,<br /><span
+                  class="text-amber-300">120 Days</span>, 22 Hours</h1>
+            </div>
+
+            <div
+              class="space-y-4 text-n-100 text-sm md:text-base leading-relaxed font-normal bg-p-950/40 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+              <p data-en="Three million years ago, the last volcanoes of Di Linh went quiet, leaving three meters of basalt soil. 120 days is the time a durian needs to ripen fully at 950 meters altitude."
+                data-zh="大約三百萬年前，夷靈高原最後幾座火山熄滅，留下三公尺厚的玄武岩。一百二十天，是一顆榴槤在海拔九百五十公尺處完全熟透所需的時間。">
+                Three million years ago, the last volcanoes of Di Linh went quiet, leaving three meters of basalt soil.
+                120 days is the time a durian needs to ripen fully at 950 meters altitude.
+              </p>
+              <p data-en="22 hours is how long each batch rests in our freeze-drying chamber. These three numbers gather everything we pursue. We do not allow ourselves to shorten any one of them."
+                data-zh="二十二小時，是每一批榴槤在冷凍乾燥艙中靜臥的時間。這三個數字概括了我們追求的一切。任何一個，我們都絕不允許縮短。">
+                22 hours is how long each batch rests in our freeze-drying chamber. These three numbers gather
+                everything we pursue. We do not allow ourselves to shorten any one of them.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--=================
+    Contact
+    ==================-->
+  <section id="contact">
+    <div class="container my-20">
+      <div class="flex flex-col w-full gap-10 lg:flex-row">
+        <!-- contact info -->
+        <div
+          class="flex h-[515px] flex-col items-center justify-center flex-1 w-full px-10 py-20 border border-dotted border-p-600 gap-9">
+          <div data-aos="fade-down">
+            <h2 class="sub_heading" data-en="Get in Touch" data-zh="聯絡我們">Get in Touch</h2>
+            <h1 class="main_heading" data-en="Contact Djirian" data-zh="聯繫 Djirian">Contact Djirian</h1>
+          </div>
+
+          <div class="contact-info">
+            <div>
+              <img src="./assets/building.svg" alt="building" class="size-4" />
+              <h1 data-en="Address" data-zh="地址">Address</h1>
+            </div>
+            <p data-en="Di Linh, Lâm Đồng Province, Vietnam" data-zh="越南林同省夷靈">Di Linh, Lâm Đồng Province, Vietnam</p>
+          </div>
+
+          <div class="contact-info">
+            <div>
+              <img src="./assets/mail.svg" alt="email" class="size-4" />
+              <h1>Email</h1>
+            </div>
+            <p>contact@djirian.com</p>
+          </div>
+
+          <div class="contact-info">
+            <div>
+              <img src="./assets/phone.svg" alt="phone" class="size-4" />
+              <h1>WhatsApp / Zalo</h1>
+            </div>
+            <p>+84 xxx xxx xxx</p>
+          </div>
+        </div>
+
+        <!-- newsletter signup -->
+        <div
+          class="relative text-center flex flex-col items-center w-full flex-1 h-[515px] px-10 py-20 gap-9 border border-p-600 overflow-clip">
+          <div data-aos="fade-down">
+            <h2 class="sub_heading" data-en="Partnership Inquiry" data-zh="合作洽詢">Partnership Inquiry</h2>
+            <h1 class="main_heading" data-en="Work With Us" data-zh="與我們合作">Work With Us</h1>
+          </div>
+
+          <p data-en="Interested in importing Djirian? We welcome partnerships in direct import, exclusive distribution, and OEM."
+            data-zh="有意進口 Djirian？我們歡迎直接進口、區域獨家經銷、OEM 代工等合作方式。">
+            Interested in importing Djirian? We welcome partnerships in direct import, exclusive distribution, and OEM.
+          </p>
+
+          <div class="relative w-[250px] md:w-[350px]">
+            <input type="email" placeholder="Your email address" class="w-full px-12 py-3 border border-p-600"
+              data-en="Your email address" data-zh="您的電郵地址" />
+            <img src="./assets/mail2.svg" alt="mail icon" class="absolute -translate-y-1/2 top-1/2 left-4" />
+          </div>
+
+          <button class="flex-none !border-p-600 w-[250px] md:w-[350px]">
+            <div class="capitalize btn !bg-p-600 hover:!bg-p-700">
+              <span class="w-full text-center" data-en="Send Inquiry" data-zh="發送洽詢">Send Inquiry</span>
+            </div>
+          </button>
+
+          <!-- decorative designer image -->
+          <img src="./assets/banner_2.png" alt="decor"
+            class="absolute -bottom-16 -right-16 w-[320px] md:w-[380px] opacity-25 -z-10 object-contain pointer-events-none" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--=================
+    Footer
+    ==================-->
+  <footer class="bg-p-950">
+    <div class="container text-white/50">
+      <p class="text-center mt-9" data-en="© Djirian 2026 — Single Origin Freeze-Dried Durian, Di Linh, Vietnam"
+        data-zh="© Djirian 2026 — 單一產地冷凍乾燥榴槤，越南夷靈">
+        © Djirian 2026 — Single Origin Freeze-Dried Durian, Di Linh, Vietnam
+      </p>
+    </div>
+  </footer>
+</body>
+
 </html>

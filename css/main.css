@@ -237,6 +237,15 @@
     bottom: -4rem !important;
   }
 
+  .slick-list {
+    overflow: hidden !important;
+    padding: 0.5rem 0 !important;
+  }
+
+  .slider .slick-slide {
+    padding: 0 0.5rem;
+  }
+
   .benefit-bars {
     @apply mt-8;
   }
@@ -342,6 +351,70 @@
   display: inline-block;
   white-space: nowrap;
   animation: marquee 25s linear infinite;
+}
+
+/* Orbit Revolving & Micro Animations */
+@keyframes orbitRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.05);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 30s linear infinite;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.animate-orbit {
+  animation: orbitRotate 18s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: orbitRotate 22s linear infinite reverse;
+}
+
+.animate-orbit-delayed {
+  animation: orbitRotate 15s linear infinite;
+  animation-delay: -5s;
 }
 
   .product-card-body {
