@@ -1,0 +1,12 @@
+{
+  "name": "djirian-web",
+  "version": "1.0.0",
+  "description": "Djirian - Single Origin Freeze-Dried Durian",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./css/main.css -o ./dist/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./css/main.css -o ./dist/output.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.10"
+  }
+}
