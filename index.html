@@ -39,6 +39,7 @@
   <script defer src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
   <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./js/i18n.js" defer></script>
+  <script src="./js/hero-wave.js" defer></script>
   <script defer type="module" src="./js/main.js"></script>
 </head>
 
@@ -92,74 +93,101 @@
     </div>
   </header>
 
-    <!--=================
+  <!--=================
       Hero Section
     ==================-->
-    <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-p-50 via-lime-50/60 to-white pt-16 sm:pt-20 pb-12 md:py-20 lg:py-24">
-      <!-- Decorative Organic floating background blur shapes -->
-      <div class="absolute -top-20 -left-20 w-80 h-80 bg-p-300/30 rounded-full blur-3xl animate-float-slow pointer-events-none"></div>
-      <div class="absolute bottom-10 right-1/3 w-96 h-96 bg-lime-200/40 rounded-full blur-3xl animate-float pointer-events-none"></div>
+  <section id="hero"
+    class="relative overflow-hidden bg-gradient-to-b from-p-50 via-lime-50/60 to-white pt-16 sm:pt-20 pb-12 md:py-20 lg:py-24">
+    <!-- Dynamic Organic Wave Line Canvas Background -->
+    <canvas id="hero-wave-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
 
-      <div class="max-w-[1536px] mx-auto px-4 sm:px-8 xl:px-16 min-h-[auto] xl:min-h-[640px] flex flex-col xl:flex-row items-center justify-between gap-8 xl:gap-0 relative z-10">
-        
-        <!-- Text & Headline Content (Clean transparent layout without white box) -->
-        <div class="w-full xl:max-w-2xl text-center xl:text-left z-20 pt-6 xl:pt-10">
-          
-          <!-- Badge Wrapper Container -->
-          <div data-aos="zoom-in" class="w-full flex justify-center xl:justify-start mb-5 sm:mb-6">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-p-100 border border-p-300 text-p-900 font-extrabold text-xs sm:text-sm tracking-wide shadow-md max-w-full text-center">
-              <span class="w-2.5 h-2.5 rounded-full bg-p-500 animate-ping flex-none"></span>
-              <span data-en="🌱 100% Pure Highland Durian • Zero Additives" data-zh="🌱 100% 純粹高原榴槤 • 零添加" class="leading-snug">🌱 100% Pure Highland Durian • Zero Additives</span>
-            </div>
-          </div>
+    <!-- Decorative Organic floating background blur shapes -->
+    <div
+      class="absolute -top-20 -left-20 w-80 h-80 bg-p-300/30 rounded-full blur-3xl animate-float-slow pointer-events-none">
+    </div>
+    <div
+      class="absolute bottom-10 right-1/3 w-96 h-96 bg-lime-200/40 rounded-full blur-3xl animate-float pointer-events-none">
+    </div>
 
-          <!-- Main Headline -->
-          <h1 data-aos="zoom-in" data-aos-delay="100" class="text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold text-p-950 font-playfair leading-[1.15] mb-4 md:mb-6"
-              data-en="Good for <span class='text-p-600'>You</span>.<br/>Good for the <span class='text-p-700'>Land</span>."
-              data-zh="對<span class='text-p-600'>您</span>好。<br/>對<span class='text-p-700'>土地</span>更好。">
-            Good for <span class="text-p-600">You</span>.<br/>Good for the <span class="text-p-700">Land</span>.
-          </h1>
+    <div
+      class="max-w-[1536px] mx-auto px-4 sm:px-8 xl:px-16 min-h-[auto] xl:min-h-[640px] flex flex-col xl:flex-row items-center justify-between gap-8 xl:gap-0 relative z-10">
 
-          <!-- Description -->
-          <p data-aos="zoom-in" data-aos-delay="200" class="text-n-800 text-sm sm:text-base md:text-lg max-w-xl mx-auto xl:mx-0 leading-relaxed mb-6 md:mb-8 font-medium"
-             data-en="Single-origin freeze-dried durian from the Di Linh highlands. Naturally ripened on trees at 950m altitude. No added sugar, no preservatives, no nonsense."
-             data-zh="來自夷靈高原的單一產地冷凍乾燥榴槤。950公尺海拔自然樹熟。無添加糖、無防腐劑、不玩花樣。">
-            Single-origin freeze-dried durian from the Di Linh highlands. Naturally ripened on trees at 950m altitude. No added sugar, no preservatives, no nonsense.
-          </p>
+      <!-- Text & Headline Content (Clean transparent layout without white box) -->
+      <div class="w-full xl:max-w-2xl text-center xl:text-left z-20 pt-6 xl:pt-10">
 
-          <!-- Action Buttons -->
-          <div data-aos="zoom-in" data-aos-delay="300" class="flex flex-col sm:flex-row items-center justify-center xl:justify-start gap-3 sm:gap-4 w-full sm:w-auto">
-            <a href="./products.html" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-p-600 hover:bg-p-700 text-white font-bold text-sm sm:text-base shadow-xl transition-all duration-300 hover-tilt flex items-center justify-center gap-2 border border-p-700">
-              <span data-en="Taste Pure Durian 💛" data-zh="品嚐純粹榴槤 💛">Taste Pure Durian 💛</span>
-            </a>
-            <a href="#story" class="w-full sm:w-auto px-7 py-3.5 rounded-full border-2 border-p-700 bg-white/90 text-p-950 font-bold text-sm sm:text-base hover:bg-p-700 hover:text-white shadow-md transition-all duration-300 hover-tilt flex items-center justify-center">
-              <span data-en="Our Story" data-zh="品牌故事">Our Story</span>
-            </a>
+        <!-- Badge Wrapper Container -->
+        <div data-aos="zoom-in" class="w-full flex justify-center xl:justify-start mb-5 sm:mb-6">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-p-100 border border-p-300 text-p-900 font-extrabold text-xs sm:text-sm tracking-wide shadow-md max-w-full text-center">
+            <span class="w-2.5 h-2.5 rounded-full bg-p-500 animate-ping flex-none"></span>
+            <span data-en="🌱 100% Pure Highland Durian • Zero Additives" data-zh="🌱 100% 純粹高原榴槤 • 零添加"
+              class="leading-snug">🌱 100% Pure Highland Durian • Zero Additives</span>
           </div>
         </div>
 
-        <!-- Hero Product Stage (Clean Self-Contained Stage) -->
-        <div data-aos="fade-up" class="relative xl:absolute bottom-0 right-0 z-20 w-full xl:w-[620px] 2xl:w-[700px] flex items-center justify-center mt-6 xl:mt-0">
-          
-          <!-- Glowing aura background -->
-          <div class="absolute w-[300px] h-[300px] sm:w-[440px] sm:h-[440px] md:w-[540px] md:h-[540px] rounded-full bg-gradient-to-tr from-amber-300/40 via-p-300/30 to-amber-100/50 blur-3xl animate-pulse-subtle pointer-events-none"></div>
+        <!-- Main Headline -->
+        <h1 data-aos="zoom-in" data-aos-delay="100"
+          class="text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold text-p-950 font-playfair leading-[1.15] mb-4 md:mb-6"
+          data-en="Good for <span class='text-p-600'>You</span>.<br/>Good for the <span class='text-p-700'>Land</span>."
+          data-zh="對<span class='text-p-600'>您</span>好。<br/>對<span class='text-p-700'>土地</span>更好。">
+          Good for <span class="text-p-600">You</span>.<br />Good for the <span class="text-p-700">Land</span>.
+        </h1>
 
-          <!-- Main Image Container Frame (Self-Contained Dimensions with Gentle Floating Animation) -->
-          <div class="hero-slideshow-container animate-float-gentle relative w-[300px] sm:w-[420px] md:w-[480px] xl:w-[560px] h-[380px] sm:h-[500px] md:h-[560px] xl:h-[580px] rounded-3xl overflow-hidden shadow-[0_20px_50px_-10px_rgba(0,0,0,0.25)] border-4 border-white bg-white/40 backdrop-blur-sm">
-            <img src="./assets/banner_1.png" alt="Djirian Design Vertical 1" class="hero-slide active w-full h-full object-cover rounded-2xl absolute inset-0 transition-all duration-1000 ease-in-out opacity-100 scale-100" />
-            <img src="./assets/banner_2.png" alt="Djirian Design Vertical 2" class="hero-slide w-full h-full object-cover rounded-2xl absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-95" />
-            <img src="./assets/banner_3.png" alt="Djirian Design Vertical 3" class="hero-slide w-full h-full object-cover rounded-2xl absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-95" />
-          </div>
+        <!-- Description -->
+        <p data-aos="zoom-in" data-aos-delay="200"
+          class="text-n-800 text-sm sm:text-base md:text-lg max-w-xl mx-auto xl:mx-0 leading-relaxed mb-6 md:mb-8 font-medium"
+          data-en="Single-origin freeze-dried durian from the Di Linh highlands. Naturally ripened on trees at 950m altitude. No added sugar, no preservatives, no nonsense."
+          data-zh="來自夷靈高原的單一產地冷凍乾燥榴槤。950公尺海拔自然樹熟。無添加糖、無防腐劑、不玩花樣。">
+          Single-origin freeze-dried durian from the Di Linh highlands. Naturally ripened on trees at 950m altitude. No
+          added sugar, no preservatives, no nonsense.
+        </p>
 
-          <!-- Slide indicators -->
-          <div class="absolute bottom-4 z-40 flex gap-2">
-            <span class="slide-dot cursor-pointer w-7 h-2.5 rounded-full bg-p-600 shadow-md transition-all duration-300"></span>
-            <span class="slide-dot cursor-pointer w-2.5 h-2.5 rounded-full bg-p-300 shadow-md transition-all duration-300"></span>
-            <span class="slide-dot cursor-pointer w-2.5 h-2.5 rounded-full bg-p-300 shadow-md transition-all duration-300"></span>
-          </div>
+        <!-- Action Buttons -->
+        <div data-aos="zoom-in" data-aos-delay="300"
+          class="flex flex-col sm:flex-row items-center justify-center xl:justify-start gap-3 sm:gap-4 w-full sm:w-auto">
+          <a href="./products.html"
+            class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-p-600 hover:bg-p-700 text-white font-bold text-sm sm:text-base shadow-xl transition-all duration-300 hover-tilt flex items-center justify-center gap-2 border border-p-700">
+            <span data-en="Taste Pure Durian" data-zh="品嚐純粹榴槤 ">Taste Pure Durian </span>
+          </a>
+          <a href="#story"
+            class="w-full sm:w-auto px-7 py-3.5 rounded-full border-2 border-p-700 bg-white/90 text-p-950 font-bold text-sm sm:text-base hover:bg-p-700 hover:text-white shadow-md transition-all duration-300 hover-tilt flex items-center justify-center">
+            <span data-en="Our Story" data-zh="品牌故事">Our Story</span>
+          </a>
         </div>
       </div>
-    </section>
+
+      <!-- Hero Product Stage (Clean Self-Contained Stage) -->
+      <div data-aos="fade-up"
+        class="relative xl:absolute bottom-0 right-0 z-20 w-full xl:w-[620px] 2xl:w-[700px] flex items-center justify-center mt-6 xl:mt-0">
+
+        <!-- Glowing aura background -->
+        <div
+          class="absolute w-[300px] h-[300px] sm:w-[440px] sm:h-[440px] md:w-[540px] md:h-[540px] rounded-full bg-gradient-to-tr from-amber-300/40 via-p-300/30 to-amber-100/50 blur-3xl animate-pulse-subtle pointer-events-none">
+        </div>
+
+        <!-- Main Image Container Frame (Self-Contained Dimensions with Gentle Floating Animation) -->
+        <div
+          class="hero-slideshow-container animate-float-gentle relative w-[300px] sm:w-[420px] md:w-[480px] xl:w-[560px] h-[380px] sm:h-[500px] md:h-[560px] xl:h-[580px] rounded-3xl overflow-hidden shadow-[0_20px_50px_-10px_rgba(0,0,0,0.25)] border-4 border-white bg-white/40 backdrop-blur-sm">
+          <img src="./assets/banner_1.png" alt="Djirian Design Vertical 1"
+            class="hero-slide active w-full h-full object-cover rounded-2xl absolute inset-0 transition-all duration-1000 ease-in-out opacity-100 scale-100" />
+          <img src="./assets/banner_2.png" alt="Djirian Design Vertical 2"
+            class="hero-slide w-full h-full object-cover rounded-2xl absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-95" />
+          <img src="./assets/banner_3.png" alt="Djirian Design Vertical 3"
+            class="hero-slide w-full h-full object-cover rounded-2xl absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-95" />
+        </div>
+
+        <!-- Slide indicators -->
+        <div class="absolute bottom-4 z-40 flex gap-2">
+          <span
+            class="slide-dot cursor-pointer w-7 h-2.5 rounded-full bg-p-600 shadow-md transition-all duration-300"></span>
+          <span
+            class="slide-dot cursor-pointer w-2.5 h-2.5 rounded-full bg-p-300 shadow-md transition-all duration-300"></span>
+          <span
+            class="slide-dot cursor-pointer w-2.5 h-2.5 rounded-full bg-p-300 shadow-md transition-all duration-300"></span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!--=================
         Stats
@@ -169,7 +197,8 @@
     <div class="absolute inset-0 bg-gradient-to-r from-p-950/95 via-p-950/85 to-p-950/95 backdrop-blur-[2px]"></div>
 
     <!-- content (Full Spacious Display without cutoff) -->
-    <div class="container relative z-10 flex flex-col items-center justify-center px-4 py-16 lg:py-24 gap-12 lg:gap-28 md:flex-row">
+    <div
+      class="container relative z-10 flex flex-col items-center justify-center px-4 py-16 lg:py-24 gap-12 lg:gap-28 md:flex-row">
       <div class="stats-item">
         <h1 class="counter">127</h1>
         <h2 data-en="Hectares of Partner Orchards" data-zh="公頃合作果園">Hectares of Partner Orchards</h2>
