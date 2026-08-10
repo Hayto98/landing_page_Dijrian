@@ -11,7 +11,7 @@
   --breakpoint-2xl: 96rem; /*1536px*/
 
   /* font */
-  --font-playfair: "Playfair Display", serif;
+  --font-playfair: "Nunito", sans-serif;
   --font-inter: "Inter", sans-serif;
 }
 
@@ -46,10 +46,13 @@
 
   body {
     @apply text-base font-inter overflow-x-clip;
+    background: #fffdf7;
+    color: #17351f;
   }
 
   p {
     @apply text-sm leading-7 font-inter;
+    color: #526353;
   }
 
   button {
@@ -76,21 +79,22 @@
   }
 
   .hover-tilt {
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    transition:
+      transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+      box-shadow 0.4s ease;
   }
 
   .hover-tilt:hover {
-    transform: translateY(-8px) rotate(1.5deg) scale(1.02);
+    transform: translateY(-4px) rotate(-1deg) scale(1.01);
   }
 
   /* Navigation */
   .navLink {
-    @apply text-base font-semibold leading-none tracking-wide capitalize cursor-pointer text-n-800 hover:text-p-600 transition-all duration-300 relative py-1;
+    @apply text-sm font-bold leading-none cursor-pointer text-p-950 hover:bg-lime-100 transition-all duration-300 relative px-3 py-2 rounded-full;
   }
 
   .navLink::after {
-    content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-p-500 transition-all duration-300 rounded-full;
+    content: none;
   }
 
   .navLink:hover::after {
@@ -103,6 +107,7 @@
 
   .dropdown-menu {
     @apply absolute right-8 top-[70%] w-[300px] bg-p-900 backdrop-blur-[15px] rounded-lg overflow-hidden flex flex-col gap-4 items-center justify-center h-0 transition-all duration-200 ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.4);
   }
 
   .dropdown-menu.open {
@@ -113,6 +118,31 @@
   /* hero */
   .btn {
     @apply flex items-center justify-center gap-2 px-4 py-2 text-sm tracking-wider text-white transition-colors duration-300 bg-p-700 hover:bg-p-600 border-p-700 font-inter lg:py-3 lg:px-9;
+  }
+
+  #hero {
+    background-image:
+      radial-gradient(
+        circle at 20% 10%,
+        rgba(253, 250, 236, 0.95) 0%,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 90% 88%,
+        rgba(238, 249, 213, 0.88) 0%,
+        transparent 22%
+      ),
+      linear-gradient(135deg, #eff8d5 0%, #fffdf7 52%, #fff0c7 100%);
+  }
+
+  #hero .hero-slideshow-container {
+    border-color: #17351f;
+    background: #ffffff;
+    box-shadow: 12px 12px 0 #fbbf24;
+  }
+
+  #hero .hero-slideshow-container::before {
+    content: none;
   }
 
   .text-gradient {
@@ -128,10 +158,16 @@
   /* partner logos */
   .sub_heading {
     @apply text-xs font-medium uppercase font-inter text-p-600;
+    letter-spacing: 0.12em;
   }
 
   .main_heading {
-    @apply mt-2 text-2xl tracking-wide capitalize lg:text-3xl font-playfair;
+    @apply mt-2 text-3xl tracking-tight lg:text-4xl font-playfair font-extrabold;
+    color: #17351f;
+  }
+
+  .main_heading .text-gradient {
+    color: #668a45;
   }
 
   /* Language Switcher */
@@ -156,10 +192,10 @@
 
   /* Products */
   .tabContainer {
-    @apply flex flex-col w-full gap-8 md:flex-row md:gap-16;
+    @apply flex flex-col w-full gap-8 md:flex-row md:gap-12 bg-white rounded-[2rem] border-2 border-p-950 overflow-hidden shadow-[8px_8px_0_#d9f99d];
 
     > div {
-      @apply w-full my-auto;
+      @apply w-full my-auto p-6 md:p-8;
     }
 
     h3 {
@@ -180,11 +216,11 @@
   }
 
   .productImg {
-    @apply w-full md:w-1/2  h-[250px] md:h-[700px] md:rounded-tr-[80px] md:rounded-br-[80px] object-cover;
+    @apply w-full md:w-1/2 h-[300px] md:h-[620px] object-cover;
   }
 
   .tab-link {
-    @apply font-semibold hover:text-n-700;
+    @apply font-bold hover:text-p-700 px-3 py-2 rounded-full;
 
     span {
       @apply hidden sm:inline;
@@ -192,7 +228,7 @@
   }
 
   .activeTab {
-    @apply text-p-700;
+    @apply text-p-950 bg-amber-200;
   }
 
   /* Features */
@@ -256,12 +292,14 @@
 
   /* Stats */
   .stats-item {
+    @apply w-full max-w-[260px] min-h-40 flex flex-col items-center justify-center rounded-[2rem] bg-white border-2 border-p-950 px-5 py-7 shadow-[6px_6px_0_#fbbf24];
+
     h1 {
-      @apply text-6xl lg:text-8xl font-playfair text-center tracking-wider leading-none font-bold text-transparent bg-clip-text bg-[linear-gradient(24deg,rgba(255,255,255,1)_40%,rgba(212,175,55,1)_100%)];
+      @apply text-5xl lg:text-6xl font-playfair text-center leading-none font-black text-p-700;
     }
 
     h2 {
-      @apply mt-2 text-xs text-center lg:text-base text-white/50;
+      @apply mt-3 text-xs text-center lg:text-sm text-p-950 font-bold;
     }
   }
 
@@ -310,20 +348,45 @@
   /* Product cards */
   .product-card {
     @apply relative overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-500 hover:shadow-2xl border border-p-100/50;
+    border-top: 4px solid #d9efe1;
+    background: linear-gradient(180deg, #fffdfb 0%, #fafff6 100%);
   }
 
   .product-card img {
     @apply w-full h-72 object-cover transition-transform duration-700 ease-out;
   }
 
+  .product-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(113, 164, 83, 0.62);
+  }
+
   .product-card:hover img {
     @apply scale-105;
+  }
+
+  .product-card-body {
+    padding: 1.5rem;
+  }
+
+  .product-card-body h3 {
+    color: #3a5634;
+    font-family: "Playfair Display", serif;
+  }
+
+  .product-card-body p {
+    color: #607468;
+  }
+
+  .product-card-body .price {
+    color: #6e9440;
   }
 }
 
 /* Keyframes */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) rotate(0deg);
   }
   50% {
@@ -332,7 +395,8 @@
 }
 
 @keyframes pulseSubtle {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
   }
@@ -343,14 +407,39 @@
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 25s linear infinite;
+  animation: marquee 34s linear infinite;
+}
+
+#intro p {
+  color: #304c35;
+}
+
+#products,
+#process,
+#garden,
+#contact {
+  background: #fffdf7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-float,
+  .animate-float-slow,
+  .animate-pulse-subtle,
+  .animate-float-gentle {
+    animation: none !important;
+  }
 }
 
 /* Orbit Revolving & Micro Animations */
@@ -373,7 +462,8 @@
 }
 
 @keyframes floatGentle {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -382,7 +472,8 @@
 }
 
 @keyframes pulseGlow {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.6;
     transform: scale(1);
   }
@@ -417,52 +508,52 @@
   animation-delay: -5s;
 }
 
-  .product-card-body {
-    @apply p-6;
-  }
+.product-card-body {
+  @apply p-6;
+}
 
-  .product-card-body h3 {
-    @apply text-lg font-semibold text-n-800 font-playfair;
-  }
+.product-card-body h3 {
+  @apply text-lg font-semibold text-n-800 font-playfair;
+}
 
-  .product-card-body p {
-    @apply mt-2 text-sm text-n-500;
-  }
+.product-card-body p {
+  @apply mt-2 text-sm text-n-500;
+}
 
-  .product-card-body .price {
-    @apply mt-3 text-lg font-bold text-p-600;
-  }
+.product-card-body .price {
+  @apply mt-3 text-lg font-bold text-p-600;
+}
 
-  /* Spec table */
-  .spec-table {
-    @apply w-full border-collapse mt-6;
-  }
+/* Spec table */
+.spec-table {
+  @apply w-full border-collapse mt-6;
+}
 
-  .spec-table th {
-    @apply text-left py-3 px-4 bg-p-50 text-p-900 font-semibold text-sm border-b border-p-200;
-  }
+.spec-table th {
+  @apply text-left py-3 px-4 bg-p-50 text-p-900 font-semibold text-sm border-b border-p-200;
+}
 
-  .spec-table td {
-    @apply py-3 px-4 text-sm text-n-700 border-b border-n-100;
-  }
+.spec-table td {
+  @apply py-3 px-4 text-sm text-n-700 border-b border-n-100;
+}
 
-  .spec-table tr:hover td {
-    @apply bg-p-50/50;
-  }
+.spec-table tr:hover td {
+  @apply bg-p-50/50;
+}
 
-  /* Certification badge */
-  .cert-badge {
-    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium;
-  }
+/* Certification badge */
+.cert-badge {
+  @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium;
+}
 
-  .cert-badge.active {
-    @apply bg-green-100 text-green-800;
-  }
+.cert-badge.active {
+  @apply bg-green-100 text-green-800;
+}
 
-  .cert-badge.planned {
-    @apply bg-yellow-100 text-yellow-800;
-  }
+.cert-badge.planned {
+  @apply bg-yellow-100 text-yellow-800;
+}
 
-  .cert-badge.future {
-    @apply bg-n-100 text-n-600;
-  }
+.cert-badge.future {
+  @apply bg-n-100 text-n-600;
+}
