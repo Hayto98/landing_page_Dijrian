@@ -145,6 +145,221 @@
     content: none;
   }
 
+  .hero-hello {
+    @apply inline-flex items-center rounded-full border-2 border-p-950 bg-amber-200 px-5 py-2 text-sm sm:text-base font-black text-p-950 shadow-[4px_4px_0_#17351f];
+    transform: rotate(-2deg);
+  }
+
+  .hero-hello::before {
+    content: "👋";
+    margin-right: 0.5rem;
+  }
+
+  .hero-prompt {
+    @apply mx-auto xl:mx-0 mt-2 w-fit text-xs sm:text-sm font-bold text-p-700 border-b-2 border-dashed border-amber-400 pb-1;
+  }
+
+  .hero-gallery {
+    @apply relative grid w-full max-w-[560px] h-[430px] sm:h-[520px] xl:h-[580px] grid-cols-[1.2fr_0.8fr] gap-3 sm:gap-4;
+  }
+
+  .hero-image-card {
+    @apply relative overflow-hidden rounded-[2rem] border-2 border-p-950 bg-white;
+    box-shadow: 8px 8px 0 #fbbf24;
+  }
+
+  .hero-product-card {
+    transform: rotate(-1deg);
+  }
+
+  .hero-story-card {
+    transform: translateY(22px) rotate(1.5deg);
+  }
+
+  .hero-image-card > img {
+    @apply absolute inset-0 size-full object-cover;
+    transition: transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  .hero-image-overlay {
+    @apply absolute inset-0 z-10 flex flex-col items-center justify-end p-4 sm:p-6 text-center;
+    background: linear-gradient(to top, rgba(23, 53, 31, 0.92), rgba(23, 53, 31, 0.08) 70%);
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+
+  .hero-image-overlay p {
+    @apply mb-3 text-sm sm:text-lg font-black text-white;
+    transform: translateY(12px);
+    transition: transform 300ms ease;
+  }
+
+  .hero-image-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-p-950 bg-white px-3 sm:px-5 py-2 text-xs sm:text-sm font-black text-p-950 shadow-[3px_3px_0_#fbbf24];
+    transform: translateY(14px);
+    transition: transform 300ms ease, background-color 200ms ease;
+  }
+
+  .hero-image-btn:hover {
+    @apply bg-amber-100;
+  }
+
+  .hero-image-card:hover > img,
+  .hero-image-card:focus-within > img {
+    transform: scale(1.06);
+  }
+
+  .hero-image-card:hover .hero-image-overlay,
+  .hero-image-card:focus-within .hero-image-overlay {
+    opacity: 1;
+  }
+
+  .hero-image-card:hover .hero-image-overlay p,
+  .hero-image-card:hover .hero-image-btn,
+  .hero-image-card:focus-within .hero-image-overlay p,
+  .hero-image-card:focus-within .hero-image-btn {
+    transform: translateY(0);
+  }
+
+  @media (hover: none), (max-width: 47.99rem) {
+    .hero-image-overlay {
+      opacity: 1;
+      background: linear-gradient(to top, rgba(23, 53, 31, 0.88), transparent 58%);
+    }
+
+    .hero-image-overlay p,
+    .hero-image-btn {
+      transform: translateY(0);
+    }
+  }
+
+  /* Editorial image grid: playful, short copy, image-first navigation */
+  .poster-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .poster-card {
+    position: relative;
+    display: block;
+    min-height: 340px;
+    overflow: hidden;
+    border: 2px solid #17351f;
+    border-radius: 1.75rem;
+    background: #d9f99d;
+    box-shadow: 6px 6px 0 #fbbf24;
+  }
+
+  .poster-card > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 600ms cubic-bezier(0.2, 0.72, 0.2, 1);
+  }
+
+  .poster-land {
+    grid-column: span 7;
+    min-height: 480px;
+  }
+
+  .poster-product {
+    grid-column: span 5;
+    min-height: 480px;
+    background: #fde9b8;
+  }
+
+  .poster-process,
+  .poster-farmer {
+    grid-column: span 6;
+    min-height: 360px;
+  }
+
+  .poster-copy {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(23, 53, 31, 0.94), rgba(23, 53, 31, 0.1) 68%);
+    transition: background 300ms ease;
+  }
+
+  .poster-copy p {
+    max-width: 24rem;
+    margin: 0 0 0.9rem;
+    color: #fffdf7;
+    font-family: "Nunito", sans-serif;
+    font-size: clamp(1.45rem, 2.5vw, 2.7rem);
+    font-weight: 900;
+    line-height: 1.06;
+  }
+
+  .poster-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 2px solid #17351f;
+    border-radius: 999px;
+    background: #fffdf7;
+    color: #17351f;
+    padding: 0.65rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 900;
+    box-shadow: 3px 3px 0 #fbbf24;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 250ms ease, transform 250ms ease, background-color 200ms ease;
+  }
+
+  .poster-button:hover {
+    background: #fef3c7;
+  }
+
+  .poster-card:hover > img,
+  .poster-card:focus-visible > img {
+    transform: scale(1.07);
+  }
+
+  .poster-card:hover .poster-copy,
+  .poster-card:focus-visible .poster-copy {
+    background: linear-gradient(to top, rgba(23, 53, 31, 0.96), rgba(23, 53, 31, 0.28) 74%);
+  }
+
+  .poster-card:hover .poster-button,
+  .poster-card:focus-visible .poster-button {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (hover: none), (max-width: 47.99rem) {
+    .poster-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .poster-land,
+    .poster-product,
+    .poster-process,
+    .poster-farmer {
+      grid-column: auto;
+      min-height: 300px;
+    }
+
+    .poster-copy {
+      padding: 1.25rem;
+    }
+
+    .poster-button {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .text-gradient {
     background: linear-gradient(
       to right,
@@ -220,7 +435,7 @@
   }
 
   .tab-link {
-    @apply font-bold hover:text-p-700 px-3 py-2 rounded-full;
+    @apply relative flex min-h-12 items-center justify-center font-bold text-p-700 hover:text-p-950 px-2 sm:px-3 py-2 rounded-xl transition-all duration-200;
 
     span {
       @apply hidden sm:inline;
@@ -228,7 +443,42 @@
   }
 
   .activeTab {
-    @apply text-p-950 bg-amber-200;
+    @apply bg-transparent;
+  }
+
+  .activeTab .tab-link {
+    @apply text-p-950 bg-amber-50;
+  }
+
+  .activeTab .tab-link::after {
+    content: "";
+    @apply absolute left-1/2 -translate-x-1/2 bottom-1 w-5 h-0.5 rounded-full bg-amber-400;
+  }
+
+  .tab-separator {
+    @apply hidden md:flex items-center text-p-200;
+  }
+
+  .products-tab-list > li:not(.tab-separator) {
+    @apply flex items-stretch justify-center min-w-0;
+  }
+
+  @media (max-width: 47.99rem) {
+    #products-tabs .products-tab-list,
+    #products-tabs .r-tabs-nav {
+      display: grid !important;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.25rem;
+    }
+
+    #products-tabs .tab-separator {
+      display: none !important;
+    }
+
+    #products-tabs .products-tab-list > li:not(.tab-separator),
+    #products-tabs .r-tabs-nav > li:not(.tab-separator) {
+      width: auto !important;
+    }
   }
 
   /* Features */
@@ -292,10 +542,10 @@
 
   /* Stats */
   .stats-item {
-    @apply w-full max-w-[260px] min-h-40 flex flex-col items-center justify-center rounded-[2rem] bg-white border-2 border-p-950 px-5 py-7 shadow-[6px_6px_0_#fbbf24];
+    @apply w-full max-w-[260px] min-h-32 sm:min-h-40 flex flex-col items-center justify-center rounded-2xl sm:rounded-[2rem] bg-white border-2 border-p-950 px-3 sm:px-5 py-5 sm:py-7 shadow-[5px_5px_0_#fbbf24];
 
     h1 {
-      @apply text-5xl lg:text-6xl font-playfair text-center leading-none font-black text-p-700;
+      @apply text-4xl sm:text-5xl lg:text-6xl font-playfair text-center leading-none font-black text-p-700;
     }
 
     h2 {
@@ -439,6 +689,48 @@
   .animate-pulse-subtle,
   .animate-float-gentle {
     animation: none !important;
+  }
+}
+
+/* Lightweight scroll motion */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px) scale(0.985);
+  transition:
+    opacity 650ms ease,
+    transform 650ms cubic-bezier(0.2, 0.75, 0.25, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.stats-item,
+#garden img,
+.productImg {
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.stats-item:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 8px 10px 0 #fbbf24;
+}
+
+#garden img:hover,
+.productImg:hover {
+  transform: translateY(-5px) rotate(0.5deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .reveal-on-scroll.is-revealed {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 

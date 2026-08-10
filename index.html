@@ -39,6 +39,7 @@
   <script defer src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
   <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./js/i18n.js" defer></script>
+  <script src="./js/reveal.js" defer></script>
   <script src="./js/hero-wave.js" defer></script>
   <script defer type="module" src="./js/main.js"></script>
 </head>
@@ -117,13 +118,10 @@
       <!-- Text & Headline Content (Clean transparent layout without white box) -->
       <div class="w-full xl:max-w-2xl text-center xl:text-left z-20 pt-6 xl:pt-10">
 
-        <!-- Badge Wrapper Container -->
+        <!-- Friendly greeting -->
         <div data-aos="zoom-in" class="w-full flex justify-center xl:justify-start mb-5 sm:mb-6">
-          <div
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-p-100 border border-p-300 text-p-900 font-extrabold text-xs sm:text-sm tracking-wide shadow-md max-w-full text-center">
-            <span class="w-2.5 h-2.5 rounded-full bg-p-500 animate-ping flex-none"></span>
-            <span data-en="🌱 100% Pure Highland Durian • Zero Additives" data-zh="🌱 100% 純粹高原榴槤 • 零添加"
-              class="leading-snug">🌱 100% Pure Highland Durian • Zero Additives</span>
+          <div class="hero-hello">
+            <span data-en="hello, we're Djirian" data-zh="你好，我們是 Djirian">hello, we're Djirian</span>
           </div>
         </div>
 
@@ -143,49 +141,71 @@
           Naturally tree-ripened at 950m in Lâm Đồng, Vietnam. 100% Di Linh durian flesh — no added sugar, no preservatives, no flavorings, no blending.
         </p>
 
-        <!-- Action Buttons -->
-        <div data-aos="zoom-in" data-aos-delay="300"
-          class="flex flex-col sm:flex-row items-center justify-center xl:justify-start gap-3 sm:gap-4 w-full sm:w-auto">
-          <a href="./products.html"
-            class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-amber-400 hover:bg-amber-500 text-p-950 font-extrabold text-sm sm:text-base shadow-lg transition-all duration-300 hover-tilt flex items-center justify-center gap-2 border-2 border-p-950">
-            <span data-en="Taste Pure Durian" data-zh="品嚐純粹榴槤 ">Taste Pure Durian </span>
-          </a>
-          <a href="#intro"
-            class="w-full sm:w-auto px-7 py-3.5 rounded-full border-2 border-p-950 bg-white text-p-950 font-extrabold text-sm sm:text-base hover:bg-p-100 shadow-md transition-all duration-300 hover-tilt flex items-center justify-center">
-            <span data-en="Our Story" data-zh="品牌故事">Our Story</span>
-          </a>
-        </div>
+        <p data-aos="zoom-in" data-aos-delay="300" class="hero-prompt" data-en="Pick a picture to say hello." data-zh="選一張圖片，來認識我們吧。">Pick a picture to say hello.</p>
       </div>
 
-      <!-- Hero Product Stage (Clean Self-Contained Stage) -->
+      <!-- Image-led navigation -->
       <div data-aos="fade-up"
         class="relative xl:absolute bottom-0 right-0 z-20 w-full xl:w-[620px] 2xl:w-[700px] flex items-center justify-center mt-6 xl:mt-0">
-
-        <!-- Glowing aura background -->
-        <div
-          class="absolute w-[300px] h-[300px] sm:w-[440px] sm:h-[440px] md:w-[540px] md:h-[540px] rounded-full bg-gradient-to-tr from-amber-300/40 via-p-300/30 to-amber-100/50 blur-3xl animate-pulse-subtle pointer-events-none">
+        <div class="hero-gallery">
+          <article class="hero-image-card hero-product-card">
+            <img src="./assets/banner_2.webp" alt="Djirian freeze-dried durian" fetchpriority="high" />
+            <div class="hero-image-overlay">
+              <p data-en="the good stuff" data-zh="好東西在這裡">the good stuff</p>
+              <a href="#products" class="hero-image-btn" data-en="Meet our durian <span>→</span>" data-zh="認識我們的榴槤 <span>→</span>">Meet our durian <span>→</span></a>
+            </div>
+          </article>
+          <article class="hero-image-card hero-story-card">
+            <img src="./assets/highlands.webp" alt="Di Linh highlands" loading="lazy" />
+            <div class="hero-image-overlay">
+              <p data-en="where it all begins" data-zh="一切從這裡開始">where it all begins</p>
+              <a href="#intro" class="hero-image-btn" data-en="Meet Djirian <span>→</span>" data-zh="認識 Djirian <span>→</span>">Meet Djirian <span>→</span></a>
+            </div>
+          </article>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Main Image Container Frame (Self-Contained Dimensions with Gentle Floating Animation) -->
-        <div
-          class="hero-slideshow-container animate-float-gentle relative w-[300px] sm:w-[420px] md:w-[480px] xl:w-[560px] h-[380px] sm:h-[500px] md:h-[560px] xl:h-[580px] rounded-3xl overflow-hidden shadow-[0_20px_50px_-10px_rgba(0,0,0,0.25)] border-4 border-white bg-white/40 backdrop-blur-sm">
-          <img src="./assets/banner_1.webp" alt="Djirian Design Vertical 1" fetchpriority="high"
-            class="hero-slide active w-full h-full object-cover rounded-2xl absolute inset-0 transition-all duration-1000 ease-in-out opacity-100 scale-100" />
-          <img src="./assets/banner_2.webp" alt="Djirian Design Vertical 2" loading="lazy"
-            class="hero-slide w-full h-full object-cover rounded-2xl absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-95" />
-          <img src="./assets/banner_3.webp" alt="Djirian Design Vertical 3" loading="lazy"
-            class="hero-slide w-full h-full object-cover rounded-2xl absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-95" />
-        </div>
+  <!--=================
+        Playful Story Mosaic
+    ==================-->
+  <section id="highlights" class="bg-[#fffdf7] py-8 md:py-14">
+    <div class="container">
+      <div class="mb-7 text-center">
+        <p class="sub_heading" data-en="A few good reasons" data-zh="幾個很好的理由">A few good reasons</p>
+        <h2 class="main_heading" data-en="A little bit of <span class='text-gradient'>Di Linh</span> in every bite." data-zh="每一口，都有一點<span class='text-gradient'>迪靈</span>。">A little bit of <span class="text-gradient">Di Linh</span> in every bite.</h2>
+      </div>
 
-        <!-- Slide indicators -->
-        <div class="absolute bottom-4 z-40 flex gap-2">
-          <span
-            class="slide-dot cursor-pointer w-7 h-2.5 rounded-full bg-p-600 shadow-md transition-all duration-300"></span>
-          <span
-            class="slide-dot cursor-pointer w-2.5 h-2.5 rounded-full bg-p-300 shadow-md transition-all duration-300"></span>
-          <span
-            class="slide-dot cursor-pointer w-2.5 h-2.5 rounded-full bg-p-300 shadow-md transition-all duration-300"></span>
-        </div>
+      <div class="poster-grid">
+        <a href="#intro" class="poster-card poster-land">
+          <img src="./assets/highlands.webp" alt="Di Linh highlands" loading="lazy" />
+          <div class="poster-copy">
+            <p data-en="3 million years of good soil." data-zh="三百萬年的好土壤。">3 million years of good soil.</p>
+            <span class="poster-button" data-en="Meet the land <b>→</b>" data-zh="認識這片土地 <b>→</b>">Meet the land <b>→</b></span>
+          </div>
+        </a>
+        <a href="#products" class="poster-card poster-product">
+          <img src="./assets/banner_1.webp" alt="Djirian freeze-dried durian product" loading="lazy" />
+          <div class="poster-copy">
+            <p data-en="One fruit. Three packs. Zero shortcuts." data-zh="一種水果，三種包裝，零捷徑。">One fruit. Three packs. Zero shortcuts.</p>
+            <span class="poster-button" data-en="See the good stuff <b>→</b>" data-zh="看看好東西 <b>→</b>">See the good stuff <b>→</b></span>
+          </div>
+        </a>
+        <a href="#process" class="poster-card poster-process">
+          <img src="./assets/production.webp" alt="Djirian freeze-drying process" loading="lazy" />
+          <div class="poster-copy">
+            <p data-en="22 quiet hours. Plenty of crunch." data-zh="22 個安靜的小時，滿滿酥脆。">22 quiet hours. Plenty of crunch.</p>
+            <span class="poster-button" data-en="See how <b>→</b>" data-zh="看看做法 <b>→</b>">See how <b>→</b></span>
+          </div>
+        </a>
+        <a href="#garden" class="poster-card poster-farmer">
+          <img src="./assets/farmer.webp" alt="Djirian partner farmer" loading="lazy" />
+          <div class="poster-copy">
+            <p data-en="Grown with people who know their trees." data-zh="由真正懂果樹的人細心種植。">Grown with people who know their trees.</p>
+            <span class="poster-button" data-en="Visit the orchard <b>→</b>" data-zh="走進果園 <b>→</b>">Visit the orchard <b>→</b></span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -199,7 +219,7 @@
 
     <!-- content (Full Spacious Display without cutoff) -->
     <div
-      class="container relative z-10 flex flex-col items-center justify-center px-4 py-10 lg:py-14 gap-5 md:flex-row">
+      class="container relative z-10 grid grid-cols-2 items-center justify-center px-4 py-6 lg:py-8 gap-4 md:flex md:flex-row">
       <div class="stats-item">
         <h1 class="counter">28</h1>
         <h2 data-en="Hectares of Partner Orchards" data-zh="公頃合作果園">Hectares of Partner Orchards</h2>
@@ -259,7 +279,7 @@
         Innocent-style Marquee Ticker
     ==================-->
   <div
-    class="bg-amber-200 text-p-950 py-2.5 overflow-hidden whitespace-nowrap font-bold text-sm border-y-2 border-p-950">
+    class="hidden bg-amber-200 text-p-950 py-2.5 overflow-hidden whitespace-nowrap font-bold text-sm border-y-2 border-p-950">
     <div class="inline-block animate-marquee tracking-wide">
       <span class="mx-6" data-en="✨ 100% Single Origin Di Linh" data-zh="✨ 100% 迪靈單一產區">✨ 100% Single Origin Di Linh</span>
       <span class="mx-6" data-en="⚡ 22-Hour Freeze Dried" data-zh="⚡ 22 小時凍乾">⚡ 22-Hour Freeze Dried</span>
@@ -277,7 +297,7 @@
   <!--=================
         Welcome / Company Introduction
     ==================-->
-  <section id="intro" class="relative overflow-hidden bg-white py-16 md:py-24">
+  <section id="intro" class="relative overflow-hidden bg-white py-10 md:py-12">
     <div class="absolute -top-16 -right-16 size-64 rounded-full bg-amber-100"></div>
     <div class="container relative z-10 grid items-center gap-10 lg:grid-cols-2">
       <div>
@@ -308,16 +328,16 @@
         <!-- tabs -->
         <div id="products-tabs">
           <ul
-            class="flex bg-p-50 px-4 md:px-10 xl:px-[200px] py-4 md:py-6 gap-4 md:gap-8 justify-center mb-9 text-center">
+            class="products-tab-list grid grid-cols-4 bg-white border-2 border-p-100 rounded-2xl px-2 md:px-8 py-2 md:py-3 gap-1 md:flex md:gap-5 justify-center mb-9 text-center shadow-sm">
             <li><a href="#discovery" class="tab-link" data-en="<span>100g</span> Discovery"
                 data-zh="<span>100g</span> 探索裝"><span>100g</span> Discovery</a></li>
-            <li>|</li>
+            <li class="tab-separator">|</li>
             <li><a href="#everyday" class="tab-link" data-en="<span>150g</span> Everyday"
                 data-zh="<span>150g</span> 日常精選"><span>150g</span> Everyday</a></li>
-            <li>|</li>
+            <li class="tab-separator">|</li>
             <li><a href="#gift" class="tab-link" data-en="<span>200g</span> Gift"
                 data-zh="<span>200g</span> 禮贈裝"><span>200g</span> Gift</a></li>
-            <li>|</li>
+            <li class="tab-separator">|</li>
             <li><a href="#oem" class="tab-link" data-en="OEM / Private Label" data-zh="OEM 代工">OEM / Private Label</a>
             </li>
           </ul>

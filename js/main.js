@@ -150,8 +150,6 @@ $(function () {
   AOS Animation
   =================== */
 $(function () {
-  AOS.init();
-
   AOS.init({
     disable: false,
     startEvent: "DOMContentLoaded",
@@ -165,8 +163,8 @@ $(function () {
     delay: 0,
     duration: 700,
     easing: "ease-in-out",
-    once: false,
-    mirror: true,
+    once: true,
+    mirror: false,
     anchorPlacement: "center-bottom",
   });
 });
