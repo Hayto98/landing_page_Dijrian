@@ -28,17 +28,6 @@
     <script src="./js/reveal.js" defer></script>
     <script defer>
       document.addEventListener("DOMContentLoaded", function () {
-        // Nav
-        $(".navbar").hidescroll();
-        $("#toggle_btn").click(() => $(".dropdown-menu").toggleClass("open"));
-        $(".dropdown-menu a").click(() => $(".dropdown-menu").removeClass("open"));
-
-        // i18n
-        window.djirian_i18n.init();
-        $(".lang-btn").on("click", function () {
-          window.djirian_i18n.switchTo($(this).data("lang"));
-        });
-
         // AOS
         AOS.init({
           offset: 100, delay: 0, duration: 700,
@@ -61,8 +50,10 @@
 
           <nav class="items-center justify-end hidden w-full gap-6 lg:flex lg:gap-8">
             <a href="./products.html" class="navLink text-p-600 font-bold" data-en="Products" data-zh="產品">Products</a>
-            <a href="./about.html" class="navLink" data-en="Our Story" data-zh="品牌故事">Our Story</a>
+            <a href="./about.html" class="navLink" data-en="About Djirian" data-zh="關於 Djirian">About Djirian</a>
+            <a href="./profile.html" class="navLink" data-en="Profile" data-zh="公司簡介">Profile</a>
             <a href="./#process" class="navLink" data-en="Process" data-zh="工藝">Process</a>
+            <a href="./#garden" class="navLink" data-en="Our Orchards" data-zh="我們的果園">Our Orchards</a>
             <a href="./#contact" class="navLink" data-en="Contact" data-zh="聯絡">Contact</a>
             <div class="flex items-center gap-1 ml-4 border-l border-n-200 pl-4">
               <button class="lang-btn active" data-lang="en">EN</button>
@@ -84,7 +75,10 @@
 
           <div class="dropdown-menu lg:hidden">
             <a href="./products.html" class="navLink mobileNavLink" data-en="Products" data-zh="產品">Products</a>
-            <a href="./about.html" class="navLink mobileNavLink" data-en="Our Story" data-zh="品牌故事">Our Story</a>
+            <a href="./about.html" class="navLink mobileNavLink" data-en="About Djirian" data-zh="關於 Djirian">About Djirian</a>
+            <a href="./profile.html" class="navLink mobileNavLink" data-en="Profile" data-zh="公司簡介">Profile</a>
+            <a href="./#process" class="navLink mobileNavLink" data-en="Process" data-zh="工藝">Process</a>
+            <a href="./#garden" class="navLink mobileNavLink" data-en="Our Orchards" data-zh="我們的果園">Our Orchards</a>
             <a href="./#contact" class="navLink mobileNavLink" data-en="Contact" data-zh="聯絡">Contact</a>
           </div>
         </div>
