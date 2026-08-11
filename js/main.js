@@ -211,8 +211,9 @@ $(function () {
   }
   
   // Click on image cards to open lightbox
-  infoImages.on("click", function () {
-    const index = infoImages.index(this);
+  const cards = $(".infographic-card");
+  cards.on("click", function () {
+    const index = cards.index(this);
     openLightbox(index);
   });
   
