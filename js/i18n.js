@@ -26,6 +26,11 @@ const i18n = {
       }
     });
 
+    // Swap localized assets such as the company profile document pages.
+    document.querySelectorAll(`[data-src-${lang}]`).forEach((el) => {
+      el.src = el.getAttribute(`data-src-${lang}`);
+    });
+
     // Update html lang attribute
     document.documentElement.lang = lang === "zh" ? "zh-Hant" : "en";
   },

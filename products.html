@@ -26,6 +26,7 @@
     <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/i18n.js" defer></script>
     <script src="./js/reveal.js" defer></script>
+    <script defer type="module" src="./js/main.js"></script>
     <script defer>
       document.addEventListener("DOMContentLoaded", function () {
         // AOS
@@ -49,8 +50,8 @@
           </a>
 
           <nav class="items-center justify-end hidden w-full gap-6 lg:flex lg:gap-8">
+            <a href="./" class="navLink" data-en="Home" data-zh="首頁">Home</a>
             <a href="./products.html" class="navLink text-p-600 font-bold" data-en="Products" data-zh="產品">Products</a>
-            <a href="./about.html" class="navLink" data-en="About Djirian" data-zh="關於 Djirian">About Djirian</a>
             <a href="./profile.html" class="navLink" data-en="Profile" data-zh="公司簡介">Profile</a>
             <a href="./#process" class="navLink" data-en="Process" data-zh="工藝">Process</a>
             <a href="./#garden" class="navLink" data-en="Our Orchards" data-zh="我們的果園">Our Orchards</a>
@@ -74,12 +75,42 @@
           </div>
 
           <div class="dropdown-menu lg:hidden">
-            <a href="./products.html" class="navLink mobileNavLink" data-en="Products" data-zh="產品">Products</a>
-            <a href="./about.html" class="navLink mobileNavLink" data-en="About Djirian" data-zh="關於 Djirian">About Djirian</a>
-            <a href="./profile.html" class="navLink mobileNavLink" data-en="Profile" data-zh="公司簡介">Profile</a>
-            <a href="./#process" class="navLink mobileNavLink" data-en="Process" data-zh="工藝">Process</a>
-            <a href="./#garden" class="navLink mobileNavLink" data-en="Our Orchards" data-zh="我們的果園">Our Orchards</a>
-            <a href="./#contact" class="navLink mobileNavLink" data-en="Contact" data-zh="聯絡">Contact</a>
+            <a href="./" class="mobileNavLink group">
+              <span data-en="Home" data-zh="首頁">Home</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+            <a href="./products.html" class="mobileNavLink group">
+              <span data-en="Products" data-zh="產品">Products</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+            <a href="./profile.html" class="mobileNavLink group">
+              <span data-en="Profile" data-zh="公司簡介">Profile</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+            <a href="./#process" class="mobileNavLink group">
+              <span data-en="Process" data-zh="工藝">Process</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+            <a href="./#garden" class="mobileNavLink group">
+              <span data-en="Our Orchards" data-zh="我們的果園">Our Orchards</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+            <a href="./#contact" class="mobileNavLink group">
+              <span data-en="Contact" data-zh="聯絡">Contact</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -112,7 +143,9 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- 100g -->
           <div class="product-card" data-aos="fade-up">
-            <img src="./assets/banner_2.webp" alt="Discovery 100g" loading="lazy" class="h-80 object-cover" />
+            <div class="product-gallery product-gallery--card" data-product-gallery data-images="./assets/Product/100g.png|./assets/Product/100g.jpg" data-alt="Discovery 100g">
+              <img src="./assets/Product/100g.png" alt="Discovery 100g" loading="lazy" class="h-80 object-cover" draggable="false" />
+            </div>
             <div class="product-card-body">
               <h3 data-en="Discovery 100g" data-zh="探索裝 100g">Discovery 100g</h3>
               <p data-en="Personal trial size. Perfect for modern retail, airport shops, and trade events."
@@ -125,7 +158,9 @@
 
           <!-- 150g -->
           <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-            <img src="./assets/banner_1.webp" alt="Everyday Premium 150g" loading="lazy" class="h-80 object-cover" />
+            <div class="product-gallery product-gallery--card" data-product-gallery data-images="./assets/Product/150g.png|./assets/Product/150g.1.png|./assets/Product/150.3g.png" data-alt="Everyday Premium 150g">
+              <img src="./assets/Product/150g.png" alt="Everyday Premium 150g" loading="lazy" class="h-80 object-cover" draggable="false" />
+            </div>
             <div class="product-card-body">
               <h3 data-en="Everyday Premium 150g" data-zh="日常精選 150g">Everyday Premium 150g</h3>
               <p data-en="Our most popular SKU for supermarkets and high-end food stores."
@@ -138,7 +173,9 @@
 
           <!-- 200g -->
           <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-            <img src="./assets/banner_3.webp" alt="Share & Gift 200g" loading="lazy" class="h-80 object-cover" />
+            <div class="product-gallery product-gallery--card" data-product-gallery data-images="./assets/Product/200g.png" data-alt="Share &amp; Gift 200g">
+              <img src="./assets/Product/200g.png" alt="Share &amp; Gift 200g" loading="lazy" class="h-80 object-cover" draggable="false" />
+            </div>
             <div class="product-card-body">
               <h3 data-en="Share &amp; Gift 200g" data-zh="分享禮贈 200g">Share &amp; Gift 200g</h3>
               <p data-en="Ideal for gifting. Pairs beautifully with tea, coffee, or chocolate in gift sets."
@@ -147,6 +184,32 @@
               </p>
               <div class="price">$16.90 – $21.90</div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=================
+        150g Editorial Images
+    ==================-->
+    <section class="bg-white pt-0">
+      <div class="container">
+        <div class="product-portrait-showcase" data-aos="fade-up">
+          <div class="product-portrait-copy">
+            <p class="sub_heading" data-en="150g In Focus" data-zh="150g 焦點呈現">150g In Focus</p>
+            <h2 data-en="Made for the <span class='text-gradient'>everyday shelf.</span>"
+              data-zh="為<span class='text-gradient'>日常貨架</span>而生。">
+              Made for the <span class="text-gradient">everyday shelf.</span>
+            </h2>
+            <p data-en="Portrait compositions from the Everyday Premium collection, presented as a visual story outside the product gallery."
+              data-zh="日常精選系列的直式構圖，以獨立視覺故事呈現，不影響產品圖庫的橫式瀏覽體驗。">
+              Portrait compositions from the Everyday Premium collection, presented as a visual story outside the product gallery.
+            </p>
+          </div>
+          <div class="product-portrait-collage">
+            <img src="./assets/Product/150g.2.png" alt="Everyday Premium 150g portrait composition" loading="lazy" />
+            <img src="./assets/Product/150.4g.png" alt="Everyday Premium 150g lifestyle portrait" loading="lazy" />
+            <img src="./assets/Product/150.5g.png" alt="Everyday Premium 150g product detail" loading="lazy" />
           </div>
         </div>
       </div>

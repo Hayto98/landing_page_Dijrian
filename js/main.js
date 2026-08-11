@@ -252,3 +252,67 @@ $(function () {
   });
 });
 
+/* ================
+   Product Image Galleries
+  =================== */
+$(function () {
+  document.querySelectorAll("[data-product-gallery]").forEach((gallery) => {
+    const images = gallery.dataset.images.split("|").filter(Boolean);
+    const image = gallery.querySelector("img");
+
+    if (!image || images.length === 0) return;
+
+    const setGalleryBackground = (src) => {
+      gallery.style.setProperty("--gallery-bg", `url("${src}")`);
+    };
+
+    setGalleryBackground(images[0]);
+    if (images.length < 2) return;
+
+    const alt = gallery.dataset.alt || image.alt;
+
+    let currentIndex = 0;
+    let startX = 0;
+
+    gallery.insertAdjacentHTML(
+      "beforeend",
+      `<button class="product-gallery__control product-gallery__control--prev" type="button" aria-label="Previous product image">‹</button>
+       <button class="product-gallery__control product-gallery__control--next" type="button" aria-label="Next product image">›</button>
+       <div class="product-gallery__dots" aria-label="Product image selection">${images
+         .map((_, index) => `<button class="product-gallery__dot${index === 0 ? " is-active" : ""}" type="button" aria-label="Show product image ${index + 1}"></button>`)
+         .join("")}</div>`
+    );
+
+    const dots = [...gallery.querySelectorAll(".product-gallery__dot")];
+
+    function showImage(index) {
+      currentIndex = (index + images.length) % images.length;
+      image.style.opacity = "0";
+
+      window.setTimeout(() => {
+        image.src = images[currentIndex];
+        image.alt = `${alt} — image ${currentIndex + 1}`;
+        setGalleryBackground(images[currentIndex]);
+        image.style.opacity = "1";
+      }, 150);
+
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle("is-active", dotIndex === currentIndex);
+      });
+    }
+
+    gallery.querySelector(".product-gallery__control--prev").addEventListener("click", () => showImage(currentIndex - 1));
+    gallery.querySelector(".product-gallery__control--next").addEventListener("click", () => showImage(currentIndex + 1));
+    dots.forEach((dot, index) => dot.addEventListener("click", () => showImage(index)));
+
+    gallery.addEventListener("pointerdown", (event) => {
+      startX = event.clientX;
+    });
+
+    gallery.addEventListener("pointerup", (event) => {
+      const swipeDistance = event.clientX - startX;
+      if (Math.abs(swipeDistance) < 40) return;
+      showImage(currentIndex + (swipeDistance < 0 ? 1 : -1));
+    });
+  });
+});
