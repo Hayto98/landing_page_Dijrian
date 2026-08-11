@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Djirian — Credentials & Roadmap</title>
+  <meta name="description"
+    content="Djirian company credentials: Factory certification roadmap, supply capacity, and regional partnership details." />
+  <link rel="icon" type="image/png" href="./assets/logo.png" />
+
+  <!-- CSS -->
+  <link type="text/css" rel="stylesheet" href="./css/showHideNav.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="./css/animation.css" rel="stylesheet" />
+  <link href="./dist/output.css" rel="stylesheet" />
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+
+  <!-- Scripts -->
+  <script src="./js/jquery.hidescroll.js" defer></script>
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/i18n.js" defer></script>
+  <script src="./js/reveal.js" defer></script>
+  <script defer type="module" src="./js/main.js"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Nav scroll hiding
+      if ($.fn.hidescroll) {
+        $(".navbar").hidescroll();
+      }
+      
+      // Mobile menu toggle
+      $("#toggle_btn").click(() => $(".dropdown-menu").toggleClass("open"));
+      $(".dropdown-menu a").click(() => $(".dropdown-menu").removeClass("open"));
+
+      // Initialize translation system
+      if (window.djirian_i18n) {
+        window.djirian_i18n.init();
+        $(".lang-btn").on("click", function () {
+          window.djirian_i18n.switchTo($(this).data("lang"));
+        });
+      }
+
+      // Initialize animations
+      if (typeof AOS !== "undefined") {
+        AOS.init({
+          offset: 100,
+          delay: 0,
+          duration: 700,
+          easing: "ease-in-out",
+          once: true,
+          mirror: false,
+        });
+      }
+    });
+  </script>
+</head>
+
+<body class="bg-[#fffdf7]">
+  <!--=================
+        Navigation
+    ==================-->
+  <header class="relative z-50">
+    <div class="flex items-center justify-center navbar">
+      <div class="max-w-[1536px] w-full px-4 py-4 md:py-10 md:px-[72px] flex items-center justify-between">
+        <!-- Logo -->
+        <a href="./" class="flex items-center justify-center flex-none gap-3 hover-tilt">
+          <img src="./assets/official_logo.png" alt="Djirian Logo" class="h-10 md:h-12 w-auto object-contain" />
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="items-center justify-end hidden w-full gap-6 lg:flex lg:gap-8">
+          <a href="./products.html" class="navLink" data-en="Products" data-zh="產品">Products</a>
+          <a href="./about.html" class="navLink text-p-600 font-bold" data-en="Our Story" data-zh="品牌故事">Our Story</a>
+          <a href="./#process" class="navLink" data-en="Process" data-zh="工藝">Process</a>
+          <a href="./#contact" class="navLink" data-en="Contact" data-zh="聯絡">Contact</a>
+          <div class="flex items-center gap-1 ml-4 border-l border-n-200 pl-4">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <span class="text-n-200">|</span>
+            <button class="lang-btn" data-lang="zh">中文</button>
+          </div>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="flex items-center gap-3 lg:hidden">
+          <div class="flex items-center gap-1">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <span class="text-n-200">|</span>
+            <button class="lang-btn" data-lang="zh">中文</button>
+          </div>
+          <div class="cursor-pointer" id="toggle_btn">
+            <img src="./assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
+          </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div class="dropdown-menu lg:hidden">
+          <a href="./products.html" class="navLink mobileNavLink" data-en="Products" data-zh="產品">Products</a>
+          <a href="./about.html" class="navLink mobileNavLink" data-en="Our Story" data-zh="品牌故事">Our Story</a>
+          <a href="./#process" class="navLink mobileNavLink" data-en="Process" data-zh="工藝">Process</a>
+          <a href="./#contact" class="navLink mobileNavLink" data-en="Contact" data-zh="聯絡">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!--=================
+        Main Content
+    ==================-->
+  <main class="container my-12 max-w-4xl px-4">
+    <div class="mb-12 text-center" data-aos="fade-down">
+      <p class="sub_heading" data-en="Credentials & Roadmap" data-zh="企業資質與規劃">Credentials & Roadmap</p>
+      <h1 class="main_heading text-3xl md:text-5xl mt-2" data-en="About <span class='text-gradient'>Djirian</span>" data-zh="關於 <span class='text-gradient'>Djirian</span>">About <span class="text-gradient">Djirian</span></h1>
+      <p class="mx-auto mt-4 max-w-2xl text-n-700 text-sm md:text-base leading-relaxed" data-en="Browse our factory certifications roadmap, supply capacity specifications, and regional partnership details below. Click on any infographic to view it in full screen." data-zh="瀏覽我們的工廠規劃、供應能力規格與地區合作詳情。點擊任意圖片可開啟全螢幕檢視。">Browse our factory certifications roadmap, supply capacity specifications, and regional partnership details below. Click on any infographic to view it in full screen.</p>
+    </div>
+
+    <div class="flex flex-col gap-16 items-center">
+      <!-- Card 1: Factory Roadmap -->
+      <div class="w-full bg-white border-2 border-p-950 rounded-[2rem] shadow-[8px_8px_0_#fbbf24] p-6 md:p-8 flex flex-col items-center gap-6" data-aos="fade-up">
+        <h2 class="font-playfair text-xl md:text-2xl font-bold text-p-950 text-center" data-en="1. Factory Roadmap" data-zh="1. 工廠規劃路線圖">1. Factory Roadmap</h2>
+        <div class="relative w-full max-w-[500px] aspect-[1/1.414] overflow-hidden rounded-2xl border border-n-200 cursor-zoom-in group infographic-card">
+          <img src="./assets/factory_roadmap.png" alt="Factory Roadmap" class="w-full h-full object-cover object-top infographic-img" data-caption-en="Factory Roadmap" data-caption-zh="工廠規劃路線圖" />
+          <div class="absolute inset-0 bg-p-950/0 group-hover:bg-p-950/10 transition-colors flex items-center justify-center">
+            <span class="bg-p-950/80 text-white px-4 py-2 rounded-full text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5 shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637zM10.5 7.5v6m3-3h-6" />
+              </svg>
+              <span data-en="Click to Zoom" data-zh="點擊放大">Click to Zoom</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Supply Capacity -->
+      <div class="w-full bg-white border-2 border-p-950 rounded-[2rem] shadow-[8px_8px_0_#fbbf24] p-6 md:p-8 flex flex-col items-center gap-6" data-aos="fade-up">
+        <h2 class="font-playfair text-xl md:text-2xl font-bold text-p-950 text-center" data-en="2. Supply Capacity" data-zh="2. 供應能力">2. Supply Capacity</h2>
+        <div class="relative w-full max-w-[500px] aspect-[1/1.414] overflow-hidden rounded-2xl border border-n-200 cursor-zoom-in group infographic-card">
+          <img src="./assets/supply_capacity.png" alt="Supply Capacity" class="w-full h-full object-cover object-top infographic-img" data-caption-en="Supply Capacity" data-caption-zh="供應能力" />
+          <div class="absolute inset-0 bg-p-950/0 group-hover:bg-p-950/10 transition-colors flex items-center justify-center">
+            <span class="bg-p-950/80 text-white px-4 py-2 rounded-full text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5 shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637zM10.5 7.5v6m3-3h-6" />
+              </svg>
+              <span data-en="Click to Zoom" data-zh="點擊放大">Click to Zoom</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Why Djirian & Contact -->
+      <div class="w-full bg-white border-2 border-p-950 rounded-[2rem] shadow-[8px_8px_0_#fbbf24] p-6 md:p-8 flex flex-col items-center gap-6" data-aos="fade-up">
+        <h2 class="font-playfair text-xl md:text-2xl font-bold text-p-950 text-center" data-en="3. Why Djirian & Contact" data-zh="3. 為何選擇 Djirian & 聯絡">3. Why Djirian & Contact</h2>
+        <div class="relative w-full max-w-[500px] aspect-[1/1.414] overflow-hidden rounded-2xl border border-n-200 cursor-zoom-in group infographic-card">
+          <img src="./assets/why_djirian_contact.png" alt="Why Djirian & Contact" class="w-full h-full object-cover object-top infographic-img" data-caption-en="Why Djirian & Contact" data-caption-zh="為何選擇 Djirian & 聯絡" />
+          <div class="absolute inset-0 bg-p-950/0 group-hover:bg-p-950/10 transition-colors flex items-center justify-center">
+            <span class="bg-p-950/80 text-white px-4 py-2 rounded-full text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5 shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637zM10.5 7.5v6m3-3h-6" />
+              </svg>
+              <span data-en="Click to Zoom" data-zh="點擊放大">Click to Zoom</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!--=================
+        Footer
+    ==================-->
+  <footer class="bg-p-950 py-10 mt-20">
+    <div class="container text-white/50">
+      <p class="text-center" data-en="© Djirian 2026 — Single Origin Freeze-Dried Durian, Di Linh, Vietnam"
+        data-zh="© Djirian 2026 — 單一產地冷凍乾燥榴槤，越南夷靈">© Djirian 2026 — Single Origin Freeze-Dried Durian, Di Linh, Vietnam</p>
+    </div>
+  </footer>
+
+  <!--=================
+    About Djirian Lightbox Modal
+  ==================-->
+  <div id="about-lightbox" class="fixed inset-0 bg-p-950/90 backdrop-blur-md z-[9999] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-all duration-300">
+    <!-- Close button -->
+    <button id="lightbox-close" class="absolute top-6 right-6 text-white hover:text-amber-400 transition-colors bg-white/10 hover:bg-white/20 p-2.5 rounded-full border border-white/20 z-50 shadow-lg cursor-pointer" aria-label="Close Lightbox">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    
+    <!-- Lightbox Navigation -->
+    <button id="lightbox-prev" class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 text-white hover:text-amber-400 transition-colors bg-white/10 hover:bg-white/20 p-4 rounded-full border border-white/20 z-50 shadow-lg cursor-pointer" aria-label="Previous image">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+      </svg>
+    </button>
+    <button id="lightbox-next" class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 text-white hover:text-amber-400 transition-colors bg-white/10 hover:bg-white/20 p-4 rounded-full border border-white/20 z-50 shadow-lg cursor-pointer" aria-label="Next image">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </button>
+    
+    <!-- Image container -->
+    <div class="w-full max-w-[90vw] max-h-[80vh] flex justify-center items-center overflow-auto p-4 select-none">
+      <img id="lightbox-img" src="" alt="Enlarged Infographic" class="max-w-full max-h-[75vh] object-contain rounded-2xl border border-white/10 shadow-2xl transition-transform duration-300" />
+    </div>
+    
+    <!-- Caption / Label -->
+    <div id="lightbox-caption" class="mt-5 text-white font-semibold text-sm px-6 py-2.5 bg-p-950/80 border border-white/10 rounded-full backdrop-blur-sm shadow-xl tracking-wide select-none">
+      Caption
+    </div>
+  </div>
+</body>
+
+</html>

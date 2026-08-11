@@ -168,3 +168,86 @@ $(function () {
     anchorPlacement: "center-bottom",
   });
 });
+
+/* ================ 
+   About Djirian Lightbox Gallery
+  =================== */
+$(function () {
+  const lightbox = $("#about-lightbox");
+  const lightboxImg = $("#lightbox-img");
+  const lightboxClose = $("#lightbox-close");
+  const lightboxPrev = $("#lightbox-prev");
+  const lightboxNext = $("#lightbox-next");
+  const lightboxCaption = $("#lightbox-caption");
+  const infoImages = $(".infographic-img");
+  
+  if (infoImages.length === 0 || lightbox.length === 0) return;
+  
+  let currentIndex = 0;
+  
+  function openLightbox(index) {
+    if (index < 0) index = infoImages.length - 1;
+    if (index >= infoImages.length) index = 0;
+    
+    currentIndex = index;
+    
+    const imgEl = $(infoImages[currentIndex]);
+    const imgSrc = imgEl.attr("src");
+    
+    // Get language code
+    const activeLang = window.djirian_i18n?.currentLang || document.documentElement.lang || "en";
+    const captionText = activeLang === "zh" ? imgEl.attr("data-caption-zh") : imgEl.attr("data-caption-en");
+    
+    lightboxImg.attr("src", imgSrc);
+    lightboxCaption.text(captionText || imgEl.attr("alt"));
+    
+    lightbox.removeClass("opacity-0 pointer-events-none");
+    $("body").addClass("overflow-hidden"); // Disable page scrolling
+  }
+  
+  function closeLightbox() {
+    lightbox.addClass("opacity-0 pointer-events-none");
+    $("body").removeClass("overflow-hidden");
+  }
+  
+  // Click on image cards to open lightbox
+  infoImages.on("click", function () {
+    const index = infoImages.index(this);
+    openLightbox(index);
+  });
+  
+  lightboxClose.on("click", closeLightbox);
+  
+  // Close lightbox on click outside the image
+  lightbox.on("click", function (e) {
+    if ($(e.target).is(lightbox) || $(e.target).closest(".select-none").length === 0) {
+      if (!$(e.target).is("#lightbox-img") && !$(e.target).is("#lightbox-prev") && !$(e.target).is("#lightbox-next") && !$(e.target).is("#lightbox-caption")) {
+        closeLightbox();
+      }
+    }
+  });
+  
+  lightboxPrev.on("click", function (e) {
+    e.stopPropagation();
+    openLightbox(currentIndex - 1);
+  });
+  
+  lightboxNext.on("click", function (e) {
+    e.stopPropagation();
+    openLightbox(currentIndex + 1);
+  });
+  
+  // Keyboard navigation for lightbox
+  $(document).on("keydown", function (e) {
+    if (lightbox.hasClass("opacity-0")) return;
+    
+    if (e.key === "Escape") {
+      closeLightbox();
+    } else if (e.key === "ArrowLeft") {
+      lightboxPrev.trigger("click");
+    } else if (e.key === "ArrowRight") {
+      lightboxNext.trigger("click");
+    }
+  });
+});
+
