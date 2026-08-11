@@ -116,59 +116,51 @@
   <!--=================
         Main Content
     ==================-->
-  <main class="container my-12 max-w-5xl px-4">
-    <div class="mb-12 text-center" data-aos="fade-down">
+  <main class="container my-12 max-w-5xl px-0 md:px-4 flex flex-col items-center">
+    <div class="mb-10 text-center" data-aos="fade-down">
       <p class="sub_heading" data-en="Credentials & Roadmap" data-zh="企業資質與規劃">Credentials & Roadmap</p>
       <h1 class="main_heading text-3xl md:text-5xl mt-2" data-en="About <span class='text-gradient'>Djirian</span>" data-zh="關於 <span class='text-gradient'>Djirian</span>">About <span class="text-gradient">Djirian</span></h1>
-      <p class="mx-auto mt-4 max-w-2xl text-n-700 text-sm md:text-base leading-relaxed" data-en="Browse our factory certifications roadmap, supply capacity specifications, and regional partnership details below. Click on any infographic to view it in full screen." data-zh="瀏覽我們的工廠規劃、供應能力規格與地區合作詳情。點擊任意圖片可開啟全螢幕檢視。">Browse our factory certifications roadmap, supply capacity specifications, and regional partnership details below. Click on any infographic to view it in full screen.</p>
+      <p class="mx-auto mt-4 max-w-2xl text-n-700 text-sm md:text-base leading-relaxed" data-en="Browse our factory certifications roadmap, supply capacity specifications, and regional partnership details below. Click on any page to open it in fullscreen zoom." data-zh="瀏覽我們的工廠規劃、供應能力規格與地區合作詳情。點擊任意頁面可開啟全螢幕檢視。">Browse our factory certifications roadmap, supply capacity specifications, and regional partnership details below. Click on any page to open it in fullscreen zoom.</p>
     </div>
 
-    <div class="flex flex-col gap-16 items-center">
-      <!-- Card 1: Factory Roadmap -->
-      <div class="w-full max-w-[760px] flex flex-col items-center gap-4" data-aos="fade-up">
-        <h2 class="font-playfair text-xl md:text-2xl font-bold text-p-950 text-center" data-en="1. Factory Roadmap" data-zh="1. 工廠規劃路線圖">1. Factory Roadmap</h2>
-        <div class="relative w-full aspect-[1/1.414] overflow-hidden rounded-[1.5rem] border border-n-200 shadow-2xl cursor-zoom-in group infographic-card">
-          <img src="./assets/factory_roadmap.png" alt="Factory Roadmap" class="w-full h-full object-cover object-top infographic-img" data-caption-en="Factory Roadmap" data-caption-zh="工廠規劃路線圖" />
-          <div class="absolute inset-0 bg-p-950/0 group-hover:bg-p-950/10 transition-colors flex items-center justify-center">
-            <span class="bg-p-950/80 text-white px-4 py-2 rounded-full text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5 shadow-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637zM10.5 7.5v6m3-3h-6" />
-              </svg>
-              <span data-en="Click to Zoom" data-zh="點擊放大">Click to Zoom</span>
-            </span>
-          </div>
+    <!-- Continuous PDF Viewer -->
+    <div class="w-full max-w-[800px] flex flex-col shadow-2xl border border-n-200 rounded-3xl overflow-hidden bg-white select-none p-0" data-aos="fade-up">
+      <!-- Page 1: Factory Roadmap -->
+      <div class="relative w-full aspect-[1/1.414] cursor-zoom-in group infographic-card border-b border-n-100 p-0">
+        <img src="./assets/factory_roadmap.png" alt="Factory Roadmap" class="w-full h-full object-cover object-top infographic-img" data-caption-en="Factory Roadmap" data-caption-zh="工廠規劃路線圖" />
+        <div class="absolute inset-0 bg-p-950/0 group-hover:bg-p-950/10 transition-colors flex items-center justify-center">
+          <span class="bg-p-950/80 text-white px-4 py-2 rounded-full text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5 shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637zM10.5 7.5v6m3-3h-6" />
+            </svg>
+            <span data-en="Click to Zoom" data-zh="點擊放大">Click to Zoom</span>
+          </span>
         </div>
       </div>
 
-      <!-- Card 2: Supply Capacity -->
-      <div class="w-full max-w-[760px] flex flex-col items-center gap-4" data-aos="fade-up">
-        <h2 class="font-playfair text-xl md:text-2xl font-bold text-p-950 text-center" data-en="2. Supply Capacity" data-zh="2. 供應能力">2. Supply Capacity</h2>
-        <div class="relative w-full aspect-[1/1.414] overflow-hidden rounded-[1.5rem] border border-n-200 shadow-2xl cursor-zoom-in group infographic-card">
-          <img src="./assets/supply_capacity.png" alt="Supply Capacity" class="w-full h-full object-cover object-top infographic-img" data-caption-en="Supply Capacity" data-caption-zh="供應能力" />
-          <div class="absolute inset-0 bg-p-950/0 group-hover:bg-p-950/10 transition-colors flex items-center justify-center">
-            <span class="bg-p-950/80 text-white px-4 py-2 rounded-full text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5 shadow-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637zM10.5 7.5v6m3-3h-6" />
-              </svg>
-              <span data-en="Click to Zoom" data-zh="點擊放大">Click to Zoom</span>
-            </span>
-          </div>
+      <!-- Page 2: Supply Capacity -->
+      <div class="relative w-full aspect-[1/1.414] cursor-zoom-in group infographic-card border-b border-n-100 p-0">
+        <img src="./assets/supply_capacity.png" alt="Supply Capacity" class="w-full h-full object-cover object-top infographic-img" data-caption-en="Supply Capacity" data-caption-zh="供應能力" />
+        <div class="absolute inset-0 bg-p-950/0 group-hover:bg-p-950/10 transition-colors flex items-center justify-center">
+          <span class="bg-p-950/80 text-white px-4 py-2 rounded-full text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5 shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637zM10.5 7.5v6m3-3h-6" />
+            </svg>
+            <span data-en="Click to Zoom" data-zh="點擊放大">Click to Zoom</span>
+          </span>
         </div>
       </div>
 
-      <!-- Card 3: Why Djirian & Contact -->
-      <div class="w-full max-w-[760px] flex flex-col items-center gap-4" data-aos="fade-up">
-        <h2 class="font-playfair text-xl md:text-2xl font-bold text-p-950 text-center" data-en="3. Why Djirian & Contact" data-zh="3. 為何選擇 Djirian & 聯絡">3. Why Djirian & Contact</h2>
-        <div class="relative w-full aspect-[1/1.414] overflow-hidden rounded-[1.5rem] border border-n-200 shadow-2xl cursor-zoom-in group infographic-card">
-          <img src="./assets/why_djirian_contact.png" alt="Why Djirian & Contact" class="w-full h-full object-cover object-top infographic-img" data-caption-en="Why Djirian & Contact" data-caption-zh="為何選擇 Djirian & 聯絡" />
-          <div class="absolute inset-0 bg-p-950/0 group-hover:bg-p-950/10 transition-colors flex items-center justify-center">
-            <span class="bg-p-950/80 text-white px-4 py-2 rounded-full text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5 shadow-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637zM10.5 7.5v6m3-3h-6" />
-              </svg>
-              <span data-en="Click to Zoom" data-zh="點擊放大">Click to Zoom</span>
-            </span>
-          </div>
+      <!-- Page 3: Why Djirian & Contact -->
+      <div class="relative w-full aspect-[1/1.414] cursor-zoom-in group infographic-card p-0">
+        <img src="./assets/why_djirian_contact.png" alt="Why Djirian & Contact" class="w-full h-full object-cover object-top infographic-img" data-caption-en="Why Djirian & Contact" data-caption-zh="為何選擇 Djirian & 聯絡" />
+        <div class="absolute inset-0 bg-p-950/0 group-hover:bg-p-950/10 transition-colors flex items-center justify-center">
+          <span class="bg-p-950/80 text-white px-4 py-2 rounded-full text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5 shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637zM10.5 7.5v6m3-3h-6" />
+            </svg>
+            <span data-en="Click to Zoom" data-zh="點擊放大">Click to Zoom</span>
+          </span>
         </div>
       </div>
     </div>
@@ -208,8 +200,8 @@
     </button>
     
     <!-- Image container -->
-    <div class="w-full max-w-[95vw] max-h-[92vh] flex justify-center items-center overflow-auto p-2 select-none">
-      <img id="lightbox-img" src="" alt="Enlarged Infographic" class="max-w-full max-h-[88vh] object-contain rounded-2xl border border-white/10 shadow-2xl transition-transform duration-300" />
+    <div class="w-full max-w-[95vw] max-h-[92vh] flex justify-center items-center overflow-auto p-0 select-none">
+      <img id="lightbox-img" src="" alt="Enlarged Infographic" class="max-w-full max-h-[90vh] object-contain rounded-2xl border border-white/10 shadow-2xl transition-transform duration-300" />
     </div>
     
     <!-- Caption / Label -->
