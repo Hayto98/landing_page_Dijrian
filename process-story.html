@@ -19,25 +19,80 @@
   </head>
   <body class="process-story-page">
     <header class="relative z-50">
-      <div class="navbar story-navbar">
-        <div class="story-nav-inner">
-          <a href="./" class="story-logo" aria-label="Djirian home"><img src="./assets/official_logo.png" alt="Djirian" /></a>
-          <nav class="story-nav-links" aria-label="Primary navigation">
-            <a href="./" data-en="Home" data-zh="首頁">Home</a>
-            <a href="./our-product.html" data-en="Products" data-zh="產品">Products</a>
-            <a href="./process-story.html" class="is-active" data-en="Process" data-zh="工藝">Process</a>
-            <a href="./brand-story.html" data-en="Brand Story" data-zh="品牌故事">Brand Story</a>
-            <a href="./profile.html" data-en="Profile" data-zh="公司簡介">Profile</a>
-            <a href="./#contact" data-en="Contact" data-zh="聯絡">Contact</a>
-            <span class="story-lang-switcher"><button class="lang-btn active" data-lang="en">EN</button><span>/</span><button class="lang-btn" data-lang="zh">中文</button></span>
+      <div class="flex items-center justify-center navbar">
+        <div class="max-w-[1536px] w-full px-4 py-4 md:py-10 md:px-[72px] flex items-center justify-between">
+          <!-- Logo -->
+          <a href="./" class="flex items-center justify-center flex-none gap-3 hover-tilt">
+            <img src="./assets/official_logo.png" alt="Djirian Logo" class="h-10 md:h-12 w-auto object-contain" />
+          </a>
+
+          <!-- Nav Links -->
+          <nav class="items-center justify-end hidden w-full gap-6 lg:flex lg:gap-8">
+            <a href="./" class="navLink" data-en="Home" data-zh="首頁">Home</a>
+            <a href="./our-product.html" class="navLink" data-en="Products" data-zh="產品">Products</a>
+            <a href="./profile.html" class="navLink" data-en="Profile" data-zh="公司簡介">Profile</a>
+            <a href="./process-story.html" class="navLink text-p-600 font-bold" data-en="Process" data-zh="工藝">Process</a>
+            <a href="./brand-story.html" class="navLink" data-en="Brand Story" data-zh="品牌故事">Brand Story</a>
+            <a href="./#contact" class="navLink" data-en="Contact" data-zh="聯絡">Contact</a>
+
+            <!-- Language Switcher -->
+            <div class="flex items-center gap-1 ml-4 border-l border-n-200 pl-4">
+              <button class="lang-btn active" data-lang="en">EN</button>
+              <span class="text-n-200">|</span>
+              <button class="lang-btn" data-lang="zh">中文</button>
+            </div>
           </nav>
-          <div class="story-mobile-actions"><button class="lang-btn active" data-lang="en">EN</button><span>/</span><button class="lang-btn" data-lang="zh">中文</button><button id="toggle_btn" class="story-menu-toggle" aria-label="Open menu"><img src="./assets/Menu Icon.svg" alt="" /></button></div>
-          <div class="dropdown-menu story-mobile-menu">
-            <a href="./"><span data-en="Home" data-zh="首頁">Home</span><b>↗</b></a>
-            <a href="./our-product.html"><span data-en="Products" data-zh="產品">Products</span><b>↗</b></a>
-            <a href="./process-story.html"><span data-en="Process" data-zh="工藝">Process</span><b>↗</b></a>
-            <a href="./brand-story.html"><span data-en="Brand Story" data-zh="品牌故事">Brand Story</span><b>↗</b></a>
-            <a href="./profile.html"><span data-en="Profile" data-zh="公司簡介">Profile</span><b>↗</b></a>
+
+          <!-- Hamburger Icon -->
+          <div class="flex items-center gap-3 lg:hidden">
+            <div class="flex items-center gap-1">
+              <button class="lang-btn active" data-lang="en">EN</button>
+              <span class="text-n-200">|</span>
+              <button class="lang-btn" data-lang="zh">中文</button>
+            </div>
+            <div class="cursor-pointer" id="toggle_btn" aria-label="Toggle navigation menu">
+              <img src="./assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
+            </div>
+          </div>
+
+          <!-- Mobile Menu -->
+          <div class="dropdown-menu lg:hidden">
+            <a href="./" class="mobileNavLink group">
+              <span data-en="Home" data-zh="首頁">Home</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+            <a href="./our-product.html" class="mobileNavLink group">
+              <span data-en="Products" data-zh="產品">Products</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+            <a href="./profile.html" class="mobileNavLink group">
+              <span data-en="Profile" data-zh="公司簡介">Profile</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+            <a href="./process-story.html" class="mobileNavLink group bg-white/10 text-amber-400 font-bold">
+              <span data-en="Process" data-zh="工藝">Process</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-100 text-amber-400">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+            <a href="./brand-story.html" class="mobileNavLink group">
+              <span data-en="Brand Story" data-zh="品牌故事">Brand Story</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+            <a href="./#contact" class="mobileNavLink group">
+              <span data-en="Contact" data-zh="聯絡">Contact</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
