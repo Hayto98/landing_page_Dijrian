@@ -1,0 +1,1 @@
+const fs = require('fs'); const files = ['css/main.css', 'css/our-product.css', 'css/process-story.css', 'css/brand-story.css']; files.forEach(file => { let content = fs.readFileSync(file, 'utf8'); content = content.replace(/"SVN-gratelos display 2"/g, '"Playfair Display"'); fs.writeFileSync(file, content); }); console.log('Reverted font');
