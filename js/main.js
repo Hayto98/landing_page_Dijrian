@@ -22,14 +22,64 @@ $(function () {
     dropdownMenu.removeClass("open");
   });
 
-  // Force autoplay for mobile browsers (iOS Safari / Android Low Power Mode)
+  // Handle Hero Video & Static Image Fallback for heavy video / low performance / slow network / low battery devices
   const heroVid = document.getElementById("hero_video");
+  const heroFallbackImg = document.getElementById("hero_fallback_img");
+
+  function switchToImageFallback() {
+    if (heroVid) {
+      try {
+        heroVid.pause();
+        heroVid.removeAttribute("autoplay");
+      } catch (e) {}
+      heroVid.style.display = "none";
+    }
+    if (heroFallbackImg) {
+      heroFallbackImg.classList.remove("hidden");
+      heroFallbackImg.style.display = "block";
+    }
+  }
+
   if (heroVid) {
     heroVid.muted = true;
-    heroVid.play().catch(() => {
-      document.addEventListener("touchstart", () => heroVid.play(), { once: true });
-      document.addEventListener("click", () => heroVid.play(), { once: true });
-    });
+
+    // Detect network / device constraints (Data Saver, slow connection, low CPU/RAM specs, prefers-reduced-data)
+    const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const isSaveData = conn && conn.saveData;
+    const isSlowNetwork = conn && (conn.effectiveType === 'slow-2g' || conn.effectiveType === '2g');
+    const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
+    const isLowCpu = navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2;
+    const prefersReducedData = window.matchMedia && window.matchMedia('(prefers-reduced-data: reduce)').matches;
+
+    if (isSaveData || isSlowNetwork || isLowMemory || isLowCpu || prefersReducedData) {
+      switchToImageFallback();
+    } else {
+      // Attempt autoplay with fallback on error or timeout
+      let hasStartedPlaying = false;
+
+      heroVid.addEventListener("playing", () => {
+        hasStartedPlaying = true;
+      });
+
+      heroVid.addEventListener("error", () => {
+        switchToImageFallback();
+      });
+
+      const playPromise = heroVid.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // If autoplay fails or user has power saving / strict autoplay policies enabled, switch to image fallback
+          switchToImageFallback();
+        });
+      }
+
+      // Timeout check: if video cannot buffer/start playing within 3.5 seconds (heavy video / poor device), switch to fallback image
+      setTimeout(() => {
+        if (!hasStartedPlaying && (heroVid.paused || heroVid.readyState < 2)) {
+          switchToImageFallback();
+        }
+      }, 3500);
+    }
   }
 });
 
