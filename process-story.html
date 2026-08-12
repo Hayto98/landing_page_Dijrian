@@ -1,151 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How It’s Made — Djirian</title>
-    <meta name="description" content="From the Di Linh tree to a sealed jar: Djirian's 48-hour rule for freeze-dried durian." />
-    <link rel="icon" type="image/png" href="./assets/logo.png" />
-    <link rel="stylesheet" href="./css/showHideNav.css" />
-    <link rel="stylesheet" href="./dist/output.css" />
-    <link rel="stylesheet" href="./css/process-story.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
-    <script src="./js/jquery.hidescroll.js" defer></script>
-    <script src="./js/i18n.js" defer></script>
-    <script type="module" src="./js/main.js" defer></script>
-  </head>
-  <body class="process-story-page">
-    <header class="relative z-50">
-      <div class="flex items-center justify-center navbar">
-        <div class="max-w-[1536px] w-full px-4 py-4 md:py-10 md:px-[72px] flex items-center justify-between">
-          <!-- Logo -->
-          <a href="./" class="flex items-center justify-center flex-none gap-3 hover-tilt">
-            <img src="./assets/official_logo.png" alt="Djirian Logo" class="h-10 md:h-12 w-auto object-contain" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It’s Made — Djirian</title>
+  <meta name="description"
+    content="From the Di Linh tree to a sealed jar: Djirian's 48-hour rule for freeze-dried durian." />
+  <link rel="icon" type="image/png" href="./assets/logo.png" />
+  <link rel="stylesheet" href="./css/showHideNav.css" />
+  <link rel="stylesheet" href="./dist/output.css" />
+  <link rel="stylesheet" href="./css/process-story.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+    rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <script src="./js/jquery.hidescroll.js" defer></script>
+  <script src="./js/i18n.js" defer></script>
+  <script type="module" src="./js/main.js" defer></script>
+</head>
+
+<body class="process-story-page">
+  <header class="relative z-50">
+    <div class="flex items-center justify-center navbar">
+      <div class="max-w-[1536px] w-full px-4 py-4 md:py-10 md:px-[72px] flex items-center justify-between">
+        <!-- Logo -->
+        <a href="./" class="flex items-center justify-center flex-none gap-3 hover-tilt">
+          <img src="./assets/official_logo.png" alt="Djirian Logo" class="h-10 md:h-12 w-auto object-contain" />
+        </a>
+
+        <!-- Nav Links -->
+        <nav class="items-center justify-end hidden w-full gap-6 lg:flex lg:gap-8">
+          <a href="./" class="navLink" data-en="Home" data-zh="首頁">Home</a>
+          <a href="./our-product.html" class="navLink" data-en="Products" data-zh="產品">Products</a>
+          <a href="./profile.html" class="navLink" data-en="Profile" data-zh="公司簡介">Profile</a>
+          <a href="./process-story.html" class="navLink text-p-600 font-bold" data-en="Process" data-zh="工藝">Process</a>
+          <a href="./brand-story.html" class="navLink" data-en="Brand Story" data-zh="品牌故事">Brand Story</a>
+          <a href="./#contact" class="navLink" data-en="Contact" data-zh="聯絡">Contact</a>
+
+          <!-- Language Switcher -->
+          <div class="flex items-center gap-1 ml-4 border-l border-n-200 pl-4">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <span class="text-n-200">|</span>
+            <button class="lang-btn" data-lang="zh">中文</button>
+          </div>
+        </nav>
+
+        <!-- Hamburger Icon -->
+        <div class="flex items-center gap-3 lg:hidden">
+          <div class="flex items-center gap-1">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <span class="text-n-200">|</span>
+            <button class="lang-btn" data-lang="zh">中文</button>
+          </div>
+          <div class="cursor-pointer" id="toggle_btn" aria-label="Toggle navigation menu">
+            <img src="./assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="dropdown-menu lg:hidden">
+          <a href="./" class="mobileNavLink group">
+            <span data-en="Home" data-zh="首頁">Home</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
           </a>
-
-          <!-- Nav Links -->
-          <nav class="items-center justify-end hidden w-full gap-6 lg:flex lg:gap-8">
-            <a href="./" class="navLink" data-en="Home" data-zh="首頁">Home</a>
-            <a href="./our-product.html" class="navLink" data-en="Products" data-zh="產品">Products</a>
-            <a href="./profile.html" class="navLink" data-en="Profile" data-zh="公司簡介">Profile</a>
-            <a href="./process-story.html" class="navLink text-p-600 font-bold" data-en="Process" data-zh="工藝">Process</a>
-            <a href="./brand-story.html" class="navLink" data-en="Brand Story" data-zh="品牌故事">Brand Story</a>
-            <a href="./#contact" class="navLink" data-en="Contact" data-zh="聯絡">Contact</a>
-
-            <!-- Language Switcher -->
-            <div class="flex items-center gap-1 ml-4 border-l border-n-200 pl-4">
-              <button class="lang-btn active" data-lang="en">EN</button>
-              <span class="text-n-200">|</span>
-              <button class="lang-btn" data-lang="zh">中文</button>
-            </div>
-          </nav>
-
-          <!-- Hamburger Icon -->
-          <div class="flex items-center gap-3 lg:hidden">
-            <div class="flex items-center gap-1">
-              <button class="lang-btn active" data-lang="en">EN</button>
-              <span class="text-n-200">|</span>
-              <button class="lang-btn" data-lang="zh">中文</button>
-            </div>
-            <div class="cursor-pointer" id="toggle_btn" aria-label="Toggle navigation menu">
-              <img src="./assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
-            </div>
-          </div>
-
-          <!-- Mobile Menu -->
-          <div class="dropdown-menu lg:hidden">
-            <a href="./" class="mobileNavLink group">
-              <span data-en="Home" data-zh="首頁">Home</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-            <a href="./our-product.html" class="mobileNavLink group">
-              <span data-en="Products" data-zh="產品">Products</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-            <a href="./profile.html" class="mobileNavLink group">
-              <span data-en="Profile" data-zh="公司簡介">Profile</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-            <a href="./process-story.html" class="mobileNavLink group bg-white/10 text-amber-400 font-bold">
-              <span data-en="Process" data-zh="工藝">Process</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-100 text-amber-400">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-            <a href="./brand-story.html" class="mobileNavLink group">
-              <span data-en="Brand Story" data-zh="品牌故事">Brand Story</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-            <a href="./#contact" class="mobileNavLink group">
-              <span data-en="Contact" data-zh="聯絡">Contact</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-          </div>
+          <a href="./our-product.html" class="mobileNavLink group">
+            <span data-en="Products" data-zh="產品">Products</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+          <a href="./profile.html" class="mobileNavLink group">
+            <span data-en="Profile" data-zh="公司簡介">Profile</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+          <a href="./process-story.html" class="mobileNavLink group bg-white/10 text-amber-400 font-bold">
+            <span data-en="Process" data-zh="工藝">Process</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-100 text-amber-400">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+          <a href="./brand-story.html" class="mobileNavLink group">
+            <span data-en="Brand Story" data-zh="品牌故事">Brand Story</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+          <a href="./#contact" class="mobileNavLink group">
+            <span data-en="Contact" data-zh="聯絡">Contact</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="process-hero">
-        <div class="process-wrap process-hero-grid">
-          <div class="process-hero-copy">
-            <p class="process-eyebrow" data-en="02 / HOW IT'S MADE" data-zh="02 / 生產工藝">02 / HOW IT'S MADE</p>
-            <h1 data-en="The <em>48-hour</em><br />rule." data-zh="<em>48小時</em><br />准則。">The <em>48-hour</em><br />rule.</h1>
-            <p class="process-hero-lede" data-en="The final quality of a jar is decided almost entirely in the first 48 hours after the fruit leaves the tree." data-zh="一瓶的最終品質，幾乎完全取決於水果離樹後的首二十八小時。">The final quality of a jar is decided almost entirely in the first 48 hours after the fruit leaves the tree.</p>
-            <a class="process-down" href="#the-clock" data-en="Follow the fruit <span>↓</span>" data-zh="追隨水果 <span>↓</span>">Follow the fruit <span>↓</span></a>
-          </div>
-          <figure class="process-hero-image"><img src="./assets/ảnh/Quy%20Trình/ảnh%202.png" alt="Djirian durian process in the Di Linh highlands" /></figure>
+  <main>
+    <section class="process-hero">
+      <div class="process-wrap process-hero-grid">
+        <div class="process-hero-copy">
+          <p class="process-eyebrow" data-en="02 / HOW IT'S MADE" data-zh="02 / 生產工藝">02 / HOW IT'S MADE</p>
+          <h1 data-en="The <em>48-hour</em><br />rule." data-zh="<em>48小時</em><br />准則。">The <em>48-hour</em><br />rule.
+          </h1>
+          <p class="process-hero-lede"
+            data-en="The final quality of a jar is decided almost entirely in the first 48 hours after the fruit leaves the tree."
+            data-zh="一瓶的最終品質，幾乎完全取決於水果離樹後的首二十八小時。">The final quality of a jar is decided almost entirely in the first 48
+            hours after the fruit leaves the tree.</p>
+          <a class="process-down" href="#the-clock" data-en="Follow the fruit <span>↓</span>"
+            data-zh="追隨水果 <span>↓</span>">Follow the fruit <span>↓</span></a>
         </div>
-      </section>
+        <figure class="process-hero-image"><img src="./assets/ảnh/Quy%20Trình/ảnh%202.png"
+            alt="Djirian durian process in the Di Linh highlands" /></figure>
+      </div>
+    </section>
 
-      <section id="the-clock" class="process-clock-section">
-        <div class="process-wrap">
-          <p class="process-eyebrow" data-en="THE WINDOW" data-zh="時間窗口">⁠THE WINDOW</p>
-          <div class="process-clock-heading"><h2 data-en="Shorten everything that can be shortened.<br /><em>Never shorten what shouldn't.</em>" data-zh="能縮短的就縮短。<br /><em>不應縮短的，永遠不縮短。</em>">Shorten everything that can be shortened.<br /><em>Never shorten what shouldn't.</em></h2><p data-en="An hour late and a little aroma is gone. A full day late and there is very little left to save. Every decision below protects the fruit before there is anything to rescue." data-zh="遲一小時，少許香氣便消散。遲一天，就幾乎已無可救。以下每一個决定，都是在尚有得救之前保護這顆水果。">An hour late and a little aroma is gone. A full day late and there is very little left to save. Every decision below protects the fruit before there is anything to rescue.</p></div>
-
+    <section id="the-clock" class="process-clock-section">
+      <div class="process-wrap">
+        <p class="process-eyebrow" data-en="THE WINDOW" data-zh="時間窗口">⁠THE WINDOW</p>
+        <div class="process-clock-heading">
+          <h2 data-en="Shorten everything that can be shortened.<br /><em>Never shorten what shouldn't.</em>"
+            data-zh="能縮短的就縮短。<br /><em>不應縮短的，永遠不縮短。</em>">Shorten everything that can be shortened.<br /><em>Never
+              shorten what shouldn't.</em></h2>
+          <p data-en="An hour late and a little aroma is gone. A full day late and there is very little left to save. Every decision below protects the fruit before there is anything to rescue."
+            data-zh="遲一小時，少許香氣便消散。遲一天，就幾乎已無可救。以下每一個决定，都是在尚有得救之前保護這顆水果。">An hour late and a little aroma is gone. A full
+            day late and there is very little left to save. Every decision below protects the fruit before there is
+            anything to rescue.</p>
         </div>
-      </section>
 
-      <section class="process-chapters process-wrap">
-        <article class="process-chapter chapter-harvest">
-          <div class="chapter-copy"><p class="process-index">01 / 48</p><h2 data-en="Harvest &mdash;<br /><em>reading the tree.</em>" data-zh="收樹&mdash;<br /><em>讀懂這棵樹。</em>">Harvest &mdash;<br /><em>reading the tree.</em></h2><p data-en="The fruit is picked entirely by hand, only when it has ripened on the tree itself. Not a day earlier. Our harvest crews work in pairs, and every pair goes out with a farmer who has been reading these trees for two decades or more." data-zh="所有水果完全由手工採摘，僅在這棵樹上自然熟成之後才採摘。一天都不提前。我們的採收隊伍兩兩一組，每組都有一位讀樹已逾二十年的農人隨行。">The fruit is picked entirely by hand, only when it has ripened on the tree itself. Not a day earlier. Our harvest crews work in pairs, and every pair goes out with a farmer who has been reading these trees for two decades or more.</p><p data-en="Ripeness is read through three signs at once: the colour and dryness of the stem, the low hollow sound of the shell when tapped, and the faint deliberate parting between the spines. There is no instrument that reads these three together the way experienced eyes and ears can." data-zh="熟度靠三個訊號同時判斷：果莖的顏色與乾燥程度、輕拍果殼的沈永空鳳聲，以及果刺之間微微主動張開的紫縮。沒有一個儀器能同時讀取這三個信號，如同經驗豐富的眼睛和耳朵那樣。">Ripeness is read through three signs at once: the colour and dryness of the stem, the low hollow sound of the shell when tapped, and the faint deliberate parting between the spines. There is no instrument that reads these three together the way experienced eyes and ears can.</p></div>
-          <figure class="chapter-image"><img src="./assets/ảnh/Quy%20Trình/ảnh%202.png" alt="Durian harvest and collection" /><figcaption data-en="Tree-ripe, hand-picked, no shortcuts." data-zh="樹上熟成，手工採摘，零捷徑。">Tree-ripe, hand-picked, no shortcuts.</figcaption></figure>
-        </article>
+      </div>
+    </section>
 
-        <article class="process-chapter chapter-sort">
-          <figure class="chapter-image"><img src="./assets/ảnh/Quy%20Trình/ảnh%203.png" alt="Djirian quality sorting process" /><figcaption data-en="Before twelve hours, preservation—not rescue." data-zh="十二小時內，是保護而非救治。">Before twelve hours, preservation—not rescue.</figcaption></figure>
-          <div class="chapter-copy"><p class="process-index">02 / 48</p><h2 data-en="The first<br /><em>twelve hours.</em>" data-zh="首個<br /><em>十二小時。</em>">The first<br /><em>twelve hours.</em></h2><p data-en="Within four hours of being cut, fruit reaches a collection point no more than five kilometres from the orchard. It is sorted by size, ripeness, and the condition of the shell. Fruit below export standard moves to the domestic fresh-market channel, so the farmer is paid either way." data-zh="樹果削下四小時內，就進入朝果園五公里內的集貨點。按大小、熟度和果殼狀態分擀。未達出口標準的水果流入國內鮮貨市場，農人無論如何都會收到賞款。">Within four hours of being cut, fruit reaches a collection point no more than five kilometres from the orchard. It is sorted by size, ripeness, and the condition of the shell. Fruit below export standard moves to the domestic fresh-market channel, so the farmer is paid either way.</p><p data-en="By hour twelve, the flesh is separated from shell and seed in a climate-controlled room held between 18 and 20°C. Past that line, every step that follows becomes a rescue rather than a preservation." data-zh="到第十二小時，果肉在溫度控制在十八到二十摄氏度的房間中去殼去核。超過這個界限，後續每一個步驟都變成救治，而非保護。">By hour twelve, the flesh is separated from shell and seed in a climate-controlled room held between 18 and 20°C. Past that line, every step that follows becomes a rescue rather than a preservation.</p></div>
-        </article>
+    <section class="process-chapters process-wrap">
+      <article class="process-chapter chapter-harvest">
+        <div class="chapter-copy">
+          <p class="process-index">01 / 48</p>
+          <h2 data-en="Harvest<br /><em>reading the tree.</em>" data-zh="收樹<br /><em>讀懂這棵樹。</em>">Harvest
+            &mdash;<br /><em>reading the tree.</em></h2>
+          <p data-en="The fruit is picked entirely by hand, only when it has ripened on the tree itself. Not a day earlier. Our harvest crews work in pairs, and every pair goes out with a farmer who has been reading these trees for two decades or more."
+            data-zh="所有水果完全由手工採摘，僅在這棵樹上自然熟成之後才採摘。一天都不提前。我們的採收隊伍兩兩一組，每組都有一位讀樹已逾二十年的農人隨行。">The fruit is picked entirely by
+            hand, only when it has ripened on the tree itself. Not a day earlier. Our harvest crews work in pairs, and
+            every pair goes out with a farmer who has been reading these trees for two decades or more.</p>
+          <p data-en="Ripeness is read through three signs at once: the colour and dryness of the stem, the low hollow sound of the shell when tapped, and the faint deliberate parting between the spines. There is no instrument that reads these three together the way experienced eyes and ears can."
+            data-zh="熟度靠三個訊號同時判斷：果莖的顏色與乾燥程度、輕拍果殼的沈永空鳳聲，以及果刺之間微微主動張開的紫縮。沒有一個儀器能同時讀取這三個信號，如同經驗豐富的眼睛和耳朵那樣。">Ripeness is
+            read through three signs at once: the colour and dryness of the stem, the low hollow sound of the shell when
+            tapped, and the faint deliberate parting between the spines. There is no instrument that reads these three
+            together the way experienced eyes and ears can.</p>
+        </div>
+        <figure class="chapter-image"><img src="./assets/ảnh/Quy%20Trình/ảnh%202.png"
+            alt="Durian harvest and collection" />
+        </figure>
+      </article>
 
-        <article class="process-chapter chapter-freeze">
-          <div class="chapter-copy"><p class="process-index">03 / 48</p><h2 data-en="Thirty minutes<br /><em>at minus forty.</em>" data-zh="三十分鐘<br /><em>在負四十度。</em>">Thirty minutes<br /><em>at minus forty.</em></h2><p data-en="The flesh enters a blast freezer at −40°C for roughly thirty minutes. At that speed, the ice crystals inside each cell stay extremely small—small enough that they don't tear open the cell walls." data-zh="果肉進入 −40°C 的快門冒冷機約三十分鐘。如此高速，每個細胞內的冰晶會保持極小——小到不會撠裂細胞壁。">The flesh enters a blast freezer at −40°C for roughly thirty minutes. At that speed, the ice crystals inside each cell stay extremely small—small enough that they don't tear open the cell walls.</p><p data-en="It quietly decides whether the finished piece will snap cleanly under the teeth or crumble into powder. Everything after this rests on these thirty minutes going right." data-zh="這三十分鐘静静决定了成品在齒間是乾脆潔口還是笏化成粉。此後所有一切，全靠這三十分鐘完美奠基。">It quietly decides whether the finished piece will snap cleanly under the teeth or crumble into powder. Everything after this rests on these thirty minutes going right.</p></div>
-          <figure class="chapter-image"><img src="./assets/ảnh/Quy%20Trình/ảnh%204.png" alt="Freeze-drying preparation at the Djirian facility" /><figcaption data-en="Small crystals. Intact structure." data-zh="細小冰晶。完整結構。">Small crystals. Intact structure.</figcaption></figure>
-        </article>
+      <article class="process-chapter chapter-sort">
+        <figure class="chapter-image"><img src="./assets/ảnh/Quy%20Trình/ảnh%203.png"
+            alt="Djirian quality sorting process" />
+        </figure>
+        <div class="chapter-copy">
+          <p class="process-index">02 / 48</p>
+          <h2 data-en="The first<br /><em>twelve hours.</em>" data-zh="首個<br /><em>十二小時。</em>">The first<br /><em>twelve
+              hours.</em></h2>
+          <p data-en="Within four hours of being cut, fruit reaches a collection point no more than five kilometres from the orchard. It is sorted by size, ripeness, and the condition of the shell. Fruit below export standard moves to the domestic fresh-market channel, so the farmer is paid either way."
+            data-zh="樹果削下四小時內，就進入朝果園五公里內的集貨點。按大小、熟度和果殼狀態分擀。未達出口標準的水果流入國內鮮貨市場，農人無論如何都會收到賞款。">Within four hours of being
+            cut, fruit reaches a collection point no more than five kilometres from the orchard. It is sorted by size,
+            ripeness, and the condition of the shell. Fruit below export standard moves to the domestic fresh-market
+            channel, so the farmer is paid either way.</p>
+          <p data-en="By hour twelve, the flesh is separated from shell and seed in a climate-controlled room held between 18 and 20°C. Past that line, every step that follows becomes a rescue rather than a preservation."
+            data-zh="到第十二小時，果肉在溫度控制在十八到二十摄氏度的房間中去殼去核。超過這個界限，後續每一個步驟都變成救治，而非保護。">By hour twelve, the flesh is separated
+            from shell and seed in a climate-controlled room held between 18 and 20°C. Past that line, every step that
+            follows becomes a rescue rather than a preservation.</p>
+        </div>
+      </article>
 
-        <article class="process-chapter chapter-check">
-          <figure class="chapter-image"><img src="./assets/ảnh/Quy%20Trình/ảnh%205.png" alt="Team member inspecting freeze-dried durian by hand" /><figcaption data-en="Every batch is checked by hand and by eye." data-zh="每一批均由雙手與股眼逐一檢查。">Every batch is checked by hand and by eye.</figcaption></figure>
-          <div class="chapter-copy"><p class="process-index">34:30 / 48</p><h2 data-en="Twenty-two hours<br /><em>of stillness.</em>" data-zh="二十二小時<br /><em>的靜寂。</em>">Twenty-two hours<br /><em>of stillness.</em></h2><p data-en="Inside the freeze-drying chamber, pressure is roughly two thousand times lower than the atmosphere. The ice does not melt. It moves straight from solid to vapour—quiet, cold, and slow." data-zh="冷凍乾燥腳內的氣壓大約為大氣壓的兩千分之一。冰不渶化，直接從固態變為氣態——安靜、寒冷、緩慢。">Inside the freeze-drying chamber, pressure is roughly two thousand times lower than the atmosphere. The ice does not melt. It moves straight from solid to vapour—quiet, cold, and slow.</p><p data-en="When the chamber opens, the fruit is still the fruit: lighter, drier, and strong enough to travel without a cold chain. Before anything is sealed, every piece is inspected for colour, shape, and texture. Our rejection rate is 8–12%—higher by choice." data-zh="脸開脸覓，水果依然是水果：更軽、更乾，且就算不需冷鏈也能長途運輸。密封之前，每一片成品都依顏色、形狀與口感逐一檢驗。我們的淡除率為 8–12%——這是我們主動選擇的高標準。">When the chamber opens, the fruit is still the fruit: lighter, drier, and strong enough to travel without a cold chain. Before anything is sealed, every piece is inspected for colour, shape, and texture. Our rejection rate is 8–12%—higher by choice.</p></div>
-        </article>
-      </section>
+      <article class="process-chapter chapter-freeze">
+        <div class="chapter-copy">
+          <p class="process-index">03 / 48</p>
+          <h2 data-en="Thirty minutes<br /><em>at minus forty.</em>" data-zh="三十分鐘<br /><em>在負四十度。</em>">Thirty
+            minutes<br /><em>at minus forty.</em></h2>
+          <p data-en="The flesh enters a blast freezer at −40°C for roughly thirty minutes. At that speed, the ice crystals inside each cell stay extremely small - small enough that they don't tear open the cell walls."
+            data-zh="果肉進入 −40°C 的快門冒冷機約三十分鐘。如此高速，每個細胞內的冰晶會保持極小 - 小到不會撠裂細胞壁。">The flesh enters a blast freezer at −40°C
+            for roughly thirty minutes. At that speed, the ice crystals inside each cell stay extremely small—small
+            enough that they don't tear open the cell walls.</p>
+          <p data-en="It quietly decides whether the finished piece will snap cleanly under the teeth or crumble into powder. Everything after this rests on these thirty minutes going right."
+            data-zh="這三十分鐘静静决定了成品在齒間是乾脆潔口還是笏化成粉。此後所有一切，全靠這三十分鐘完美奠基。">It quietly decides whether the finished piece will
+            snap cleanly under the teeth or crumble into powder. Everything after this rests on these thirty minutes
+            going right.</p>
+        </div>
+        <figure class="chapter-image"><img src="./assets/ảnh/Quy%20Trình/ảnh%204.png"
+            alt="Freeze-drying preparation at the Djirian facility" />
+        </figure>
+      </article>
 
-      <section class="process-oem-note"><div class="process-wrap process-oem-inner"><span data-en="AN HONEST NOTE" data-zh="誠實說明">AN HONEST NOTE</span><blockquote data-en="“The freeze-drying is currently carried out at a trusted OEM partner’s facility while our own plant is being built. The 48-hour window, twelve-hour line, twenty-two hours, and rejection rate are ours—not theirs.”" data-zh="「目前凍乾作業在一家可信賴的 OEM 合作廠商設施中進行，同時我們自己的工廠正在建造中。48 小時窗口、十二小時界限、二十二小時冷凍乾燥，以及淡除率，都是我們自己的準則——而非他們的。」">“The freeze-drying is currently carried out at a trusted OEM partner’s facility while our own plant is being built. The 48-hour window, twelve-hour line, twenty-two hours, and rejection rate are ours—not theirs.”</blockquote><p data-en="Our team is on site through every batch. We would rather say this plainly than have you discover it later." data-zh="我們的團隊全程騔場監察每一批次生產。我們寧可在此直言，也不希望你日後自行發現。">Our team is on site through every batch. We would rather say this plainly than have you discover it later.</p></div></section>
+      <article class="process-chapter chapter-check">
+        <figure class="chapter-image"><img src="./assets/ảnh/Quy%20Trình/ảnh%205.png"
+            alt="Team member inspecting freeze-dried durian by hand" />
+        </figure>
+        <div class="chapter-copy">
+          <p class="process-index">34:30 / 48</p>
+          <h2 data-en="Twenty-two hours<br /><em>of stillness.</em>" data-zh="二十二小時<br /><em>的靜寂。</em>">Twenty-two
+            hours<br /><em>of stillness.</em></h2>
+          <p data-en="Inside the freeze-drying chamber, pressure is roughly two thousand times lower than the atmosphere. The ice does not melt. It moves straight from solid to vapour—quiet, cold, and slow."
+            data-zh="冷凍乾燥腳內的氣壓大約為大氣壓的兩千分之一。冰不渶化，直接從固態變為氣態——安靜、寒冷、緩慢。">Inside the freeze-drying chamber, pressure is
+            roughly two thousand times lower than the atmosphere. The ice does not melt. It moves straight from solid to
+            vapour—quiet, cold, and slow.</p>
+          <p data-en="When the chamber opens, the fruit is still the fruit: lighter, drier, and strong enough to travel without a cold chain. Before anything is sealed, every piece is inspected for colour, shape, and texture. Our rejection rate is 8–12%—higher by choice."
+            data-zh="脸開脸覓，水果依然是水果：更軽、更乾，且就算不需冷鏈也能長途運輸。密封之前，每一片成品都依顏色、形狀與口感逐一檢驗。我們的淡除率為 8–12%——這是我們主動選擇的高標準。">When the
+            chamber opens, the fruit is still the fruit: lighter, drier, and strong enough to travel without a cold
+            chain. Before anything is sealed, every piece is inspected for colour, shape, and texture. Our rejection
+            rate is 8–12%—higher by choice.</p>
+        </div>
+      </article>
+    </section>
 
-      <section class="process-outcome"><div class="process-wrap"><p class="process-eyebrow" data-en="WHAT THE 48 HOURS BUY US" data-zh="48 小時帶來的足跡">WHAT THE 48 HOURS BUY US</p><h2 data-en="Still fruit.<br /><em>Just lighter.</em>" data-zh="依然是水果。<br /><em>只是更軽了。</em>">Still fruit.<br /><em>Just lighter.</em></h2><div class="outcome-grid"><div><b>97%</b><span data-en="of fresh-fruit nutritional value preserved" data-zh="保留鮮果營養價値">of fresh-fruit nutritional value preserved</span></div><div><b>&lt;4%</b><span data-en="final moisture" data-zh="最終含水率">final moisture</span></div><div><b>12</b><span data-en="months of shelf life" data-zh="個月保質期">months of shelf life</span></div><div><b>0</b><span data-en="preservatives, additives, or cold-chain required" data-zh="防腐劑、添加劑或冷鏈需求">preservatives, additives, or cold-chain required</span></div></div><p class="outcome-final" data-en="One fruit. Three packs. <strong>Zero shortcuts.</strong>" data-zh="一種水果。三種包裝。<strong>零捷徑。</strong>">One fruit. Three packs. <strong>Zero shortcuts.</strong></p></div></section>
-    </main>
+    <section class="process-oem-note">
+      <div class="process-wrap process-oem-inner"><span data-en="AN HONEST NOTE" data-zh="誠實說明">AN HONEST NOTE</span>
+        <blockquote
+          data-en="“The freeze-drying is currently carried out at a trusted OEM partner’s facility while our own plant is being built. The 48-hour window, twelve-hour line, twenty-two hours, and rejection rate are ours—not theirs.”"
+          data-zh="「目前凍乾作業在一家可信賴的 OEM 合作廠商設施中進行，同時我們自己的工廠正在建造中。48 小時窗口、十二小時界限、二十二小時冷凍乾燥，以及淡除率，都是我們自己的準則——而非他們的。」">“The
+          freeze-drying is currently carried out at a trusted OEM partner’s facility while our own plant is being built.
+          The 48-hour window, twelve-hour line, twenty-two hours, and rejection rate are ours—not theirs.”</blockquote>
+        <p data-en="Our team is on site through every batch. We would rather say this plainly than have you discover it later."
+          data-zh="我們的團隊全程騔場監察每一批次生產。我們寧可在此直言，也不希望你日後自行發現。">Our team is on site through every batch. We would rather say
+          this plainly than have you discover it later.</p>
+      </div>
+    </section>
 
-    <footer class="story-footer"><div class="story-footer-inner"><div class="story-footer-brand"><img src="./assets/official_logo.png" alt="Djirian" /></div><p data-en="Single-origin freeze-dried durian<br />from the Di Linh highlands." data-zh="單一產區凍乾榴槤<br />來自迪靈高原。">Single-origin freeze-dried durian<br />from the Di Linh highlands.</p><nav class="story-footer-links"><a href="./our-product.html" data-en="Product" data-zh="產品">Product</a><a href="./process-story.html" data-en="Process" data-zh="工藝">Process</a><a href="./brand-story.html" data-en="Our story" data-zh="品牌故事">Our story</a></nav><small>© 2026 Djirian</small></div></footer>
-  </body>
+    <section class="process-outcome">
+      <div class="process-wrap">
+        <p class="process-eyebrow" data-en="WHAT THE 48 HOURS BUY US" data-zh="48 小時帶來的足跡">WHAT THE 48 HOURS BUY US</p>
+        <h2 data-en="Still fruit.<br /><em>Just lighter.</em>" data-zh="依然是水果。<br /><em>只是更軽了。</em>">Still
+          fruit.<br /><em>Just lighter.</em></h2>
+        <div class="outcome-grid">
+          <div><b>97%</b><span data-en="of fresh-fruit nutritional value preserved" data-zh="保留鮮果營養價値">of fresh-fruit
+              nutritional value preserved</span></div>
+          <div><b>&lt;4%</b><span data-en="final moisture" data-zh="最終含水率">final moisture</span></div>
+          <div><b>12</b><span data-en="months of shelf life" data-zh="個月保質期">months of shelf life</span></div>
+          <div><b>0</b><span data-en="preservatives, additives, or cold-chain required"
+              data-zh="防腐劑、添加劑或冷鏈需求">preservatives, additives, or cold-chain required</span></div>
+        </div>
+        <p class="outcome-final" data-en="One fruit. Three packs. <strong>Zero shortcuts.</strong>"
+          data-zh="一種水果。三種包裝。<strong>零捷徑。</strong>">One fruit. Three packs. <strong>Zero shortcuts.</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="story-footer">
+    <div class="story-footer-inner">
+      <div class="story-footer-brand"><img src="./assets/official_logo.png" alt="Djirian" /></div>
+      <p data-en="Single-origin freeze-dried durian<br />from the Di Linh highlands." data-zh="單一產區凍乾榴槤<br />來自迪靈高原。">
+        Single-origin freeze-dried durian<br />from the Di Linh highlands.</p>
+      <nav class="story-footer-links"><a href="./our-product.html" data-en="Product" data-zh="產品">Product</a><a
+          href="./process-story.html" data-en="Process" data-zh="工藝">Process</a><a href="./brand-story.html"
+          data-en="Our story" data-zh="品牌故事">Our story</a></nav><small>© 2026 Djirian</small>
+    </div>
+  </footer>
+</body>
+
 </html>

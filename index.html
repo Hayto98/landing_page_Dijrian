@@ -702,17 +702,21 @@
             Interested in importing Djirian? We welcome partnerships in direct import, exclusive distribution, and OEM.
           </p>
 
-          <div class="relative w-full max-w-md">
-            <input type="email" placeholder="Your email address"
-              class="w-full px-12 py-3.5 rounded-full border-2 border-p-950 bg-lime-50/60 focus:bg-white focus:outline-none focus:ring-2 focus:ring-p-600 text-sm font-medium text-p-950 transition-all shadow-inner"
-              data-en="Your email address" data-zh="您的電郵地址" />
-            <img src="./assets/mail2.svg" alt="mail icon" class="absolute -translate-y-1/2 top-1/2 left-4 size-5" />
-          </div>
+          <form id="partnership-form" class="w-full max-w-md flex flex-col items-center gap-5">
+            <div class="relative w-full">
+              <input type="email" name="email" id="partnership-email" required placeholder="Your email address"
+                class="w-full px-12 py-3.5 rounded-full border-2 border-p-950 bg-lime-50/60 focus:bg-white focus:outline-none focus:ring-2 focus:ring-p-600 text-sm font-medium text-p-950 transition-all shadow-inner"
+                data-en="Your email address" data-zh="您的電郵地址" />
+              <img src="./assets/mail2.svg" alt="mail icon" class="absolute -translate-y-1/2 top-1/2 left-4 size-5" />
+            </div>
 
-          <button type="submit"
-            class="w-full max-w-md py-3.5 px-8 rounded-full bg-p-700 hover:bg-p-800 text-white font-bold text-sm tracking-wide transition-all shadow-[4px_4px_0_#17351f] hover:translate-y-[-2px] border-2 border-p-950">
-            <span data-en="Send Inquiry" data-zh="發送洽詢">Send Inquiry</span>
-          </button>
+            <button type="submit" id="partnership-submit"
+              class="w-full py-3.5 px-8 rounded-full bg-p-700 hover:bg-p-800 text-white font-bold text-sm tracking-wide transition-all shadow-[4px_4px_0_#17351f] hover:translate-y-[-2px] border-2 border-p-950">
+              <span data-en="Send Inquiry" data-zh="發送洽詢">Send Inquiry</span>
+            </button>
+            
+            <div id="form-status" class="hidden text-xs font-bold mt-2 px-4 py-2 rounded-lg border"></div>
+          </form>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ $(function () {
     $(".navbar").hidescroll();
   }
 
-// mobile dropdown menu
+  // mobile dropdown menu
   const toggleBtn = $("#toggle_btn");
   const dropdownMenu = $(".dropdown-menu");
 
@@ -31,7 +31,7 @@ $(function () {
       try {
         heroVid.pause();
         heroVid.removeAttribute("autoplay");
-      } catch (e) {}
+      } catch (e) { }
       heroVid.style.display = "none";
     }
     if (heroFallbackImg) {
@@ -215,43 +215,43 @@ $(function () {
   const lightboxNext = $("#lightbox-next");
   const lightboxCaption = $("#lightbox-caption");
   const infoImages = $(".infographic-img");
-  
+
   if (infoImages.length === 0 || lightbox.length === 0) return;
-  
+
   let currentIndex = 0;
-  
+
   function openLightbox(index) {
     if (index < 0) index = infoImages.length - 1;
     if (index >= infoImages.length) index = 0;
-    
+
     currentIndex = index;
-    
+
     const imgEl = $(infoImages[currentIndex]);
     const imgSrc = imgEl.attr("src");
-    
+
     const activeLang = window.djirian_i18n?.currentLang || document.documentElement.lang || "en";
     const captionText = activeLang === "zh" ? imgEl.attr("data-caption-zh") : imgEl.attr("data-caption-en");
-    
+
     lightboxImg.attr("src", imgSrc);
     lightboxCaption.text(captionText || imgEl.attr("alt"));
-    
+
     lightbox.removeClass("opacity-0 pointer-events-none");
     $("body").addClass("overflow-hidden");
   }
-  
+
   function closeLightbox() {
     lightbox.addClass("opacity-0 pointer-events-none");
     $("body").removeClass("overflow-hidden");
   }
-  
+
   const cards = $(".infographic-card");
   cards.on("click", function () {
     const index = cards.index(this);
     openLightbox(index);
   });
-  
+
   lightboxClose.on("click", closeLightbox);
-  
+
   lightbox.on("click", function (e) {
     if ($(e.target).is(lightbox) || $(e.target).closest(".select-none").length === 0) {
       if (!$(e.target).is("#lightbox-img") && !$(e.target).is("#lightbox-prev") && !$(e.target).is("#lightbox-next") && !$(e.target).is("#lightbox-caption")) {
@@ -259,20 +259,20 @@ $(function () {
       }
     }
   });
-  
+
   lightboxPrev.on("click", function (e) {
     e.stopPropagation();
     openLightbox(currentIndex - 1);
   });
-  
+
   lightboxNext.on("click", function (e) {
     e.stopPropagation();
     openLightbox(currentIndex + 1);
   });
-  
+
   $(document).on("keydown", function (e) {
     if (lightbox.hasClass("opacity-0")) return;
-    
+
     if (e.key === "Escape") {
       closeLightbox();
     } else if (e.key === "ArrowLeft") {
@@ -309,8 +309,8 @@ $(function () {
       `<button class="product-gallery__control product-gallery__control--prev" type="button" aria-label="Previous product image">‹</button>
        <button class="product-gallery__control product-gallery__control--next" type="button" aria-label="Next product image">›</button>
        <div class="product-gallery__dots" aria-label="Product image selection">${images
-         .map((_, index) => `<button class="product-gallery__dot${index === 0 ? " is-active" : ""}" type="button" aria-label="Show product image ${index + 1}"></button>`)
-         .join("")}</div>`
+        .map((_, index) => `<button class="product-gallery__dot${index === 0 ? " is-active" : ""}" type="button" aria-label="Show product image ${index + 1}"></button>`)
+        .join("")}</div>`
     );
 
     const dots = [...gallery.querySelectorAll(".product-gallery__dot")];
@@ -370,6 +370,75 @@ $(function () {
       once: true,
       mirror: false,
       anchorPlacement: "center-bottom",
+    });
+  }
+});
+
+/* ================ 
+   Partnership Inquiry Form Submit
+  =================== */
+$(function () {
+  const form = $("#partnership-form");
+  const emailInput = $("#partnership-email");
+  const submitBtn = $("#partnership-submit");
+  const statusDiv = $("#form-status");
+
+  // Dán đường link Web App URL lấy từ bước 3 (Deploy) của bạn vào đây:
+  const GOOGLE_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz8EW61zLEN3SvmM2P6OT3XlgkfcPjiqKXixDxizYPy0vsST8F1VmDl3yPlQnowP5tmJA/exec";
+
+  if (form.length) {
+    form.on("submit", function (e) {
+      e.preventDefault();
+
+      const currentLang = (window.djirian_i18n && window.djirian_i18n.currentLang) || "en";
+      
+      const messages = {
+        en: {
+          sending: "Sending inquiry...",
+          success: "Success! Thank you for your inquiry.",
+          error: "Error sending inquiry. Please try again."
+        },
+        zh: {
+          sending: "正在發送諮詢...",
+          success: "發送成功！感謝您的諮詢。",
+          error: "發送失敗，請稍後重試。"
+        }
+      };
+
+      const msg = messages[currentLang] || messages.en;
+
+      // Vô hiệu hóa nút và hiện trạng thái đang gửi
+      submitBtn.prop("disabled", true).addClass("opacity-70");
+      statusDiv.removeClass("hidden border-green-300 text-green-700 bg-green-50 border-red-300 text-red-700 bg-red-50")
+        .addClass("block border-amber-300 text-amber-700 bg-amber-50")
+        .text(msg.sending);
+
+      const params = new URLSearchParams();
+      params.append("email", emailInput.val());
+
+      fetch(GOOGLE_WEB_APP_URL, {
+        method: "POST",
+        mode: "no-cors", // Sử dụng no-cors để tránh lỗi chặn CORS từ máy chủ Google
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: params
+      })
+        .then(() => {
+          statusDiv.removeClass("border-amber-300 text-amber-700 bg-amber-50")
+            .addClass("border-green-300 text-green-700 bg-green-50")
+            .text(msg.success);
+          emailInput.val("");
+        })
+        .catch((error) => {
+          console.error("Error submitting form:", error);
+          statusDiv.removeClass("border-amber-300 text-amber-700 bg-amber-50")
+            .addClass("border-red-300 text-red-700 bg-red-50")
+            .text(msg.error);
+        })
+        .finally(() => {
+          submitBtn.prop("disabled", false).removeClass("opacity-70");
+        });
     });
   }
 });
