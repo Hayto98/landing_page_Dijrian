@@ -42,7 +42,7 @@
 .hero-image-frame { background: #e9edda; border-radius: 2rem 2rem 2rem .45rem; padding: 1.3rem; box-shadow: 1.1rem 1.1rem 0 var(--story-lime); transform: rotate(1.2deg); }
 .hero-image-frame img { display: block; width: 100%; height: clamp(330px, 48vw, 590px); border-radius: 1.35rem 1.35rem 1.35rem .3rem; object-fit: cover; object-position: center; }
 .hero-stamp { position: absolute; right: -1.6rem; bottom: -2rem; width: 108px; height: 108px; border-radius: 50%; border: 1px solid var(--story-green); background: var(--story-cream); display: flex; align-items: center; justify-content: center; flex-direction: column; transform: rotate(-11deg); color: var(--story-green); }
-.hero-stamp span { font-size: .55rem; letter-spacing: .16em; font-weight: 800; }.hero-stamp strong { font: 700 1.5rem "Playfair Display", serif; line-height: 1.1; }.hero-stamp small { font-size: .52rem; }
+.hero-stamp span { font-size: .55rem; letter-spacing: .16em; font-weight: 800; }.hero-stamp strong { font-family: "DM Sans", "Inter", sans-serif; font-size: 1.5rem; font-weight: 700; line-height: 1.1; }.hero-stamp small { font-size: .52rem; }
 
 .two-column { display: grid; grid-template-columns: minmax(160px, .5fr) minmax(0, 1.5fr); gap: clamp(2rem, 8vw, 9rem); }
 .story-intro { padding-top: 130px; padding-bottom: 145px; border-top: 1px solid var(--story-line); }
