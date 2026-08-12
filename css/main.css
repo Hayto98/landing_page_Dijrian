@@ -286,7 +286,7 @@
     align-items: flex-start;
     justify-content: flex-end;
     padding: 1.5rem;
-    background: linear-gradient(to top, rgba(23, 53, 31, 0.94), rgba(23, 53, 31, 0.1) 68%);
+    background: transparent;
     transition: background 300ms ease;
   }
 
@@ -298,6 +298,9 @@
     font-size: clamp(1.45rem, 2.5vw, 2.7rem);
     font-weight: 900;
     line-height: 1.06;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 250ms ease, transform 250ms ease;
   }
 
   .poster-button {
@@ -332,9 +335,36 @@
   }
 
   .poster-card:hover .poster-button,
-  .poster-card:focus-visible .poster-button {
+  .poster-card:focus-visible .poster-button,
+  .poster-card:hover .poster-copy p,
+  .poster-card:focus-visible .poster-copy p {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* Artwork panels carry their own typography; retain only a clear CTA. */
+  .poster-artwork > img {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .poster-product.poster-artwork > img {
+    object-position: center;
+  }
+
+  .poster-artwork .poster-copy {
+    justify-content: flex-end;
+    background: transparent;
+  }
+
+  .poster-artwork .poster-button {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  .poster-artwork:hover > img,
+  .poster-artwork:focus-visible > img {
+    transform: scale(1.015);
   }
 
   @media (hover: none), (max-width: 47.99rem) {
@@ -352,9 +382,16 @@
 
     .poster-copy {
       padding: 1.25rem;
+      background: linear-gradient(to top, rgba(23, 53, 31, 0.92), rgba(23, 53, 31, 0.06) 72%);
     }
 
-    .poster-button {
+    .poster-artwork .poster-copy {
+      background: linear-gradient(to top, rgba(23, 53, 31, 0.88), transparent 58%);
+    }
+
+    .poster-button,
+    .poster-copy p,
+    .poster-artwork .poster-button {
       opacity: 1;
       transform: translateY(0);
     }
@@ -979,6 +1016,22 @@
 @media (hover: none) {
   .product-gallery__control {
     opacity: 1;
+  }
+}
+
+/* Profile document format adapts to the device: portrait pages on mobile,
+   horizontal PDF pages on laptop/desktop. */
+.profile-document-viewer {
+  max-width: 1100px;
+}
+
+@media (min-width: 48rem) {
+  .profile-document-viewer .infographic-card {
+    aspect-ratio: 16 / 9;
+  }
+
+  .profile-document-viewer .infographic-img {
+    object-position: center;
   }
 }
 
