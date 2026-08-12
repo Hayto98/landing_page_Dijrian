@@ -145,6 +145,25 @@
     background: #0f2a18;
   }
 
+  /* Force Hide Mobile & WebKit Native Media Player Controls Overlay */
+  #hero video::-webkit-media-controls,
+  #hero video::-webkit-media-controls-enclosure,
+  #hero video::-webkit-media-controls-panel,
+  #hero video::-webkit-media-controls-play-button,
+  #hero video::-webkit-media-controls-start-playback-button,
+  #hero video::-webkit-media-controls-overlay-play-button,
+  #hero video::-webkit-media-controls-timeline,
+  #hero video::-webkit-media-controls-current-time-display,
+  #hero video::-webkit-media-controls-time-remaining-display,
+  #hero video::-webkit-media-controls-mute-button,
+  #hero video::-webkit-media-controls-toggle-closed-captions-button,
+  #hero video::-webkit-media-controls-volume-slider {
+    display: none !important;
+    -webkit-appearance: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
   #hero .hero-slideshow-container {
     border-color: #17351f;
     background: #ffffff;
