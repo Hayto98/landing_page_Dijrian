@@ -1,376 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Djirian — Products & Specifications</title>
-    <meta name="description" content="Djirian freeze-dried durian products: Discovery 100g, Everyday Premium 150g, Share & Gift 200g, and OEM/Private Label options." />
-    <link rel="icon" type="image/png" href="./assets/logo.png" />
 
-    <!-- CSS -->
-    <link type="text/css" rel="stylesheet" href="./css/showHideNav.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link href="./css/animation.css" rel="stylesheet" />
-    <link href="./dist/output.css" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Djirian — Products & Specifications</title>
+  <meta name="description"
+    content="Djirian freeze-dried durian products: Discovery 100g, Everyday Premium 150g, Share & Gift 200g, and OEM/Private Label options." />
+  <link rel="icon" type="image/png" href="./assets/logo.png" />
 
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- CSS -->
+  <link type="text/css" rel="stylesheet" href="./css/showHideNav.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="./css/animation.css" rel="stylesheet" />
+  <link href="./dist/output.css" rel="stylesheet" />
 
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
 
-    <!-- Scripts -->
-    <script src="./js/jquery.hidescroll.js" defer></script>
-    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/i18n.js" defer></script>
-    <script src="./js/reveal.js" defer></script>
-    <script defer type="module" src="./js/main.js"></script>
-    <script defer>
-      document.addEventListener("DOMContentLoaded", function () {
-        // AOS
-        AOS.init({
-          offset: 100, delay: 0, duration: 700,
-          easing: "ease-in-out", once: false, mirror: true,
-        });
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+
+  <!-- Scripts -->
+  <script src="./js/jquery.hidescroll.js" defer></script>
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/i18n.js" defer></script>
+  <script src="./js/reveal.js" defer></script>
+  <script defer type="module" src="./js/main.js"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      // AOS
+      AOS.init({
+        offset: 100, delay: 0, duration: 700,
+        easing: "ease-in-out", once: false, mirror: true,
       });
-    </script>
-  </head>
-  <body>
-    <!--=================
+    });
+  </script>
+</head>
+
+<body>
+  <!--=================
         Navigation
     ==================-->
-    <header class="relative z-50">
-      <div class="flex items-center justify-center navbar">
-        <div class="max-w-[1536px] w-full px-4 py-4 md:py-10 md:px-[72px] flex items-center justify-between">
-          <!-- Logo -->
-          <a href="./" class="flex items-center justify-center flex-none gap-3 hover-tilt">
-            <img src="./assets/official_logo.png" alt="Djirian Logo" class="h-10 md:h-12 w-auto object-contain" />
-          </a>
+  <header class="relative z-50">
+    <div class="flex items-center justify-center navbar">
+      <div class="max-w-[1536px] w-full px-4 py-4 md:py-10 md:px-[72px] flex items-center justify-between">
+        <!-- Logo -->
+        <a href="./" class="flex items-center justify-center flex-none gap-3 hover-tilt">
+          <img src="./assets/official_logo.png" alt="Djirian Logo" class="h-10 md:h-12 w-auto object-contain" />
+        </a>
 
-          <nav class="items-center justify-end hidden w-full gap-6 lg:flex lg:gap-8">
-            <a href="./" class="navLink" data-en="Home" data-zh="首頁">Home</a>
-            <a href="./our-product.html" class="navLink text-p-600 font-bold" data-en="Products" data-zh="產品">Products</a>
-            <a href="./profile.html" class="navLink" data-en="Profile" data-zh="公司簡介">Profile</a>
-            <a href="./process-story.html" class="navLink" data-en="Process" data-zh="工藝">Process</a>
-            <a href="./brand-story.html" class="navLink" data-en="Brand Story" data-zh="品牌故事">Brand Story</a>
-            <a href="./#contact" class="navLink" data-en="Contact" data-zh="聯絡">Contact</a>
-            <div class="flex items-center gap-1 ml-4 border-l border-n-200 pl-4">
-              <button class="lang-btn active" data-lang="en">EN</button>
-              <span class="text-n-200">|</span>
-              <button class="lang-btn" data-lang="zh">中文</button>
-            </div>
-          </nav>
-
-          <div class="flex items-center gap-3 lg:hidden">
-            <div class="flex items-center gap-1">
-              <button class="lang-btn active" data-lang="en">EN</button>
-              <span class="text-n-200">|</span>
-              <button class="lang-btn" data-lang="zh">中文</button>
-            </div>
-            <div class="cursor-pointer" id="toggle_btn">
-              <img src="./assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
-            </div>
+        <nav class="items-center justify-end hidden w-full gap-6 lg:flex lg:gap-8">
+          <a href="./" class="navLink" data-en="Home" data-zh="首頁">Home</a>
+          <a href="./our-product.html" class="navLink text-p-600 font-bold" data-en="Products" data-zh="產品">Products</a>
+          <a href="./profile.html" class="navLink" data-en="Profile" data-zh="公司簡介">Profile</a>
+          <a href="./process-story.html" class="navLink" data-en="Process" data-zh="工藝">Process</a>
+          <a href="./brand-story.html" class="navLink" data-en="Brand Story" data-zh="品牌故事">Brand Story</a>
+          <a href="./#contact" class="navLink" data-en="Contact" data-zh="聯絡">Contact</a>
+          <div class="flex items-center gap-1 ml-4 border-l border-n-200 pl-4">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <span class="text-n-200">|</span>
+            <button class="lang-btn" data-lang="zh">中文</button>
           </div>
+        </nav>
 
-          <div class="dropdown-menu lg:hidden">
-            <a href="./" class="mobileNavLink group">
-              <span data-en="Home" data-zh="首頁">Home</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-            <a href="./our-product.html" class="mobileNavLink group bg-white/10 text-amber-400 font-bold">
-              <span data-en="Products" data-zh="產品">Products</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-100 text-amber-400">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-            <a href="./profile.html" class="mobileNavLink group">
-              <span data-en="Profile" data-zh="公司簡介">Profile</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-            <a href="./process-story.html" class="mobileNavLink group">
-              <span data-en="Process" data-zh="工藝">Process</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-            <a href="./brand-story.html" class="mobileNavLink group">
-              <span data-en="Brand Story" data-zh="品牌故事">Brand Story</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-            <a href="./#contact" class="mobileNavLink group">
-              <span data-en="Contact" data-zh="聯絡">Contact</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
+        <div class="flex items-center gap-3 lg:hidden">
+          <div class="flex items-center gap-1">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <span class="text-n-200">|</span>
+            <button class="lang-btn" data-lang="zh">中文</button>
+          </div>
+          <div class="cursor-pointer" id="toggle_btn">
+            <img src="./assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
           </div>
         </div>
-      </div>
-    </header>
 
-    <!--=================
+        <div class="dropdown-menu lg:hidden">
+          <a href="./" class="mobileNavLink group">
+            <span data-en="Home" data-zh="首頁">Home</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+          <a href="./our-product.html" class="mobileNavLink group bg-white/10 text-amber-400 font-bold">
+            <span data-en="Products" data-zh="產品">Products</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-100 text-amber-400">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+          <a href="./profile.html" class="mobileNavLink group">
+            <span data-en="Profile" data-zh="公司簡介">Profile</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+          <a href="./process-story.html" class="mobileNavLink group">
+            <span data-en="Process" data-zh="工藝">Process</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+          <a href="./brand-story.html" class="mobileNavLink group">
+            <span data-en="Brand Story" data-zh="品牌故事">Brand Story</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+          <a href="./#contact" class="mobileNavLink group">
+            <span data-en="Contact" data-zh="聯絡">Contact</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!--=================
         Hero
     ==================-->
-    <section class="bg-gradient-to-b from-p-50 to-white py-20">
-      <div class="container text-center">
-        <h2 class="sub_heading" data-en="Things We Make" data-zh="我們做的事">Things We Make</h2>
-        <h1 class="main_heading text-4xl lg:text-5xl mt-4"
-          data-en="One product. <span class='text-gradient'>Done properly.</span>"
-          data-zh="一個產品。<span class='text-gradient'>做到極致。</span>">
-          One product. <span class="text-gradient">Done properly.</span>
-        </h1>
-        <p class="max-w-2xl mx-auto mt-6 text-n-600"
-          data-en="A single-origin freeze-dried durian, grown at 950 meters on the volcanic soil of the Di Linh highlands, picked ripe from the tree, and freeze-dried whole so it still tastes like fruit. Not a candy. Not a chip. A fruit that got lighter."
-          data-zh="單一產地冷凍乾燥榴槤，生長在夷靈高原海拔九百五十公尺的火山土壤上，在樹上自然成熟後採摘，整顆冷凍乾燥，讓它仍然嚐起來是水果。不是糖果，不是薯片，而是一顆變輕了的水果。">
-          A single-origin freeze-dried durian, grown at 950 meters on the volcanic soil of the Di Linh highlands, picked ripe from the tree, and freeze-dried whole so it still tastes like fruit. Not a candy. Not a chip. A fruit that got lighter.
-        </p>
-      </div>
-    </section>
+  <section class="bg-gradient-to-b from-p-50 to-white py-20">
+    <div class="container text-center">
+      <h2 class="sub_heading" data-en="Things We Make" data-zh="我們做的事">Things We Make</h2>
+      <h1 class="main_heading text-4xl lg:text-5xl mt-4"
+        data-en="One product. <span class='text-gradient'>Done properly.</span>"
+        data-zh="一個產品。<span class='text-gradient'>做到極致。</span>">
+        One product. <span class="text-gradient">Done properly.</span>
+      </h1>
+      <p class="max-w-2xl mx-auto mt-6 text-n-600"
+        data-en="A single-origin freeze-dried durian, grown at 950 meters on the volcanic soil of the Di Linh highlands, picked ripe from the tree, and freeze-dried whole so it still tastes like fruit. Not a candy. Not a chip. A fruit that got lighter."
+        data-zh="單一產地冷凍乾燥榴槤，生長在夷靈高原海拔九百五十公尺的火山土壤上，在樹上自然成熟後採摘，整顆冷凍乾燥，讓它仍然嚐起來是水果。不是糖果，不是薯片，而是一顆變輕了的水果。">
+        A single-origin freeze-dried durian, grown at 950 meters on the volcanic soil of the Di Linh highlands, picked
+        ripe from the tree, and freeze-dried whole so it still tastes like fruit. Not a candy. Not a chip. A fruit that
+        got lighter.
+      </p>
+    </div>
+  </section>
 
-    <!--=================
+  <!--=================
         Product Cards
     ==================-->
-    <section class="bg-white">
-      <div class="container">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- 100g -->
-          <div class="product-card" data-aos="fade-up">
-            <div class="product-gallery product-gallery--card" data-product-gallery data-images="./assets/Mockup/hình 1.png" data-alt="Discovery 100g">
-              <img src="./assets/Mockup/hình 1.png" alt="Discovery 100g" loading="lazy" class="h-80 object-cover" draggable="false" />
-            </div>
-            <div class="product-card-body">
-              <h3 data-en="Discovery 100g" data-zh="探索裝 100g">Discovery 100g</h3>
-              <p data-en="Personal trial size. Perfect for modern retail, airport shops, and trade events."
-                 data-zh="個人試用裝。適合現代零售、機場銷售點及展會樣品。">
-                Personal trial size. Perfect for modern retail, airport shops, and trade events.
-              </p>
-              <div class="price">$5.90 – $7.50</div>
-            </div>
+  <section class="bg-white">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 100g -->
+        <div class="product-card" data-aos="fade-up">
+          <div class="product-gallery product-gallery--card" data-product-gallery
+            data-images="./assets/Mockup/hình 1.png" data-alt="Discovery 100g">
+            <img src="./assets/Mockup/hình 1.png" alt="Discovery 100g" loading="lazy" class="h-80 object-cover"
+              draggable="false" />
           </div>
-
-          <!-- 150g -->
-          <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="product-gallery product-gallery--card" data-product-gallery data-images="./assets/Mockup/hình 2.png|./assets/Mockup/hình 3.png|./assets/Mockup/hình 4.png" data-alt="Everyday Premium 150g">
-              <img src="./assets/Mockup/hình 2.png" alt="Everyday Premium 150g" loading="lazy" class="h-80 object-cover" draggable="false" />
-            </div>
-            <div class="product-card-body">
-              <h3 data-en="Everyday Premium 150g" data-zh="日常精選 150g">Everyday Premium 150g</h3>
-              <p data-en="Our most popular SKU for supermarkets and high-end food stores."
-                 data-zh="最受歡迎的規格，針對超市與高端食品店。">
-                Our most popular SKU for supermarkets and high-end food stores.
-              </p>
-              <div class="price">$8.90 – $11.50</div>
-            </div>
+          <div class="product-card-body">
+            <h3 data-en="Discovery 100g" data-zh="探索裝 100g">Discovery 100g</h3>
+            <p data-en="Personal trial size. Perfect for modern retail, airport shops, and trade events."
+              data-zh="個人試用裝。適合現代零售、機場銷售點及展會樣品。">
+              Personal trial size. Perfect for modern retail, airport shops, and trade events.
+            </p>
+            <div class="price">$5.90 – $7.50</div>
           </div>
+        </div>
 
-          <!-- 200g -->
-          <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="product-gallery product-gallery--card" data-product-gallery data-images="./assets/Mockup/hình 5.png" data-alt="Share &amp; Gift 200g">
-              <img src="./assets/Mockup/hình 5.png" alt="Share &amp; Gift 200g" loading="lazy" class="h-80 object-cover" draggable="false" />
-            </div>
-            <div class="product-card-body">
-              <h3 data-en="Share &amp; Gift 200g" data-zh="分享禮贈 200g">Share &amp; Gift 200g</h3>
-              <p data-en="Ideal for gifting. Pairs beautifully with tea, coffee, or chocolate in gift sets."
-                 data-zh="禮贈理想之選。可與茶、咖啡、巧克力組合成雅緻禮盒。">
-                Ideal for gifting. Pairs beautifully with tea, coffee, or chocolate in gift sets.
-              </p>
-              <div class="price">$16.90 – $21.90</div>
-            </div>
+        <!-- 150g -->
+        <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="product-gallery product-gallery--card" data-product-gallery
+            data-images="./assets/Mockup/hình 2.png|./assets/Mockup/hình 3.png|./assets/Mockup/hình 4.png"
+            data-alt="Everyday Premium 150g">
+            <img src="./assets/Mockup/hình 2.png" alt="Everyday Premium 150g" loading="lazy" class="h-80 object-cover"
+              draggable="false" />
+          </div>
+          <div class="product-card-body">
+            <h3 data-en="Everyday Premium 150g" data-zh="日常精選 150g">Everyday Premium 150g</h3>
+            <p data-en="Our most popular SKU for supermarkets and high-end food stores." data-zh="最受歡迎的規格，針對超市與高端食品店。">
+              Our most popular SKU for supermarkets and high-end food stores.
+            </p>
+            <div class="price">$8.90 – $11.50</div>
+          </div>
+        </div>
+
+        <!-- 200g -->
+        <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="product-gallery product-gallery--card" data-product-gallery
+            data-images="./assets/Mockup/hình 5.png" data-alt="Share &amp; Gift 200g">
+            <img src="./assets/Mockup/hình 5.png" alt="Share &amp; Gift 200g" loading="lazy" class="h-80 object-cover"
+              draggable="false" />
+          </div>
+          <div class="product-card-body">
+            <h3 data-en="Share &amp; Gift 200g" data-zh="分享禮贈 200g">Share &amp; Gift 200g</h3>
+            <p data-en="Ideal for gifting. Pairs beautifully with tea, coffee, or chocolate in gift sets."
+              data-zh="禮贈理想之選。可與茶、咖啡、巧克力組合成雅緻禮盒。">
+              Ideal for gifting. Pairs beautifully with tea, coffee, or chocolate in gift sets.
+            </p>
+            <div class="price">$16.90 – $21.90</div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!--=================
+  <!--=================
         150g Editorial Images
     ==================-->
-    <section class="bg-white pt-0">
-      <div class="container">
-        <div class="product-portrait-showcase" data-aos="fade-up">
-          <div class="product-portrait-copy">
-            <p class="sub_heading" data-en="150g In Focus" data-zh="150g 焦點呈現">150g In Focus</p>
-            <h2 data-en="Made for the <span class='text-gradient'>everyday shelf.</span>"
-              data-zh="為<span class='text-gradient'>日常貨架</span>而生。">
-              Made for the <span class="text-gradient">everyday shelf.</span>
-            </h2>
-            <p data-en="Portrait compositions from the Everyday Premium collection, presented as a visual story outside the product gallery."
-              data-zh="日常精選系列的直式構圖，以獨立視覺故事呈現，不影響產品圖庫的橫式瀏覽體驗。">
-              Portrait compositions from the Everyday Premium collection, presented as a visual story outside the product gallery.
-            </p>
-          </div>
-          <div class="product-portrait-collage">
-            <img src="./assets/Mockup/hình 2.png" alt="Everyday Premium 150g portrait composition" loading="lazy" />
-            <img src="./assets/Mockup/hình 3.png" alt="Everyday Premium 150g lifestyle portrait" loading="lazy" />
-            <img src="./assets/Mockup/hình 4.png" alt="Everyday Premium 150g product detail" loading="lazy" />
-          </div>
+  <section class="bg-white pt-0">
+    <div class="container">
+      <div class="product-portrait-showcase" data-aos="fade-up">
+        <div class="product-portrait-copy">
+          <p class="sub_heading" data-en="150g In Focus" data-zh="150g 焦點呈現">150g In Focus</p>
+          <h2 data-en="Made for the <span class='text-gradient'>everyday shelf.</span>"
+            data-zh="為<span class='text-gradient'>日常貨架</span>而生。">
+            Made for the <span class="text-gradient">everyday shelf.</span>
+          </h2>
+          <p data-en="Portrait compositions from the Everyday Premium collection, presented as a visual story outside the product gallery."
+            data-zh="日常精選系列的直式構圖，以獨立視覺故事呈現，不影響產品圖庫的橫式瀏覽體驗。">
+            Portrait compositions from the Everyday Premium collection, presented as a visual story outside the product
+            gallery.
+          </p>
+        </div>
+        <div class="product-portrait-collage">
+          <img src="./assets/Mockup/hình 2.png" alt="Everyday Premium 150g portrait composition" loading="lazy" />
+          <img src="./assets/Mockup/hình 3.png" alt="Everyday Premium 150g lifestyle portrait" loading="lazy" />
+          <img src="./assets/Mockup/hình 4.png" alt="Everyday Premium 150g product detail" loading="lazy" />
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!--=================
+  <!--=================
         Specifications
     ==================-->
-    <section class="bg-p-50/50 mt-20">
-      <div class="container">
-        <div data-aos="fade-right">
-          <h2 class="sub_heading" data-en="Specifications" data-zh="產品規格">Specifications</h2>
-          <h1 class="main_heading"
-            data-en="Common Specs <span class='text-gradient'>Across the Line</span>"
-            data-zh="全系列<span class='text-gradient'>通用規格</span>">
-            Common Specs <span class="text-gradient">Across the Line</span>
-          </h1>
+  <section class="bg-p-50/50 mt-20">
+    <div class="container">
+      <div data-aos="fade-right">
+        <h2 class="sub_heading" data-en="Specifications" data-zh="產品規格">Specifications</h2>
+        <h1 class="main_heading" data-en="Common Specs <span class='text-gradient'>Across the Line</span>"
+          data-zh="全系列<span class='text-gradient'>通用規格</span>">
+          Common Specs <span class="text-gradient">Across the Line</span>
+        </h1>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
+        <div data-aos="fade-up">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th data-en="Parameter" data-zh="參數">Parameter</th>
+                <th data-en="Value" data-zh="數值">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-en="Ingredients" data-zh="成分">Ingredients</td>
+                <td data-en="100% Di Linh durian" data-zh="100% 夷靈榴槤">100% Di Linh durian</td>
+              </tr>
+              <tr>
+                <td data-en="Added Sugar" data-zh="添加糖">Added Sugar</td>
+                <td data-en="None" data-zh="無">None</td>
+              </tr>
+              <tr>
+                <td data-en="Preservatives" data-zh="防腐劑">Preservatives</td>
+                <td data-en="None" data-zh="無">None</td>
+              </tr>
+              <tr>
+                <td data-en="Final Moisture" data-zh="成品含水率">Final Moisture</td>
+                <td data-en="Below 4%" data-zh="低於 4%">Below 4%</td>
+              </tr>
+              <tr>
+                <td data-en="Nutrition Retained" data-zh="營養保留">Nutrition Retained</td>
+                <td data-en="Approximately 97% of fresh fruit" data-zh="約 97% 鮮果營養">Approximately 97% of fresh fruit
+                </td>
+              </tr>
+              <tr>
+                <td data-en="Shelf Life" data-zh="保質期">Shelf Life</td>
+                <td data-en="12 months (sealed)" data-zh="12 個月（未開封）">12 months (sealed)</td>
+              </tr>
+              <tr>
+                <td data-en="Storage" data-zh="儲存">Storage</td>
+                <td data-en="Dry, ventilated, below 25°C" data-zh="乾燥通風處，溫度低於 25°C">Dry, ventilated, below 25°C</td>
+              </tr>
+              <tr>
+                <td data-en="After Opening" data-zh="開封後">After Opening</td>
+                <td data-en="Consume within 7 days" data-zh="7 天內使用完畢">Consume within 7 days</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
-          <div data-aos="fade-up">
-            <table class="spec-table">
-              <thead>
-                <tr>
-                  <th data-en="Parameter" data-zh="參數">Parameter</th>
-                  <th data-en="Value" data-zh="數值">Value</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-en="Ingredients" data-zh="成分">Ingredients</td>
-                  <td data-en="100% Di Linh durian (Ri6 70%, Monthong 30%)" data-zh="100% 夷靈榴槤（Ri6 70%、Monthong 30%）">100% Di Linh durian (Ri6 70%, Monthong 30%)</td>
-                </tr>
-                <tr>
-                  <td data-en="Added Sugar" data-zh="添加糖">Added Sugar</td>
-                  <td data-en="None" data-zh="無">None</td>
-                </tr>
-                <tr>
-                  <td data-en="Preservatives" data-zh="防腐劑">Preservatives</td>
-                  <td data-en="None" data-zh="無">None</td>
-                </tr>
-                <tr>
-                  <td data-en="Final Moisture" data-zh="成品含水率">Final Moisture</td>
-                  <td data-en="Below 4%" data-zh="低於 4%">Below 4%</td>
-                </tr>
-                <tr>
-                  <td data-en="Nutrition Retained" data-zh="營養保留">Nutrition Retained</td>
-                  <td data-en="Approximately 97% of fresh fruit" data-zh="約 97% 鮮果營養">Approximately 97% of fresh fruit</td>
-                </tr>
-                <tr>
-                  <td data-en="Shelf Life" data-zh="保質期">Shelf Life</td>
-                  <td data-en="12 months (sealed)" data-zh="12 個月（未開封）">12 months (sealed)</td>
-                </tr>
-                <tr>
-                  <td data-en="Storage" data-zh="儲存">Storage</td>
-                  <td data-en="Dry, ventilated, below 25°C" data-zh="乾燥通風處，溫度低於 25°C">Dry, ventilated, below 25°C</td>
-                </tr>
-                <tr>
-                  <td data-en="After Opening" data-zh="開封後">After Opening</td>
-                  <td data-en="Consume within 7 days" data-zh="7 天內使用完畢">Consume within 7 days</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-lg font-semibold text-p-700 font-playfair mb-4"
-              data-en="Certification Roadmap" data-zh="認證路線圖">Certification Roadmap</h3>
-            <table class="spec-table">
-              <thead>
-                <tr>
-                  <th data-en="Standard" data-zh="標準">Standard</th>
-                  <th data-en="Status" data-zh="狀態">Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-en="Microbial & Residue Testing (Eurofins)" data-zh="微生物與農殘檢驗（Eurofins）">Microbial & Residue Testing (Eurofins)</td>
-                  <td><span class="cert-badge active" data-en="✓ Since 2023" data-zh="✓ 2023年起">✓ Since 2023</span></td>
-                </tr>
-                <tr>
-                  <td data-en="QR Traceability" data-zh="QR 溯源">QR Traceability</td>
-                  <td><span class="cert-badge active" data-en="✓ Live Q2 2025" data-zh="✓ 2025 Q2 已上線">✓ Live Q2 2025</span></td>
-                </tr>
-                <tr>
-                  <td>HACCP</td>
-                  <td><span class="cert-badge planned" data-en="Target Q4 2026" data-zh="預計 2026 Q4">Target Q4 2026</span></td>
-                </tr>
-                <tr>
-                  <td>ISO 22000</td>
-                  <td><span class="cert-badge planned" data-en="Target Q2 2027" data-zh="預計 2027 Q2">Target Q2 2027</span></td>
-                </tr>
-                <tr>
-                  <td>Halal</td>
-                  <td><span class="cert-badge planned" data-en="Target Q3 2027" data-zh="預計 2027 Q3">Target Q3 2027</span></td>
-                </tr>
-                <tr>
-                  <td>Kosher</td>
-                  <td><span class="cert-badge future" data-en="Assessment 2028" data-zh="2028 評估">Assessment 2028</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-lg font-semibold text-p-700 font-playfair mb-4" data-en="Certification Roadmap"
+            data-zh="認證路線圖">Certification Roadmap</h3>
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th data-en="Standard" data-zh="標準">Standard</th>
+                <th data-en="Status" data-zh="狀態">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-en="Microbial & Residue Testing (Eurofins)" data-zh="微生物與農殘檢驗（Eurofins）">Microbial & Residue
+                  Testing (Eurofins)</td>
+                <td><span class="cert-badge active" data-en="✓ Since 2023" data-zh="✓ 2023年起">✓ Since 2023</span></td>
+              </tr>
+              <tr>
+                <td data-en="QR Traceability" data-zh="QR 溯源">QR Traceability</td>
+                <td><span class="cert-badge active" data-en="✓ Live Q2 2025" data-zh="✓ 2025 Q2 已上線">✓ Live Q2
+                    2025</span></td>
+              </tr>
+              <tr>
+                <td>HACCP</td>
+                <td><span class="cert-badge planned" data-en="Target Q4 2026" data-zh="預計 2026 Q4">Target Q4 2026</span>
+                </td>
+              </tr>
+              <tr>
+                <td>ISO 22000</td>
+                <td><span class="cert-badge planned" data-en="Target Q2 2027" data-zh="預計 2027 Q2">Target Q2 2027</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Halal</td>
+                <td><span class="cert-badge planned" data-en="Target Q3 2027" data-zh="預計 2027 Q3">Target Q3 2027</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Kosher</td>
+                <td><span class="cert-badge future" data-en="Assessment 2028" data-zh="2028 評估">Assessment 2028</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!--=================
+  <!--=================
         Growing Region
     ==================-->
-    <section class="mt-20">
-      <div class="container">
-        <div class="flex flex-col lg:flex-row gap-12 items-center">
-          <div class="flex-1" data-aos="fade-right">
-            <img src="./assets/highlands.webp" alt="Di Linh Highlands" loading="lazy" class="rounded-lg shadow-lg w-full h-[400px] object-cover" />
-          </div>
-          <div class="flex-1" data-aos="fade-left">
-            <h2 class="sub_heading" data-en="The Growing Region" data-zh="原料產區">The Growing Region</h2>
-            <h1 class="main_heading"
-              data-en="Di Linh <span class='text-gradient'>Plateau</span>"
-              data-zh="夷靈<span class='text-gradient'>高原</span>">
-              Di Linh <span class="text-gradient">Plateau</span>
-            </h1>
-            <p class="mt-4"
-              data-en="The Di Linh Plateau lies in Lâm Đồng Province, at 920–1,050 meters — higher than every major commercial durian region of Thailand, Malaysia, and Indonesia. Three rare natural conditions meet here: 3-million-year basalt soil, 8–11°C day-night temperature swing, and a clearly divided wet-dry cycle."
-              data-zh="夷靈高原位於林同省，海拔920至1,050公尺——比泰國、馬來西亞、印尼所有大型商業榴槤產區都高。三個罕見的自然條件在此匯聚：三百萬年的玄武岩土壤、八到十一度的日夜溫差、以及分明的乾濕季節。">
-              The Di Linh Plateau lies in Lâm Đồng Province, at 920–1,050 meters — higher than every major commercial durian region of Thailand, Malaysia, and Indonesia. Three rare natural conditions meet here: 3-million-year basalt soil, 8–11°C day-night temperature swing, and a clearly divided wet-dry cycle.
-            </p>
-            <div class="grid grid-cols-2 gap-4 mt-6">
-              <div class="p-4 bg-p-50 rounded-lg text-center">
-                <p class="text-2xl font-bold text-p-700 font-playfair">28 ha</p>
-                <p class="text-xs text-n-500 mt-1" data-en="Partner orchards" data-zh="合作果園">Partner orchards</p>
-              </div>
-              <div class="p-4 bg-p-50 rounded-lg text-center">
-                <p class="text-2xl font-bold text-p-700 font-playfair">950m</p>
-                <p class="text-xs text-n-500 mt-1" data-en="Average altitude" data-zh="平均海拔">Average altitude</p>
-              </div>
-              <div class="p-4 bg-p-50 rounded-lg text-center">
-                <p class="text-2xl font-bold text-p-700 font-playfair">3</p>
-                <p class="text-xs text-n-500 mt-1" data-en="Farming households" data-zh="合作農戶">Farming households</p>
-              </div>
-              <div class="p-4 bg-p-50 rounded-lg text-center">
-                <p class="text-2xl font-bold text-p-700 font-playfair">680t</p>
-                <p class="text-xs text-n-500 mt-1" data-en="Fresh durian/year" data-zh="年產鮮果">Fresh durian/year</p>
-              </div>
+  <section class="mt-20">
+    <div class="container">
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+        <div class="flex-1" data-aos="fade-right">
+          <img src="./assets/highlands.webp" alt="Di Linh Highlands" loading="lazy"
+            class="rounded-lg shadow-lg w-full h-[400px] object-cover" />
+        </div>
+        <div class="flex-1" data-aos="fade-left">
+          <h2 class="sub_heading" data-en="The Growing Region" data-zh="原料產區">The Growing Region</h2>
+          <h1 class="main_heading" data-en="Di Linh <span class='text-gradient'>Plateau</span>"
+            data-zh="夷靈<span class='text-gradient'>高原</span>">
+            Di Linh <span class="text-gradient">Plateau</span>
+          </h1>
+          <p class="mt-4"
+            data-en="The Di Linh Plateau lies in Lâm Đồng Province, at 920–1,050 meters — higher than every major commercial durian region of Thailand, Malaysia, and Indonesia. Three rare natural conditions meet here: 3-million-year basalt soil, 8–11°C day-night temperature swing, and a clearly divided wet-dry cycle."
+            data-zh="夷靈高原位於林同省，海拔920至1,050公尺——比泰國、馬來西亞、印尼所有大型商業榴槤產區都高。三個罕見的自然條件在此匯聚：三百萬年的玄武岩土壤、八到十一度的日夜溫差、以及分明的乾濕季節。">
+            The Di Linh Plateau lies in Lâm Đồng Province, at 920–1,050 meters — higher than every major commercial
+            durian region of Thailand, Malaysia, and Indonesia. Three rare natural conditions meet here: 3-million-year
+            basalt soil, 8–11°C day-night temperature swing, and a clearly divided wet-dry cycle.
+          </p>
+          <div class="grid grid-cols-2 gap-4 mt-6">
+            <div class="p-4 bg-p-50 rounded-lg text-center">
+              <p class="text-2xl font-bold text-p-700 font-playfair">28 ha</p>
+              <p class="text-xs text-n-500 mt-1" data-en="Partner orchards" data-zh="合作果園">Partner orchards</p>
+            </div>
+            <div class="p-4 bg-p-50 rounded-lg text-center">
+              <p class="text-2xl font-bold text-p-700 font-playfair">950m</p>
+              <p class="text-xs text-n-500 mt-1" data-en="Average altitude" data-zh="平均海拔">Average altitude</p>
+            </div>
+            <div class="p-4 bg-p-50 rounded-lg text-center">
+              <p class="text-2xl font-bold text-p-700 font-playfair">3</p>
+              <p class="text-xs text-n-500 mt-1" data-en="Farming households" data-zh="合作農戶">Farming households</p>
+            </div>
+            <div class="p-4 bg-p-50 rounded-lg text-center">
+              <p class="text-2xl font-bold text-p-700 font-playfair">680t</p>
+              <p class="text-xs text-n-500 mt-1" data-en="Fresh durian/year" data-zh="年產鮮果">Fresh durian/year</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!--=================
+  <!--=================
     Footer
     ==================-->
-    <footer class="bg-p-950 mt-20">
-      <div class="container text-white/50">
-        <p class="text-center mt-9" data-en="© Djirian 2026 — Single Origin Freeze-Dried Durian, Di Linh, Vietnam"
-           data-zh="© Djirian 2026 — 單一產地冷凍乾燥榴槤，越南夷靈">
-          © Djirian 2026 — Single Origin Freeze-Dried Durian, Di Linh, Vietnam
-        </p>
-      </div>
-    </footer>
-  </body>
+  <footer class="bg-p-950 mt-20">
+    <div class="container text-white/50">
+      <p class="text-center mt-9" data-en="© Djirian 2026 — Single Origin Freeze-Dried Durian, Di Linh, Vietnam"
+        data-zh="© Djirian 2026 — 單一產地冷凍乾燥榴槤，越南夷靈">
+        © Djirian 2026 — Single Origin Freeze-Dried Durian, Di Linh, Vietnam
+      </p>
+    </div>
+  </footer>
+</body>
+
 </html>

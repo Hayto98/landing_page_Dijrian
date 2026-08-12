@@ -1,209 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Product — Djirian</title>
-    <meta name="description" content="One fruit. Three packs. Zero shortcuts. Discover Djirian single-origin freeze-dried durian from Di Linh." />
-    <link rel="icon" type="image/png" href="./assets/logo.png" />
-    <link rel="stylesheet" href="./css/showHideNav.css" />
-    <link rel="stylesheet" href="./dist/output.css" />
-    <link rel="stylesheet" href="./css/our-product.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
-    <script src="./js/jquery.hidescroll.js" defer></script>
-    <script src="./js/i18n.js" defer></script>
-    <script type="module" src="./js/main.js" defer></script>
-  </head>
-  <body class="product-story-page">
-    <header class="relative z-50">
-      <div class="flex items-center justify-center navbar">
-        <div class="max-w-[1536px] w-full px-4 py-4 md:py-10 md:px-[72px] flex items-center justify-between">
-          <!-- Logo -->
-          <a href="./" class="flex items-center justify-center flex-none gap-3 hover-tilt">
-            <img src="./assets/official_logo.png" alt="Djirian Logo" class="h-10 md:h-12 w-auto object-contain" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Product — Djirian</title>
+  <meta name="description"
+    content="One fruit. Three packs. Zero shortcuts. Discover Djirian single-origin freeze-dried durian from Di Linh." />
+  <link rel="icon" type="image/png" href="./assets/logo.png" />
+  <link rel="stylesheet" href="./css/showHideNav.css" />
+  <link rel="stylesheet" href="./dist/output.css" />
+  <link rel="stylesheet" href="./css/our-product.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+    rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <script src="./js/jquery.hidescroll.js" defer></script>
+  <script src="./js/i18n.js" defer></script>
+  <script type="module" src="./js/main.js" defer></script>
+</head>
+
+<body class="product-story-page">
+  <header class="relative z-50">
+    <div class="flex items-center justify-center navbar">
+      <div class="max-w-[1536px] w-full px-4 py-4 md:py-10 md:px-[72px] flex items-center justify-between">
+        <!-- Logo -->
+        <a href="./" class="flex items-center justify-center flex-none gap-3 hover-tilt">
+          <img src="./assets/official_logo.png" alt="Djirian Logo" class="h-10 md:h-12 w-auto object-contain" />
+        </a>
+
+        <!-- Nav Links -->
+        <nav class="items-center justify-end hidden w-full gap-6 lg:flex lg:gap-8">
+          <a href="./" class="navLink" data-en="Home" data-zh="首頁">Home</a>
+          <a href="./our-product.html" class="navLink text-p-600 font-bold" data-en="Products" data-zh="產品">Products</a>
+          <a href="./profile.html" class="navLink" data-en="Profile" data-zh="公司簡介">Profile</a>
+          <a href="./process-story.html" class="navLink" data-en="Process" data-zh="工藝">Process</a>
+          <a href="./brand-story.html" class="navLink" data-en="Brand Story" data-zh="品牌故事">Brand Story</a>
+          <a href="./#contact" class="navLink" data-en="Contact" data-zh="聯絡">Contact</a>
+
+          <!-- Language Switcher -->
+          <div class="flex items-center gap-1 ml-4 border-l border-n-200 pl-4">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <span class="text-n-200">|</span>
+            <button class="lang-btn" data-lang="zh">中文</button>
+          </div>
+        </nav>
+
+        <!-- Hamburger Icon -->
+        <div class="flex items-center gap-3 lg:hidden">
+          <div class="flex items-center gap-1">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <span class="text-n-200">|</span>
+            <button class="lang-btn" data-lang="zh">中文</button>
+          </div>
+          <div class="cursor-pointer" id="toggle_btn" aria-label="Toggle navigation menu">
+            <img src="./assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="dropdown-menu lg:hidden">
+          <a href="./" class="mobileNavLink group">
+            <span data-en="Home" data-zh="首頁">Home</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
           </a>
-
-          <!-- Nav Links -->
-          <nav class="items-center justify-end hidden w-full gap-6 lg:flex lg:gap-8">
-            <a href="./" class="navLink" data-en="Home" data-zh="首頁">Home</a>
-            <a href="./our-product.html" class="navLink text-p-600 font-bold" data-en="Products" data-zh="產品">Products</a>
-            <a href="./profile.html" class="navLink" data-en="Profile" data-zh="公司簡介">Profile</a>
-            <a href="./process-story.html" class="navLink" data-en="Process" data-zh="工藝">Process</a>
-            <a href="./brand-story.html" class="navLink" data-en="Brand Story" data-zh="品牌故事">Brand Story</a>
-            <a href="./#contact" class="navLink" data-en="Contact" data-zh="聯絡">Contact</a>
-
-            <!-- Language Switcher -->
-            <div class="flex items-center gap-1 ml-4 border-l border-n-200 pl-4">
-              <button class="lang-btn active" data-lang="en">EN</button>
-              <span class="text-n-200">|</span>
-              <button class="lang-btn" data-lang="zh">中文</button>
-            </div>
-          </nav>
-
-          <!-- Hamburger Icon -->
-          <div class="flex items-center gap-3 lg:hidden">
-            <div class="flex items-center gap-1">
-              <button class="lang-btn active" data-lang="en">EN</button>
-              <span class="text-n-200">|</span>
-              <button class="lang-btn" data-lang="zh">中文</button>
-            </div>
-            <div class="cursor-pointer" id="toggle_btn" aria-label="Toggle navigation menu">
-              <img src="./assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
-            </div>
-          </div>
-
-          <!-- Mobile Menu -->
-          <div class="dropdown-menu lg:hidden">
-            <a href="./" class="mobileNavLink group">
-              <span data-en="Home" data-zh="首頁">Home</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-            <a href="./our-product.html" class="mobileNavLink group bg-white/10 text-amber-400 font-bold">
-              <span data-en="Products" data-zh="產品">Products</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-100 text-amber-400">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-            <a href="./profile.html" class="mobileNavLink group">
-              <span data-en="Profile" data-zh="公司簡介">Profile</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-            <a href="./process-story.html" class="mobileNavLink group">
-              <span data-en="Process" data-zh="工藝">Process</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-            <a href="./brand-story.html" class="mobileNavLink group">
-              <span data-en="Brand Story" data-zh="品牌故事">Brand Story</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-            <a href="./#contact" class="mobileNavLink group">
-              <span data-en="Contact" data-zh="聯絡">Contact</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-          </div>
+          <a href="./our-product.html" class="mobileNavLink group bg-white/10 text-amber-400 font-bold">
+            <span data-en="Products" data-zh="產品">Products</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-100 text-amber-400">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+          <a href="./profile.html" class="mobileNavLink group">
+            <span data-en="Profile" data-zh="公司簡介">Profile</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+          <a href="./process-story.html" class="mobileNavLink group">
+            <span data-en="Process" data-zh="工藝">Process</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+          <a href="./brand-story.html" class="mobileNavLink group">
+            <span data-en="Brand Story" data-zh="品牌故事">Brand Story</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+          <a href="./#contact" class="mobileNavLink group">
+            <span data-en="Contact" data-zh="聯絡">Contact</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="size-4 opacity-40 group-hover:opacity-100 transition-opacity text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="product-story-hero story-section">
-        <div class="story-hero-copy">
-          <p class="story-kicker">01 / OUR PRODUCT</p>
-          <h1>One fruit.<br /><em>That's the whole</em><br />catalogue.</h1>
-          <p class="story-lede">One highland. One fruit. One way of doing it properly.</p>
-          <a href="#the-range" class="story-scroll-link">Scroll to discover <span>↓</span></a>
-        </div>
-        <div class="story-hero-visual">
-          <div class="hero-image-frame"><img src="./assets/Product/3loaisanpham.png" alt="Djirian 100g, 150g and 200g jars" /></div>
-          <div class="hero-stamp"><span>DI LINH</span><strong>950m</strong><small>single origin</small></div>
-        </div>
-      </section>
-
-      <section class="story-section story-intro two-column">
-        <div class="section-marker">A different kind<br />of catalogue</div>
-        <div class="story-prose">
-          <p>Most brands grow by adding. A new flavour this quarter. A new fruit next year. A cheaper line for the markets that ask for cheaper. We understand the logic. We've simply chosen a different one.</p>
-          <p>Djirian makes freeze-dried durian. Only freeze-dried durian. From one highland in Vietnam, from three farming households we've known by name for years, processed one way and one way only. There is no mango version in development. No "economy" line for price-sensitive buyers. No blended pack that quietly mixes Di Linh fruit with cheaper durian from somewhere else to stretch a harvest.</p>
-          <p>We chose this because focus is the only road we know to the kind of quality we're after. A durian that ripens for 120 days at 950 metres, on soil three million years in the making, deserves more than to become one item on a long list. It deserves a company that thinks about nothing else.</p>
-        </div>
-      </section>
-
-      <section class="story-image-break story-section">
-        <figure class="texture-image"><img src="./assets/banner_5.png" alt="Honey-gold freeze-dried durian with fresh Di Linh durian" /></figure>
-        <div class="texture-caption"><span>01</span><p>Honey-gold colour.<br />A honeycomb crunch.</p></div>
-      </section>
-
-      <section id="the-range" class="story-section range-intro">
-        <p class="story-kicker">THE RANGE</p>
-        <h2>Three packs.<br /><em>One promise</em> inside each.</h2>
-        <p class="range-lede">The fruit is the same across all three. The soil is the same. The 120 days on the tree, the 22 hours in the freeze-dryer, the hands that check each piece — all the same. What changes is only the size of the moment you're buying it for.</p>
-      </section>
-
-      <section class="pack-story-list story-section">
-        <article class="pack-story-card pack-100">
-          <div class="pack-image"><img src="./assets/Product/100g.png" alt="Discovery 100g Djirian jar" /></div>
-          <div class="pack-number">01</div>
-          <div class="pack-copy">
-            <p class="story-kicker">100g</p>
-            <h3>100g — The First Taste</h3>
-            <p>For the person who has never tried freeze-dried durian, or has tried it once from somewhere else and wants to know what a single-origin version actually tastes like. Small enough to be a decision you don't have to think too hard about. Large enough to understand what we've spent three years building.</p>
-            <p>If you like it, you'll know. If it isn't for you, you'll also know — and we'd rather you find out at this size.</p>
-          </div>
-        </article>
-
-        <article class="pack-story-card pack-150">
-          <div class="pack-image"><img src="./assets/Product/150g.png" alt="Everyday Jar 150g Djirian jar" /></div>
-          <div class="pack-number">02</div>
-          <div class="pack-copy">
-            <p class="story-kicker">150g</p>
-            <h3>150g — The Everyday Jar</h3>
-            <p>For the person who has already crossed that line. Who keeps a jar on the desk at work, or on the shelf beside the tea. Who eats two or three pieces at a time, slowly, and finds that a jar lasts them somewhere between ten days and two weeks. This is the size we designed with that rhythm in mind.</p>
-            <p>It is the size most of our returning customers come back to. Not because we push it, but because it seems to be the size that fits into a life.</p>
-          </div>
-        </article>
-
-        <article class="pack-story-card pack-200">
-          <div class="pack-image"><img src="./assets/Product/200g.png" alt="Share and Gift 200g Djirian jar" /></div>
-          <div class="pack-number">03</div>
-          <div class="pack-copy">
-            <p class="story-kicker">200g</p>
-            <h3>200g — To Share, Or To Gift</h3>
-            <p>For the moments when durian stops being a personal pleasure and becomes something you pass across a table. A jar to bring to a family gathering during Tết or Lunar New Year. A gift for a colleague in Tokyo who has heard about Vietnamese durian but never tasted it at this quality. A jar to open on a weekend when relatives visit and stay longer than expected.</p>
-            <p>The 200g is our answer to the truth that some fruit is meant to be given away.</p>
-          </div>
-        </article>
-      </section>
-
-      <section class="story-share-image story-section">
-        <img src="./assets/Product/3loaisanpham.png" alt="Three Djirian jars lined up together" />
-        <p>One origin. Three moments.<br /><strong>Nothing added.</strong></p>
-      </section>
-
-      <section class="story-section consistency-section two-column">
-        <div class="section-marker">What stays the same<br />across all three</div>
-        <div class="consistency-content">
-          <h2>Quietly consistent.<br /><em>Every single jar.</em></h2>
-          <p>Single-origin from Di Linh, Lâm Đồng. Ri6 and Monthong, harvested tree-ripe. No added sugar, no flavouring, no preservatives, no anti-oxidants. Freeze-dried for 22 hours at 2,000 times below atmospheric pressure. Final moisture below 4%. Shelf life 12 months. Every jar carries a lot code that traces back to the week it was picked and the household that picked it.</p>
-          <div class="spec-pills" aria-label="Product specifications">
-            <span>100% fruit</span><span>22h freeze-dried</span><span>&lt;4% moisture</span><span>12-month shelf life</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-final story-section">
-        <p class="story-kicker">THE DJIRIAN PROMISE</p>
-        <h2>One fruit.<br /><em>Three packs.</em><br />Zero shortcuts.</h2>
-        <a href="./#contact" class="story-button">Talk to our team <span>↗</span></a>
-      </section>
-    </main>
-
-    <footer class="story-footer" id="contact">
-      <div class="story-footer-inner">
-        <a href="./" class="story-footer-brand"><img src="./assets/official_logo.png" alt="Djirian" /></a>
-        <p>Single-origin freeze-dried durian.<br />Di Linh, Lâm Đồng, Vietnam.</p>
-        <div class="story-footer-links">
-          <a href="./" data-en="Home" data-zh="首頁">Home</a>
-          <a href="./our-product.html" data-en="Products" data-zh="產品">Products</a>
-          <a href="./profile.html" data-en="Profile" data-zh="公司簡介">Profile</a>
-          <a href="./process-story.html" data-en="Process" data-zh="工藝">Process</a>
-          <a href="./brand-story.html" data-en="Brand Story" data-zh="品牌故事">Brand Story</a>
-          <a href="./#contact" data-en="Contact" data-zh="聯絡">Contact</a>
-        </div>
-        <small>© Djirian 2026</small>
+  <main>
+    <section class="product-story-hero story-section">
+      <div class="story-hero-copy">
+        <p class="story-kicker">01 / OUR PRODUCT</p>
+        <h1>One fruit.<br /><em>That's the whole</em><br />catalogue.</h1>
+        <p class="story-lede">One highland. One fruit. One way of doing it properly.</p>
+        <a href="#the-range" class="story-scroll-link">Scroll to discover <span>↓</span></a>
       </div>
-    </footer>
-  </body>
+      <div class="story-hero-visual">
+        <div class="hero-image-frame"><img src="./assets/Product/3loaisanpham.png"
+            alt="Djirian 100g, 150g and 200g jars" /></div>
+        <div class="hero-stamp"><span>DI LINH</span><strong>950m</strong><small>single origin</small></div>
+      </div>
+    </section>
+
+    <section class="story-section story-intro two-column">
+      <div class="section-marker">A different kind<br />of catalogue</div>
+      <div class="story-prose">
+        <p>Most brands grow by adding. A new flavour this quarter. A new fruit next year. A cheaper line for the markets
+          that ask for cheaper. We understand the logic. We've simply chosen a different one.</p>
+        <p>Djirian makes freeze-dried durian. Only freeze-dried durian. From one highland in Vietnam, from three farming
+          households we've known by name for years, processed one way and one way only. There is no mango version in
+          development. No "economy" line for price-sensitive buyers. No blended pack that quietly mixes Di Linh fruit
+          with cheaper durian from somewhere else to stretch a harvest.</p>
+        <p>We chose this because focus is the only road we know to the kind of quality we're after. A durian that ripens
+          for 120 days at 950 metres, on soil three million years in the making, deserves more than to become one item
+          on a long list. It deserves a company that thinks about nothing else.</p>
+      </div>
+    </section>
+
+    <section class="story-image-break story-section">
+      <figure class="texture-image"><img src="./assets/Mockup/hình%205.png"
+          alt="Honey-gold freeze-dried durian with fresh Di Linh durian" /></figure>
+      <div class="texture-caption"><span>01</span>
+        <p>Honey-gold colour.<br />A honeycomb crunch.</p>
+      </div>
+    </section>
+
+    <section id="the-range" class="story-section range-intro">
+      <p class="story-kicker">THE RANGE</p>
+      <h2>Three packs.<br /><em>One promise</em> inside each.</h2>
+      <p class="range-lede">The fruit is the same across all three. The soil is the same. The 120 days on the tree, the
+        22 hours in the freeze-dryer, the hands that check each piece — all the same. What changes is only the size of
+        the moment you're buying it for.</p>
+    </section>
+
+    <section class="pack-story-list story-section">
+      <article class="pack-story-card pack-100">
+        <div class="pack-image"><img src="./assets/Product/100g.png" alt="Discovery 100g Djirian jar" /></div>
+        <div class="pack-number">01</div>
+        <div class="pack-copy">
+          <p class="story-kicker">100g</p>
+          <h3>100g — The First Taste</h3>
+          <p>For the person who has never tried freeze-dried durian, or has tried it once from somewhere else and wants
+            to know what a single-origin version actually tastes like. Small enough to be a decision you don't have to
+            think too hard about. Large enough to understand what we've spent three years building.</p>
+          <p>If you like it, you'll know. If it isn't for you, you'll also know — and we'd rather you find out at this
+            size.</p>
+        </div>
+      </article>
+
+      <article class="pack-story-card pack-150">
+        <div class="pack-image"><img src="./assets/Product/150g.png" alt="Everyday Jar 150g Djirian jar" /></div>
+        <div class="pack-number">02</div>
+        <div class="pack-copy">
+          <p class="story-kicker">150g</p>
+          <h3>150g — The Everyday Jar</h3>
+          <p>For the person who has already crossed that line. Who keeps a jar on the desk at work, or on the shelf
+            beside the tea. Who eats two or three pieces at a time, slowly, and finds that a jar lasts them somewhere
+            between ten days and two weeks. This is the size we designed with that rhythm in mind.</p>
+          <p>It is the size most of our returning customers come back to. Not because we push it, but because it seems
+            to be the size that fits into a life.</p>
+        </div>
+      </article>
+
+      <article class="pack-story-card pack-200">
+        <div class="pack-image"><img src="./assets/Product/201g.png" alt="Share and Gift 200g Djirian jar" /></div>
+        <div class="pack-number">03</div>
+        <div class="pack-copy">
+          <p class="story-kicker">200g</p>
+          <h3>200g — To Share, Or To Gift</h3>
+          <p>For the moments when durian stops being a personal pleasure and becomes something you pass across a table.
+            A jar to bring to a family gathering during Tết or Lunar New Year. A gift for a colleague in Tokyo who has
+            heard about Vietnamese durian but never tasted it at this quality. A jar to open on a weekend when relatives
+            visit and stay longer than expected.</p>
+          <p>The 200g is our answer to the truth that some fruit is meant to be given away.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="story-share-image story-section">
+      <img src="./assets/Product/3loaisanpham.png" alt="Three Djirian jars lined up together" />
+      <p>One origin. Three moments.<br /><strong>Nothing added.</strong></p>
+    </section>
+
+    <section class="story-section consistency-section two-column">
+      <div class="section-marker">What stays the same<br />across all three</div>
+      <div class="consistency-content">
+        <h2>Quietly consistent.<br /><em>Every single jar.</em></h2>
+        <p>Single-origin from Di Linh, Lâm Đồng. Ri6 and Monthong, harvested tree-ripe. No added sugar, no flavouring,
+          no preservatives, no anti-oxidants. Freeze-dried for 22 hours at 2,000 times below atmospheric pressure. Final
+          moisture below 4%. Shelf life 12 months. Every jar carries a lot code that traces back to the week it was
+          picked and the household that picked it.</p>
+        <div class="spec-pills" aria-label="Product specifications">
+          <span>100% fruit</span><span>22h freeze-dried</span><span>&lt;4% moisture</span><span>12-month shelf
+            life</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-final story-section">
+      <p class="story-kicker">THE DJIRIAN PROMISE</p>
+      <h2>One fruit.<br /><em>Three packs.</em><br />Zero shortcuts.</h2>
+      <a href="./#contact" class="story-button">Talk to our team <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="story-footer" id="contact">
+    <div class="story-footer-inner">
+      <a href="./" class="story-footer-brand"><img src="./assets/official_logo.png" alt="Djirian" /></a>
+      <p>Single-origin freeze-dried durian.<br />Di Linh, Lâm Đồng, Vietnam.</p>
+      <div class="story-footer-links">
+        <a href="./" data-en="Home" data-zh="首頁">Home</a>
+        <a href="./our-product.html" data-en="Products" data-zh="產品">Products</a>
+        <a href="./profile.html" data-en="Profile" data-zh="公司簡介">Profile</a>
+        <a href="./process-story.html" data-en="Process" data-zh="工藝">Process</a>
+        <a href="./brand-story.html" data-en="Brand Story" data-zh="品牌故事">Brand Story</a>
+        <a href="./#contact" data-en="Contact" data-zh="聯絡">Contact</a>
+      </div>
+      <small>© Djirian 2026</small>
+    </div>
+  </footer>
+</body>
+
 </html>
