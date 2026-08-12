@@ -9,7 +9,7 @@ $(function () {
     $(".navbar").hidescroll();
   }
 
-  // mobile dropdown menu
+// mobile dropdown menu
   const toggleBtn = $("#toggle_btn");
   const dropdownMenu = $(".dropdown-menu");
 
@@ -21,6 +21,16 @@ $(function () {
   $(".dropdown-menu a").click(() => {
     dropdownMenu.removeClass("open");
   });
+
+  // Force autoplay for mobile browsers (iOS Safari / Android Low Power Mode)
+  const heroVid = document.getElementById("hero_video");
+  if (heroVid) {
+    heroVid.muted = true;
+    heroVid.play().catch(() => {
+      document.addEventListener("touchstart", () => heroVid.play(), { once: true });
+      document.addEventListener("click", () => heroVid.play(), { once: true });
+    });
+  }
 });
 
 /* ================ 
